@@ -9,7 +9,7 @@ import {
 
 import type { Route } from "./+types/root";
 import React from "react";
-import Error from "~/errors/Error";
+import Error from "~/Services/ErrorHandling";
 
 export const links: Route.LinksFunction = () => [];
 
