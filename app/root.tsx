@@ -9,6 +9,7 @@ import {
 
 import type { Route } from "./+types/root";
 import React from "react";
+import Error from "~/errors/Error";
 
 export const links: Route.LinksFunction = () => [];
 
@@ -35,10 +36,5 @@ export default function App() {
 }
 
 export function ErrorBoundary({ error }: Route.ErrorBoundaryProps) {
-  if (isRouteErrorResponse(error)) {}
-  return (
-    <main>
-      hello
-    </main>
-  );
+  return <Error error={error} params={{}} />
 }
