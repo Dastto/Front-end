@@ -1,9 +1,10 @@
 import {Outlet} from "react-router";
 
-const DefaultLayout = () => {
+const MasterLayout = () => {
     return (<>
+        <Header />
         <Outlet />
     </>)
 }
 
-export default DefaultLayout
+export default MasterLayout
