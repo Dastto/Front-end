@@ -60,3 +60,7 @@
         font-family: 'IRANYekanX', sans-serif;
     }
 }
+
+@utility dir-* {
+    direction: --value('rtl', 'ltr');
+}
