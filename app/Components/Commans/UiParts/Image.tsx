@@ -3,15 +3,15 @@ import React from "react";
 interface ImagePropType extends ImgHTMLAttributes<HTMLImageElement> {
   src: string;
   alt: string;
-  className: string;
-  lazy?: boolean;
+  className?: string;
+  loading?: string;
 }
 
 const Image: React.FC<ImagePropType> = ({
   src,
   alt = "Dastto",
   className = "",
-  lazy = true,
+  loading = "lazy",
   ...props
 }) => {
   return (
@@ -19,7 +19,7 @@ const Image: React.FC<ImagePropType> = ({
       <img
         src={src}
         alt={alt}
-        loading={lazy}
+        loading={loading}
         {...props}
         className={className}
       />

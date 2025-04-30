@@ -1,7 +1,26 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
+import { useLocation } from "react-router";
 
-const NavItem = ({ children }: React.FC<React.ReactElement>) => {
-  return <div>{children}</div>;
+interface NavItemPropsTypes {
+  to: string;
+  children: React.ReactNode;
+}
+
+const NavItem = ({ children, to }: React.FC<NavItemPropsTypes>) => {
+  const location = useLocation();
+  const [active, setActive] = useState<boolean>(false);
+
+  useEffect(() => {
+    setActive(location.pathname === to);
+  }, [location]);
+
+  return (
+    <div
+      className={`cursor-pointer flex items-center justify-center gap-[10px] font-medium ${active && "text-black"}`}
+    >
+      {children}
+    </div>
+  );
 };
 
 export default NavItem;

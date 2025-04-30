@@ -5,8 +5,11 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="7e7d8412-18e5-477c-83ea-8db850dba07a" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/Components/Commans/Header/Header.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/Components/Commans/Header/Header.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Components/Commans/Header/Nav.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/Components/Commans/Header/Nav.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Components/Commans/Header/Nav/Nav.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/Components/Commans/Header/Nav/Nav.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Components/Commans/Header/Nav/NavItem.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/Components/Commans/Header/Nav/NavItem.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Routes/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/Routes/index.tsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -57,6 +60,7 @@
       <recent name="C:\Users\TikRack\Desktop\Dastto\Front-end\public\Fonts" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\TikRack\Desktop\Dastto\Front-end\app\Components\Commans\Header\Nav" />
       <recent name="C:\Users\TikRack\Desktop\Dastto\Front-end\app\Components\Commans" />
       <recent name="C:\Users\TikRack\Desktop\Dastto\Front-end\app\Services\ErrorHandling" />
     </key>
@@ -78,7 +82,7 @@
       <updated>1745941340864</updated>
       <workItem from="1745941342195" duration="7501000" />
       <workItem from="1746035271639" duration="6765000" />
-      <workItem from="1746046667013" duration="5140000" />
+      <workItem from="1746046667013" duration="7022000" />
     </task>
     <servers />
   </component>
