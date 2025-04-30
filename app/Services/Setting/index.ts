@@ -1,3 +1,0 @@
-const ToastSetting = {}
-
-export { ToastSetting }

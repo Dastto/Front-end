@@ -1,6 +1,6 @@
 import Logo from "~/Components/Commans/Header/Logo";
-import Nav from "~/Components/Commans/Header/Nav/Nav";
-import NavItem from "~/Components/Commans/Header/Nav/NavItem";
+import Nav from "~/Components/Commans/Header/Nav";
+import Divider from "~/Components/Commans/UiParts/Divider";
 
 const Header = () => {
   return (
