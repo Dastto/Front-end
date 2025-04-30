@@ -1,5 +1,6 @@
 import toast, {Toaster} from "react-hot-toast";
 import {ToastSetting} from "~/Services/Setting";
+import {AddCircle} from "iconsax-reactjs";
 
 const index = () => {
   const handleToast = () => {
@@ -8,6 +9,7 @@ const index = () => {
 
   return <>
     <button onClick={handleToast}>toast</button>
+    <AddCircle size="32" color="#FF8A65"/>
   </>;
 };
 
