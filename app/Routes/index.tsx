@@ -1,8 +1,9 @@
 import toast, {Toaster} from "react-hot-toast";
+import {ToastSetting} from "~/Services/Setting";
 
 const index = () => {
   const handleToast = () => {
-    toast.success("سلام من به تو")
+    toast.success("سلام من به تو", ToastSetting)
   }
 
   return <>
