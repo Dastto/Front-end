@@ -1,0 +1,66 @@
+@import "tailwindcss";
+
+@font-face {
+    font-family: 'IRANYekanX';
+    font-display: swap;
+    font-weight: 100;
+    src: url('/Fonts/IRANYekanXNoEn-Light.ttf') format('truetype');
+}
+@font-face {
+    font-family: 'IRANYekanX';
+    font-display: swap;
+    font-weight: 300;
+    src: url('/Fonts/IRANYekanXNoEn-Regular.ttf') format('truetype');
+}
+@font-face {
+    font-family: 'IRANYekanX';
+    font-display: swap;
+    font-weight: 400;
+    src: url('/Fonts/IRANYekanXNoEn-Medium.ttf') format('truetype');
+}
+@font-face {
+    font-family: 'IRANYekanX';
+    font-display: swap;
+    font-weight: 500;
+    src: url('/Fonts/IRANYekanXNoEn-DemiBold.ttf') format('truetype');
+}
+@font-face {
+    font-family: 'IRANYekanX';
+    font-display: swap;
+    font-weight: 600;
+    src: url('/Fonts/IRANYekanXNoEn-Bold.ttf') format('truetype');
+}
+@font-face {
+    font-family: 'IRANYekanX';
+    font-display: swap;
+    font-weight: 700;
+    src: url('/Fonts/IRANYekanXNoEn-ExtraBold.ttf') format('truetype');
+}
+@font-face {
+    font-family: 'IRANYekanX';
+    font-display: swap;
+    font-weight: 800;
+    src: url('/Fonts/IRANYekanXNoEn-Heavy.ttf') format('truetype');
+}
+@font-face {
+    font-family: 'IRANYekanX';
+    font-display: swap;
+    font-weight: 900;
+    src: url('/Fonts/IRANYekanXNoEn-Black.ttf') format('truetype');
+}
+@font-face {
+    font-family: 'IRANYekanX';
+    font-display: swap;
+    font-weight: 950;
+    src: url('/Fonts/IRANYekanXNoEn-ExtraBlack.ttf') format('truetype');
+}
+
+@layer base {
+    * {
+        font-family: 'IRANYekanX', sans-serif;
+    }
+}
+
+@utility dir-* {
+    direction: --value('rtl', 'ltr');
+}

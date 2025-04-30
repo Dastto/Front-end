@@ -1,0 +1,3 @@
+const ToastSetting = {}
+
+export { ToastSetting }
