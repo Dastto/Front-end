@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import { useLocation } from "react-router";
+import { Link, useLocation } from "react-router";
 
 interface NavItemPropsTypes {
   to: string;
@@ -15,11 +15,12 @@ const NavItem = ({ children, to }: React.FC<NavItemPropsTypes>) => {
   }, [location]);
 
   return (
-    <div
+    <Link
+      to={to}
       className={`cursor-pointer flex items-center justify-center gap-[10px] font-medium text-[#C5C5CF] ${active && "!text-black"}`}
     >
       {children}
-    </div>
+    </Link>
   );
 };
 
