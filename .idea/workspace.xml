@@ -5,18 +5,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="7e7d8412-18e5-477c-83ea-8db850dba07a" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/public/Fonts/IRANYekanXNoEn-Black.ttf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/Fonts/IRANYekanXNoEn-Bold.ttf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/Fonts/IRANYekanXNoEn-DemiBold.ttf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/Fonts/IRANYekanXNoEn-ExtraBlack.ttf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/Fonts/IRANYekanXNoEn-ExtraBold.ttf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/Fonts/IRANYekanXNoEn-Heavy.ttf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/Fonts/IRANYekanXNoEn-Light.ttf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/Fonts/IRANYekanXNoEn-Medium.ttf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/Fonts/IRANYekanXNoEn-Regular.ttf" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/Routes/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/Routes/index.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Styles/app.css" beforeDir="false" afterPath="$PROJECT_DIR$/app/Styles/app.css" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -84,7 +74,7 @@
       <option name="presentableId" value="Default" />
       <updated>1745941340864</updated>
       <workItem from="1745941342195" duration="7501000" />
-      <workItem from="1746035271639" duration="2787000" />
+      <workItem from="1746035271639" duration="4035000" />
     </task>
     <servers />
   </component>

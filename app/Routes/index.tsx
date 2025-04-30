@@ -1,7 +1,6 @@
 const index = () => {
   return <>
-hello
-    سلام
+
   </>;
 };
 
