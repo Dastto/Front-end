@@ -1,6 +1,7 @@
 import toast from "react-hot-toast";
 import { ToastSetting } from "~/Services/Setting";
 import { AddCircle } from "iconsax-reactjs";
+import type { Route } from "./+types";
 
 const index = () => {
   const handleToast = () => {

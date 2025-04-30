@@ -4,9 +4,12 @@ import type { Route } from "./+types/root";
 import React from "react";
 import Error from "~/Services/ErrorHandling";
 
-import "./Styles/app.css";
-
-export const links: Route.LinksFunction = () => [];
+export const links: Route.LinksFunction = () => [
+    {
+        rel: "stylesheet",
+        href: "app/Styles/app.css"
+    }
+];
 
 export function Layout({ children }: { children: React.ReactNode }) {
   return (
