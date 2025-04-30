@@ -1,4 +1,6 @@
 import Logo from "~/Components/Commans/Header/Logo";
+import Nav from "~/Components/Commans/Header/Nav/Nav";
+import NavItem from "~/Components/Commans/Header/Nav/NavItem";
 
 const Header = () => {
   return (
@@ -7,6 +9,7 @@ const Header = () => {
         <div className={"flex justify-center items-center gap-4"}>
           <Logo />
           <span className={"h-10 w-0.5 bg-gray-200"}></span>
+          <Nav />
         </div>
       </header>
     </>
