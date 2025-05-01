@@ -3,7 +3,7 @@ import { Link, useLocation } from "react-router";
 
 interface NavItemPropsTypes {
   to: string;
-  children: React.ReactNode;
+  children?: React.ReactNode;
 }
 
 const NavItem = ({ children, to }: React.FC<NavItemPropsTypes>) => {

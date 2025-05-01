@@ -1,30 +1,28 @@
-import React from "react";
+import React, { type ImgHTMLAttributes } from "react";
 
 interface ImagePropType extends ImgHTMLAttributes<HTMLImageElement> {
   src: string;
-  alt: string;
+  alt?: string;
   className?: string;
-  loading?: string;
+  loading?: "lazy" | "eager";
 }
 
-const Image: React.FC<ImagePropType> = ({
+const CustomImage: React.FC<ImagePropType> = ({
   src,
-  alt = "Dastto",
+  alt = "",
   className = "",
   loading = "lazy",
   ...props
 }) => {
   return (
-    <>
-      <img
-        src={src}
-        alt={alt}
-        loading={loading}
-        {...props}
-        className={className}
-      />
-    </>
+    <img
+      src={src}
+      alt={alt}
+      loading={loading}
+      {...props}
+      className={className}
+    />
   );
 };
 
-export default Image;
+export default CustomImage;
