@@ -67,4 +67,5 @@
 
 @theme {
     --color-dastto: #3E7BFF;
+    --shadow-buttons: 0px 22px 20px -10px rgba(0, 0, 0, 0.10);
 }

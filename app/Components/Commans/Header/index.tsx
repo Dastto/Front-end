@@ -13,50 +13,7 @@ const Index = () => {
           <Divider />
           <Nav />
         </div>
-        <div className={"flex justify-center items-center gap-4"}>
-          <div className={"flex gap-5"}>
-            <Button variant={"blue"} size={"small"}>
-              بزن بریم
-              <EmojiNormal size={24} />
-            </Button>
-            <Button variant={"blue"} size={"medium"}>
-              بزن بریم
-              <EmojiNormal size={24} />
-            </Button>
-            <Button variant={"blue"} size={"large"}>
-              بزن بریم
-              <EmojiNormal size={24} />
-            </Button>
-          </div>
-          <div className={"flex gap-5"}>
-            <Button variant={"black"} size={"small"}>
-              بزن بریم
-              <EmojiNormal size={24} strokeLinecap={"round"} />
-            </Button>
-            <Button variant={"black"} size={"medium"}>
-              بزن بریم
-              <EmojiNormal size={24} />
-            </Button>
-            <Button variant={"black"} size={"large"}>
-              بزن بریم
-              <EmojiNormal size={24} />
-            </Button>
-          </div>
-          <div className={"flex gap-5"}>
-            <Button variant={"white"} size={"small"}>
-              بزن بریم
-              <EmojiNormal size={24} />
-            </Button>
-            <Button variant={"white"} size={"medium"}>
-              بزن بریم
-              <EmojiNormal size={24} />
-            </Button>
-            <Button variant={"white"} size={"large"}>
-              بزن بریم
-              <EmojiNormal size={24} />
-            </Button>
-          </div>
-        </div>
+        <div className={"flex justify-center items-center gap-4"}></div>
       </header>
     </>
   );
