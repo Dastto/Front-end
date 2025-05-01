@@ -6,7 +6,7 @@ interface NavItemPropsTypes {
   children?: React.ReactNode;
 }
 
-const NavItem = ({ children, to }: React.FC<NavItemPropsTypes>) => {
+const NavItem: React.FC<NavItemPropsTypes> = ({ children, to }) => {
   const location = useLocation();
   const [active, setActive] = useState<boolean>(false);
 
