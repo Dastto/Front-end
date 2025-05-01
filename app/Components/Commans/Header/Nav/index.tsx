@@ -8,7 +8,7 @@ const Nav = () => {
       {NAV_ITEMS.map((item) => (
         <NavItem key={item.to} to={item.to}>
           {item.icon}
-          <h3 className="text-[22px]">{item.label}</h3>
+          <h3 className="text-[20px]">{item.label}</h3>
         </NavItem>
       ))}
     </div>

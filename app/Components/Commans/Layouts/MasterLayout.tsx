@@ -1,11 +1,13 @@
-import {Outlet} from "react-router";
-import Header from "~/Components/Commans/Header/Header";
+import { Outlet } from "react-router";
+import Index from "~/Components/Commans/Header";
 
 const MasterLayout = () => {
-    return (<>
-        <Header />
-        <Outlet />
-    </>)
-}
+  return (
+    <>
+      <Index />
+      <Outlet />
+    </>
+  );
+};
 
-export default MasterLayout
+export default MasterLayout;
