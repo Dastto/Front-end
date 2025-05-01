@@ -32,7 +32,7 @@ const Button: React.FC<ButtonPropsTypes> = ({
           ${sizes[size]?.join(" ")}
           border-2 gap-1.5 flex items-center justify-center
           rounded-full hover:shadow-buttons transition-shadow
-          duration-300 cursor-pointer active:opacity-80 active:scale-[97%]
+          duration-300 cursor-pointer active:opacity-80
         `}
         onClick={onClick}
       >
