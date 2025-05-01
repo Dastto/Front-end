@@ -2,7 +2,8 @@ import Logo from "~/Components/Commans/Header/Logo";
 import Nav from "~/Components/Commans/Header/Nav";
 import Divider from "~/Components/Commans/UiParts/Divider";
 import Button from "~/Components/Commans/UiParts/Button";
-import { EmojiNormal } from "iconsax-reactjs";
+import { EmojiNormal, User } from "iconsax-reactjs";
+import { Link } from "react-router";
 
 const Index = () => {
   return (
@@ -13,7 +14,20 @@ const Index = () => {
           <Divider />
           <Nav />
         </div>
-        <div className={"flex justify-center items-center gap-4"}></div>
+        <div className={"flex justify-center items-center gap-4"}>
+          <Link to="/">
+            <Button variant={"white"} size={"large"}>
+              <User size={24} variant={"TwoTone"} />
+              <span>ورود</span>
+            </Button>
+          </Link>
+          <Link to={"/"}>
+            <Button variant={"black"} size={"large"}>
+              <EmojiNormal size={24} />
+              <span>لینک میخوام</span>
+            </Button>
+          </Link>
+        </div>
       </header>
     </>
   );
