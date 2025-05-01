@@ -20,7 +20,7 @@ const Button: React.FC<ButtonPropsTypes> = ({
   };
   const sizes = {
     small: ["p-2.5", "text-[12px]"],
-    medium: ["p-2.5", "text-[15px]"],
+    medium: ["p-2.5", "px-3", "text-[15px]"],
     large: ["p-2.5", "px-5", "text-[20px]"],
   };
 
