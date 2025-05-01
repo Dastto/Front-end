@@ -1,8 +1,19 @@
-import { useEffect, useRef } from "react";
+import React, { useEffect, useRef } from "react";
 import LoadingBar, { type LoadingBarRef } from "react-top-loading-bar";
 import { useLocation } from "react-router";
+import { Config } from "~/Services/Setting";
 
-const RouteChangeEvent = () => {
+const checkRouterEvent = (func: (data: any) => void) => {
+  if (Config.routerEvent) {
+    return (data: any) => {
+      return func(data);
+    };
+  } else {
+    return () => {};
+  }
+};
+
+const RouteChangeEvent = checkRouterEvent(() => {
   const ref = useRef<LoadingBarRef>(null);
   const location = useLocation();
 
@@ -19,6 +30,6 @@ const RouteChangeEvent = () => {
       <LoadingBar ref={ref} color={"#3E7BFF"} />
     </div>
   );
-};
+});
 
 export default RouteChangeEvent;

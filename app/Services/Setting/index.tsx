@@ -15,4 +15,8 @@ const NAV_ITEMS = [
   },
 ];
 
-export { ToastSetting, NAV_ITEMS };
+const Config = {
+  routerEvent: false,
+};
+
+export { ToastSetting, NAV_ITEMS, Config };
