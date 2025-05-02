@@ -1,4 +1,6 @@
 import AOS from "aos";
+import "aos/dist/aos.css";
+
 import { useEffect } from "react";
 
 const Left = () => {
@@ -11,17 +13,20 @@ const Left = () => {
       <div className={""}>
         <div className={"flex justify-between w-full"}>
           <img
+            data-aos="fade-down"
             src="/Images/widgets/big-dribbble.png"
             className={"h-[330px]"}
             alt=""
           />
           <div>
             <img
+              data-aos="fade-up"
               src="/Images/widgets/small-dribbble.svg"
               className={"h-[165px]"}
               alt=""
             />
             <img
+              data-aos="fade-up"
               src="/Images/widgets/music.png"
               className={"h-[165px] translate-y-8"}
               alt=""
