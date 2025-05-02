@@ -5,6 +5,7 @@ interface ButtonPropsTypes {
   size?: "small" | "medium" | "large";
   children?: React.ReactNode;
   onClick?: () => void;
+  className?: string;
 }
 
 const Button: React.FC<ButtonPropsTypes> = ({
@@ -12,6 +13,7 @@ const Button: React.FC<ButtonPropsTypes> = ({
   size = "medium",
   children,
   onClick,
+  className,
 }) => {
   const variants = {
     white: ["bg-white", "border-[#F3F3F8]", "text-black"],
@@ -21,7 +23,7 @@ const Button: React.FC<ButtonPropsTypes> = ({
   const sizes = {
     small: ["p-2.5", "text-[12px]"],
     medium: ["p-2.5", "px-3", "text-[15px]"],
-    large: ["p-2.5", "px-5", "text-[20px]"],
+    large: ["p-2.5", "px-5", "text-[18px]"],
   };
 
   return (
@@ -33,6 +35,7 @@ const Button: React.FC<ButtonPropsTypes> = ({
           border-2 gap-1.5 flex items-center justify-center
           rounded-full hover:shadow-buttons transition-shadow
           duration-300 cursor-pointer active:opacity-80
+          ${className}
         `}
         onClick={onClick}
       >
