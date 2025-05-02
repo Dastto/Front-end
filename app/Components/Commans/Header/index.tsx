@@ -16,13 +16,13 @@ const Index = () => {
       <div className={"flex justify-center items-center gap-4"}>
         <Link to="/">
           <Button variant={"white"} size={"medium"}>
-            <User size={24} variant={"TwoTone"} />
+            <User size={24} variant={"TwoTone"} className={"track-2"} />
             <span>ورود</span>
           </Button>
         </Link>
         <Link to={"/"}>
           <Button variant={"black"} size={"medium"}>
-            <EmojiNormal size={24} />
+            <EmojiNormal size={24} className={"track-2"} />
             <span>لینک میخوام</span>
           </Button>
         </Link>

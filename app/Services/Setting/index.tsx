@@ -5,12 +5,12 @@ const ToastSetting = {};
 const NAV_ITEMS = [
   {
     to: "/",
-    icon: <Home size="24" variant="TwoTone" />,
+    icon: <Home size="24" variant="TwoTone" className={"track-2"} />,
     label: "خانه",
   },
   {
     to: "/team",
-    icon: <Profile2User size="24" variant="TwoTone" />,
+    icon: <Profile2User size="24" variant="TwoTone" className={"track-2"} />,
     label: "تیممون",
   },
 ];
