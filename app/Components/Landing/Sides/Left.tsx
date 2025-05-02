@@ -1,4 +1,11 @@
+import AOS from "aos";
+import { useEffect } from "react";
+
 const Left = () => {
+  useEffect(() => {
+    AOS.init();
+  }, []);
+
   return (
     <>
       <div className={""}>
@@ -16,7 +23,7 @@ const Left = () => {
             />
             <img
               src="/Images/widgets/music.png"
-              className={"h-[165px] translate-y-5"}
+              className={"h-[165px] translate-y-8"}
               alt=""
               loading={"lazy"}
             />
