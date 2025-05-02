@@ -22,7 +22,7 @@ const Button: React.FC<ButtonPropsTypes> = ({
       "border-black",
       "text-white",
       "hover:shadow-buttons",
-      "hover:scale-[0.95]",
+      "hover:scale-[1.05]",
     ],
     blue: ["bg-dastto", "border-dastto", "text-white"],
   };

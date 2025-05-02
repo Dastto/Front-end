@@ -4,12 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="7e7d8412-18e5-477c-83ea-8db850dba07a" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Components/Commans/UiParts/Button.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/Components/Commans/UiParts/Button.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Components/Landing/Sides/Left.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/Components/Landing/Sides/Left.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Components/Landing/Sides/Right.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/Components/Landing/Sides/Right.tsx" afterDir="false" />
-    </list>
+    <list default="true" id="7e7d8412-18e5-477c-83ea-8db850dba07a" name="Changes" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -84,7 +79,7 @@
       <workItem from="1746035271639" duration="6765000" />
       <workItem from="1746046667013" duration="9371000" />
       <workItem from="1746085419156" duration="26079000" />
-      <workItem from="1746168562184" duration="5541000" />
+      <workItem from="1746168562184" duration="5841000" />
     </task>
     <servers />
   </component>
