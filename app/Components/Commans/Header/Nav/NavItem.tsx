@@ -1,7 +1,27 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
+import { Link, useLocation } from "react-router";
 
-const NavItem = ({ children }: React.FC<React.ReactElement>) => {
-  return <div>{children}</div>;
+interface NavItemPropsTypes {
+  to: string;
+  children?: React.ReactNode;
+}
+
+const NavItem: React.FC<NavItemPropsTypes> = ({ children, to }) => {
+  const location = useLocation();
+  const [active, setActive] = useState<boolean>(false);
+
+  useEffect(() => {
+    setActive(location.pathname === to);
+  }, [location]);
+
+  return (
+    <Link
+      to={to}
+      className={`cursor-pointer flex items-center justify-center gap-[10px] font-medium text-[#C5C5CF] ${active && "!text-black"}`}
+    >
+      {children}
+    </Link>
+  );
 };
 
 export default NavItem;

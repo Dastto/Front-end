@@ -6,48 +6,56 @@
     font-weight: 100;
     src: url('/Fonts/IRANYekanXNoEn-Light.ttf') format('truetype');
 }
+
 @font-face {
     font-family: 'IRANYekanX';
     font-display: swap;
     font-weight: 300;
     src: url('/Fonts/IRANYekanXNoEn-Regular.ttf') format('truetype');
 }
+
 @font-face {
     font-family: 'IRANYekanX';
     font-display: swap;
     font-weight: 400;
     src: url('/Fonts/IRANYekanXNoEn-Medium.ttf') format('truetype');
 }
+
 @font-face {
     font-family: 'IRANYekanX';
     font-display: swap;
     font-weight: 500;
     src: url('/Fonts/IRANYekanXNoEn-DemiBold.ttf') format('truetype');
 }
+
 @font-face {
     font-family: 'IRANYekanX';
     font-display: swap;
     font-weight: 600;
     src: url('/Fonts/IRANYekanXNoEn-Bold.ttf') format('truetype');
 }
+
 @font-face {
     font-family: 'IRANYekanX';
     font-display: swap;
     font-weight: 700;
     src: url('/Fonts/IRANYekanXNoEn-ExtraBold.ttf') format('truetype');
 }
+
 @font-face {
     font-family: 'IRANYekanX';
     font-display: swap;
     font-weight: 800;
     src: url('/Fonts/IRANYekanXNoEn-Heavy.ttf') format('truetype');
 }
+
 @font-face {
     font-family: 'IRANYekanX';
     font-display: swap;
     font-weight: 900;
     src: url('/Fonts/IRANYekanXNoEn-Black.ttf') format('truetype');
 }
+
 @font-face {
     font-family: 'IRANYekanX';
     font-display: swap;
@@ -59,8 +67,17 @@
     * {
         font-family: 'IRANYekanX', sans-serif;
     }
+
+    .react-grid-item.react-grid-placeholder {
+        @apply !bg-blue-300 rounded-[20px];
+    }
 }
 
 @utility dir-* {
     direction: --value('rtl', 'ltr');
+}
+
+@theme {
+    --color-dastto: #3E7BFF;
+    --shadow-buttons: 0px 22px 20px -10px rgba(0, 0, 0, 0.10);
 }

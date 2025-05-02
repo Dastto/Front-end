@@ -1,4 +1,3 @@
-import Image from "~/Components/Commans/UiParts/Image";
 import { Link } from "react-router";
 
 const Logo = () => {
@@ -6,7 +5,11 @@ const Logo = () => {
     <>
       <Link to={"/"} className={"flex justify-center items-center gap-2"}>
         <h2 className={"text-3xl font-medium"}>Dastto</h2>
-        <Image src={"/Images/dastto-logo-1.svg"} className={"w-12"} />
+        <img
+          src={"/Images/dastto-logo-1.svg"}
+          alt={"Dastto"}
+          className={"w-12"}
+        />
       </Link>
     </>
   );

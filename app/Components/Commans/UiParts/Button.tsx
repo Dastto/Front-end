@@ -1,0 +1,45 @@
+import React from "react";
+
+interface ButtonPropsTypes {
+  variant?: "white" | "black" | "blue";
+  size?: "small" | "medium" | "large";
+  children?: React.ReactNode;
+  onClick?: () => void;
+}
+
+const Button: React.FC<ButtonPropsTypes> = ({
+  variant = "white",
+  size = "medium",
+  children,
+  onClick,
+}) => {
+  const variants = {
+    white: ["bg-white", "border-[#F3F3F8]", "text-black"],
+    black: ["bg-black", "border-black", "text-white"],
+    blue: ["bg-dastto", "border-dastto", "text-white"],
+  };
+  const sizes = {
+    small: ["p-2.5", "text-[12px]"],
+    medium: ["p-2.5", "px-3", "text-[15px]"],
+    large: ["p-2.5", "px-5", "text-[20px]"],
+  };
+
+  return (
+    <>
+      <button
+        className={`
+          ${variants[variant]?.join(" ")}
+          ${sizes[size]?.join(" ")}
+          border-2 gap-1.5 flex items-center justify-center
+          rounded-full hover:shadow-buttons transition-shadow
+          duration-300 cursor-pointer active:opacity-80
+        `}
+        onClick={onClick}
+      >
+        {children}
+      </button>
+    </>
+  );
+};
+
+export default Button;
