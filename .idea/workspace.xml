@@ -9,7 +9,6 @@
       <change beforePath="$PROJECT_DIR$/app/Components/Commans/UiParts/Button.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/Components/Commans/UiParts/Button.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/Components/Landing/Sides/Left.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/Components/Landing/Sides/Left.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/Components/Landing/Sides/Right.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/Components/Landing/Sides/Right.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Components/Landing/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/Components/Landing/index.tsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -85,7 +84,7 @@
       <workItem from="1746035271639" duration="6765000" />
       <workItem from="1746046667013" duration="9371000" />
       <workItem from="1746085419156" duration="26079000" />
-      <workItem from="1746168562184" duration="4154000" />
+      <workItem from="1746168562184" duration="5541000" />
     </task>
     <servers />
   </component>

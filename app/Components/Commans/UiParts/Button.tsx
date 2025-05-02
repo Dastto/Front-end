@@ -17,7 +17,13 @@ const Button: React.FC<ButtonPropsTypes> = ({
 }) => {
   const variants = {
     white: ["bg-white", "border-[#F3F3F8]", "text-black"],
-    black: ["bg-black", "border-black", "text-white"],
+    black: [
+      "bg-black",
+      "border-black",
+      "text-white",
+      "hover:shadow-buttons",
+      "hover:scale-[0.95]",
+    ],
     blue: ["bg-dastto", "border-dastto", "text-white"],
   };
   const sizes = {
@@ -33,7 +39,7 @@ const Button: React.FC<ButtonPropsTypes> = ({
           ${variants[variant]?.join(" ")}
           ${sizes[size]?.join(" ")}
           border-2 gap-1.5 flex items-center justify-center
-          rounded-full hover:shadow-buttons transition-shadow
+          rounded-full transition-shadow transition-transform
           duration-300 cursor-pointer active:opacity-80
           ${className}
         `}

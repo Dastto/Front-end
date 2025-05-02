@@ -15,6 +15,7 @@ const Left = () => {
           <img
             data-aos="fade-down-left"
             data-aos-duration="1000"
+            data-aos-delay="1500"
             src="/Images/widgets/big-dribbble.png"
             className={"h-[330px]"}
             alt=""
@@ -23,6 +24,8 @@ const Left = () => {
             <img
               data-aos="fade-down-right"
               data-aos-duration="1000"
+              data-aos-delay="1500"
+              data-aos-anchor-placement="top-bottom"
               src="/Images/widgets/small-dribbble.svg"
               className={"h-[165px]"}
               alt=""
@@ -30,6 +33,8 @@ const Left = () => {
             <img
               data-aos="fade-up-left"
               data-aos-duration="1000"
+              data-aos-delay="1500"
+              data-aos-anchor-placement="top-bottom"
               src="/Images/widgets/music.png"
               className={"h-[165px] translate-y-8"}
               alt=""
@@ -42,6 +47,7 @@ const Left = () => {
             src="/Images/widgets/big-telegram.png"
             className={"h-[330px]"}
             data-aos-duration="1000"
+            data-aos-delay="1500"
             alt=""
             data-aos="fade-up-right"
             loading={"lazy"}
@@ -50,6 +56,8 @@ const Left = () => {
             <img
               data-aos="fade-down-left"
               data-aos-duration="1000"
+              data-aos-delay="1500"
+              data-aos-anchor-placement="top-bottom"
               src="/Images/widgets/image.png"
               className={"h-[165px] -translate-y-8"}
               alt=""
@@ -60,6 +68,8 @@ const Left = () => {
               src="/Images/widgets/small-telegram.svg"
               className={"h-[165px]"}
               data-aos-duration="1000"
+              data-aos-anchor-placement="top-bottom"
+              data-aos-delay="1500"
               alt=""
             />
           </div>
