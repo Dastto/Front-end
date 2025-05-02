@@ -19,6 +19,7 @@ const Left = () => {
             src="/Images/widgets/big-dribbble.png"
             className={"h-[330px]"}
             alt=""
+            loading={"lazy"}
           />
           <div>
             <img
@@ -29,6 +30,7 @@ const Left = () => {
               src="/Images/widgets/small-dribbble.svg"
               className={"h-[165px]"}
               alt=""
+              loading={"lazy"}
             />
             <img
               data-aos="fade-up-left"
@@ -71,6 +73,7 @@ const Left = () => {
               data-aos-anchor-placement="top-bottom"
               data-aos-delay="1500"
               alt=""
+              loading={"lazy"}
             />
           </div>
         </div>

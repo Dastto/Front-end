@@ -5,4 +5,9 @@ import tsconfigPaths from "vite-tsconfig-paths";
 
 export default defineConfig({
   plugins: [tailwindcss(), reactRouter(), tsconfigPaths()],
+  server: {
+    allowedHosts: ["dev.dastto.ir"],
+  },
 });
+
+// cloudflared tunnel run dastto-api

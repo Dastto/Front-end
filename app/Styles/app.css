@@ -71,6 +71,10 @@
     .react-grid-item.react-grid-placeholder {
         @apply !bg-blue-300 rounded-[20px];
     }
+
+    .track-2 path {
+        stroke-width: 2px;
+    }
 }
 
 @utility dir-* {
