@@ -5,10 +5,10 @@ const Landing = () => {
   return (
     <>
       <main className="flex justify-between w-full pt-5">
-        <div className="flex-1/2">
+        <div className="basis-[59%]">
           <Right />
         </div>
-        <div className="flex-1/2">
+        <div className="basis-[41%]">
           <Left />
         </div>
       </main>

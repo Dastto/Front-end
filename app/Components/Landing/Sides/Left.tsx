@@ -1,49 +1,48 @@
 const Left = () => {
-  const Images = [
-    {
-      src: "/Images/widgets/big-telegram.png",
-      alt: "",
-      className: "h-[330px]",
-    },
-    {
-      src: "/Images/widgets/big-dribbble.png",
-      alt: "",
-      className: "h-[330px]",
-    },
-    {
-      src: "/Images/widgets/music.png",
-      alt: "",
-      className: "h-[165px]",
-    },
-    {
-      src: "/Images/widgets/image.png",
-      alt: "",
-      className: "h-[165px]",
-    },
-    {
-      src: "/Images/widgets/small-dribbble.svg",
-      alt: "",
-      className: "h-[165px]",
-    },
-    {
-      src: "/Images/widgets/small-telegram.svg",
-      alt: "",
-      className: "h-[165px]",
-    },
-  ];
-
   return (
     <>
       <div className={""}>
-        {Images.map((image, index) => (
+        <div className={"flex justify-between w-full"}>
           <img
-            key={index}
-            src={image.src}
-            alt={image.alt}
-            className={`${image.className} cursor-pointer`}
+            src="/Images/widgets/big-dribbble.png"
+            className={"h-[330px]"}
+            alt=""
+          />
+          <div>
+            <img
+              src="/Images/widgets/small-dribbble.svg"
+              className={"h-[165px]"}
+              alt=""
+            />
+            <img
+              src="/Images/widgets/music.png"
+              className={"h-[165px] translate-y-5"}
+              alt=""
+              loading={"lazy"}
+            />
+          </div>
+        </div>
+        <div className={"flex justify-between w-full flex-row-reverse mt-14"}>
+          <img
+            src="/Images/widgets/big-telegram.png"
+            className={"h-[330px]"}
+            alt=""
             loading={"lazy"}
           />
-        ))}
+          <div>
+            <img
+              src="/Images/widgets/image.png"
+              className={"h-[165px] -translate-y-8"}
+              alt=""
+              loading={"lazy"}
+            />
+            <img
+              src="/Images/widgets/small-telegram.svg"
+              className={"h-[165px]"}
+              alt=""
+            />
+          </div>
+        </div>
       </div>
     </>
   );

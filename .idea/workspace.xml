@@ -6,16 +6,8 @@
   <component name="ChangeListManager">
     <list default="true" id="7e7d8412-18e5-477c-83ea-8db850dba07a" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Components/Commans/Header/Logo.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/Components/Commans/Header/Logo.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Components/Commans/UiParts/Image.tsx" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/app/Components/Landing/Sides/Left.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/Components/Landing/Sides/Left.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/Components/Landing/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/Components/Landing/index.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/Images/widgets/big-dribbble.png" beforeDir="false" afterPath="$PROJECT_DIR$/public/Images/widgets/big-dribbble.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/Images/widgets/big-telegram.png" beforeDir="false" afterPath="$PROJECT_DIR$/public/Images/widgets/big-telegram.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/Images/widgets/image.png" beforeDir="false" afterPath="$PROJECT_DIR$/public/Images/widgets/image.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/Images/widgets/music.png" beforeDir="false" afterPath="$PROJECT_DIR$/public/Images/widgets/music.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/Images/widgets/small-dribbble.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/Images/widgets/small-telegram.png" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -91,7 +83,7 @@
       <workItem from="1746035271639" duration="6765000" />
       <workItem from="1746046667013" duration="9371000" />
       <workItem from="1746085419156" duration="26079000" />
-      <workItem from="1746168562184" duration="1145000" />
+      <workItem from="1746168562184" duration="2077000" />
     </task>
     <servers />
   </component>
