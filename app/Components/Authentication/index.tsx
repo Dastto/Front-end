@@ -9,7 +9,14 @@ const Authentication = () => {
           "h-[calc(100dvh-96px)] w-full flex justify-center gap-32 pb-5"
         }
       >
-        <div className="basis-1/2 flex justify-center items-center"></div>
+        <div className="basis-1/2 flex items-center">
+          <div>
+            <img src="/Images/hand.svg" alt="dastto hand" loading={"lazy"} />
+            <h1 className={"text-4xl block mt-3 font-semibold"}>
+              اکانت میخوام
+            </h1>
+          </div>
+        </div>
         <div className="basis-1/2">
           <div className={"relative h-full rounded-4xl overflow-hidden"}>
             <img
