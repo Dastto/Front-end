@@ -19,7 +19,7 @@ const HandyAnimation: React.FC<{
   }, [isChanging]);
 
   return (
-    <div className="relative size-17">
+    <div className="relative size-16">
       <img src="/Images/lines.svg" alt="" />
       <img
         src="/Images/handy.svg"
