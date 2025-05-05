@@ -1,7 +1,10 @@
 import { Clipboard } from "iconsax-reactjs";
 import CornerButton from "~/Components/Commans/UiParts/CornerButton";
+import HandyAnimation from "~/Components/Commans/UiParts/HandyAnimation";
+import { useState } from "react";
 
 const Authentication = () => {
+  const [change, setChange] = useState<boolean>(true);
   return (
     <>
       <main
@@ -11,7 +14,8 @@ const Authentication = () => {
       >
         <div className="basis-1/2 flex items-center">
           <div>
-            <img src="/Images/hand.svg" alt="dastto hand" loading={"lazy"} />
+            <HandyAnimation isChanging={change} />
+            <button onClick={() => setChange(!change)}>change</button>
             <h1 className={"text-4xl block mt-3 font-semibold"}>
               اکانت میخوام
             </h1>
