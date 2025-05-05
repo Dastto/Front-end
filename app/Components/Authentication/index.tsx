@@ -21,8 +21,8 @@ const Authentication = () => {
           </div>
           <div>
             <Form>
-              <Label htmlFor={"ي "} required={true}>
-                سلام بر تو ای خوب
+              <Label htmlFor={"mobile"} required={true} size={"lg"}>
+                شماره موبایل
               </Label>
             </Form>
           </div>
