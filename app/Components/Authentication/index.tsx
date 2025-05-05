@@ -4,7 +4,6 @@ import HandyAnimation from "~/Components/Commans/UiParts/HandyAnimation";
 import { useState } from "react";
 
 const Authentication = () => {
-  const [change, setChange] = useState<boolean>(true);
   return (
     <>
       <main
@@ -14,8 +13,7 @@ const Authentication = () => {
       >
         <div className="basis-1/2 flex items-center">
           <div>
-            <HandyAnimation isChanging={change} />
-            <button onClick={() => setChange(!change)}>change</button>
+            <HandyAnimation isChanging={true} />
             <h1 className={"text-4xl block mt-3 font-semibold"}>
               اکانت میخوام
             </h1>
