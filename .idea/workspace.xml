@@ -33,28 +33,28 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;dev&quot;,
-    &quot;last_opened_file_path&quot;: &quot;C:/Users/TikRack/Desktop/Dastto/Front-end/app/Components/Landing/Sides&quot;,
-    &quot;list.type.of.created.stylesheet&quot;: &quot;CSS&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;prettierjs.PrettierConfiguration.Package&quot;: &quot;C:\\Users\\TikRack\\Desktop\\Dastto\\Front-end\\node_modules\\prettier&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;settings.javascript.prettier&quot;,
-    &quot;ts.external.directory.path&quot;: &quot;C:\\Users\\TikRack\\Desktop\\Dastto\\Front-end\\node_modules\\typescript\\lib&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "RunOnceActivity.git.unshallow": "true",
+    "git-widget-placeholder": "dev",
+    "last_opened_file_path": "C:/Users/TikRack/Desktop/Dastto/Front-end/public/Images",
+    "list.type.of.created.stylesheet": "CSS",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "prettierjs.PrettierConfiguration.Package": "C:\\Users\\TikRack\\Desktop\\Dastto\\Front-end\\node_modules\\prettier",
+    "settings.editor.selected.configurable": "settings.javascript.prettier",
+    "ts.external.directory.path": "C:\\Users\\TikRack\\Desktop\\Dastto\\Front-end\\node_modules\\typescript\\lib",
+    "vue.rearranger.settings.migration": "true"
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
-      <recent name="C:\Users\TikRack\Desktop\Dastto\Front-end\app\Components\Landing\Sides" />
       <recent name="C:\Users\TikRack\Desktop\Dastto\Front-end\public\Images" />
+      <recent name="C:\Users\TikRack\Desktop\Dastto\Front-end\app\Components\Landing\Sides" />
       <recent name="C:\Users\TikRack\Desktop\Dastto\Front-end\public\Fonts" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
@@ -84,7 +84,7 @@
       <workItem from="1746085419156" duration="26079000" />
       <workItem from="1746168562184" duration="13051000" />
       <workItem from="1746270879752" duration="8000" />
-      <workItem from="1746464851942" duration="935000" />
+      <workItem from="1746464851942" duration="3531000" />
     </task>
     <servers />
   </component>
