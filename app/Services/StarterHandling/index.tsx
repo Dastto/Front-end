@@ -1,11 +1,13 @@
 import { Outlet } from "react-router";
 import { Toaster } from "react-hot-toast";
-import RouteChangeEvent from "~/Events/RouteChangeEvent";
+import useLenis from "~/Hooks/useLenis";
 
 const StarterHandling = () => {
+  useLenis();
+
   return (
     <>
-      <RouteChangeEvent />
+      {/*<RouteChangeEvent />*/}
       <Outlet />
       <Toaster />
     </>

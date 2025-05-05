@@ -4,8 +4,6 @@ import { useEffect, useRef, useState } from "react";
 import useLenis from "~/Hooks/useLenis";
 
 const Landing = () => {
-  useLenis();
-
   const [overlay, setOverlay] = useState("backdrop-blur-sm");
 
   useEffect(() => {
