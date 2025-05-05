@@ -1,6 +1,8 @@
 import { Clipboard } from "iconsax-reactjs";
 import CornerButton from "~/Components/Commans/UiParts/CornerButton";
 import HandyAnimation from "~/Components/Commans/UiParts/HandyAnimation";
+import Form from "~/Components/Commans/Forms/Form";
+import Label from "~/Components/Commans/Forms/Label";
 
 const Authentication = () => {
   return (
@@ -10,14 +12,20 @@ const Authentication = () => {
           "h-[calc(100dvh-96px)] w-full flex justify-center gap-32 pb-5"
         }
       >
-        <div className="basis-1/2 flex items-center gap-4">
+        <div className="basis-1/2 flex justify-center gap-4 flex-col">
           <div>
             <HandyAnimation isChanging={true} />
             <h1 className={"text-4xl block mt-3 font-semibold"}>
               اکانت میخوام
             </h1>
           </div>
-          <div></div>
+          <div>
+            <Form>
+              <Label htmlFor={"ي "} required={true}>
+                سلام بر تو ای خوب
+              </Label>
+            </Form>
+          </div>
         </div>
         <div className="basis-1/2">
           <div className={"relative h-full rounded-4xl overflow-hidden"}>
