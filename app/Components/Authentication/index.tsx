@@ -4,6 +4,7 @@ import HandyAnimation from "~/Components/Commans/UiParts/HandyAnimation";
 import Form from "~/Components/Commans/Forms/Form";
 import Label from "~/Components/Commans/Forms/Label";
 import Input from "~/Components/Commans/Forms/Input";
+import SubmitButton from "~/Components/Commans/Forms/SubmitButton";
 
 const Authentication = () => {
   return (
@@ -21,13 +22,14 @@ const Authentication = () => {
             </h1>
           </div>
           <div>
-            <Form>
+            <Form className={"w-full max-w-[530px]"}>
               <Label htmlFor={"mobile"} required={true} size={"lg"}>
                 شماره موبایل
               </Label>
               <Input>
                 <Mobile className={"track-2 shrink-0"} variant={"TwoTone"} />
               </Input>
+              <SubmitButton />
             </Form>
           </div>
         </div>

@@ -7,7 +7,7 @@
     <list default="true" id="7e7d8412-18e5-477c-83ea-8db850dba07a" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/Components/Authentication/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/Components/Authentication/index.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Components/Commans/UiParts/Divider.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/Components/Commans/UiParts/Divider.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Components/Commans/Forms/Input.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/Components/Commans/Forms/Input.tsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -88,6 +88,7 @@
       <workItem from="1746270879752" duration="8000" />
       <workItem from="1746464851942" duration="13235000" />
       <workItem from="1746531045424" duration="396000" />
+      <workItem from="1746553475943" duration="2041000" />
     </task>
     <servers />
   </component>

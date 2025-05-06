@@ -24,7 +24,7 @@ const Input: React.FC<InputPropsTypes> = ({
         <input
           type={type}
           className={
-            "w-full h-full focus-visible:outline-none text-lg font-semibold"
+            "w-full h-full focus-visible:outline-none text-lg font-semibold placeholder-[#C5C5CF]"
           }
           placeholder={"شماره بده!"}
         />
