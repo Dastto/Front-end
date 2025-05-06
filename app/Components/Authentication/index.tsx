@@ -1,8 +1,9 @@
-import { Clipboard } from "iconsax-reactjs";
+import { Clipboard, Home, Mobile } from "iconsax-reactjs";
 import CornerButton from "~/Components/Commans/UiParts/CornerButton";
 import HandyAnimation from "~/Components/Commans/UiParts/HandyAnimation";
 import Form from "~/Components/Commans/Forms/Form";
 import Label from "~/Components/Commans/Forms/Label";
+import Input from "~/Components/Commans/Forms/Input";
 
 const Authentication = () => {
   return (
@@ -24,6 +25,9 @@ const Authentication = () => {
               <Label htmlFor={"mobile"} required={true} size={"lg"}>
                 شماره موبایل
               </Label>
+              <Input>
+                <Mobile className={"track-2 shrink-0"} variant={"TwoTone"} />
+              </Input>
             </Form>
           </div>
         </div>
