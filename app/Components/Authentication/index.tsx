@@ -6,8 +6,11 @@ import Label from "~/Components/Commans/Forms/Label";
 import Input from "~/Components/Commans/Forms/Input";
 import SubmitButton from "~/Components/Commans/Forms/SubmitButton";
 import { z } from "zod";
+import { useState } from "react";
 
 const Authentication = () => {
+  const [typing, setTyping] = useState(false);
+
   const handleSubmit = () => {};
 
   const loginValidation = {
@@ -30,7 +33,7 @@ const Authentication = () => {
       >
         <div className="basis-1/2 flex justify-center gap-4 flex-col">
           <div>
-            <HandyAnimation isChanging={true} />
+            <HandyAnimation isChanging={typing} />
             <h1 className={"text-4xl block mt-3 font-semibold"}>
               اکانت میخوام
             </h1>
@@ -44,7 +47,17 @@ const Authentication = () => {
               <Label htmlFor={"mobile"} required={true} size={"lg"}>
                 شماره موبایل
               </Label>
-              <Input autoFocus={true} name={"mobile"}>
+              <Input
+                autoFocus={true}
+                name={"mobile"}
+                type={"number"}
+                onFocus={() => {
+                  setTyping(true);
+                }}
+                onblur={() => {
+                  setTyping(false);
+                }}
+              >
                 <Mobile className={"track-2 shrink-0"} variant={"TwoTone"} />
               </Input>
               <SubmitButton />

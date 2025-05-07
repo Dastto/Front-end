@@ -68,6 +68,12 @@
         font-family: 'IRANYekanX', sans-serif;
     }
 
+    input[type="number"]::-webkit-inner-spin-button,
+    input[type="number"]::-webkit-outer-spin-button {
+        -webkit-appearance: none;
+        margin: 0;
+    }
+
     .react-grid-item.react-grid-placeholder {
         @apply !bg-blue-300 rounded-[20px];
     }

@@ -7,6 +7,9 @@ interface InputPropsTypes {
   children?: React.ReactNode;
   autoFocus?: boolean;
   name?: string;
+  onInput?: () => void;
+  onblur?: () => void;
+  onFocus?: () => void;
 }
 
 const Input: React.FC<InputPropsTypes> = ({
@@ -15,6 +18,9 @@ const Input: React.FC<InputPropsTypes> = ({
   children,
   autoFocus = false,
   name,
+  onInput,
+  onblur,
+  onFocus,
 }) => {
   return (
     <>
@@ -33,6 +39,9 @@ const Input: React.FC<InputPropsTypes> = ({
           type={type}
           autoFocus={autoFocus}
           name={name}
+          onInput={onInput}
+          onBlur={onblur}
+          onFocus={onFocus}
           className={
             "w-full h-full focus-visible:outline-none text-lg font-semibold placeholder-[#C5C5CF]"
           }
