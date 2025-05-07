@@ -6,6 +6,7 @@ interface InputPropsTypes {
   icon?: boolean;
   children?: React.ReactNode;
   autoFocus?: boolean;
+  name?: string;
 }
 
 const Input: React.FC<InputPropsTypes> = ({
@@ -13,6 +14,7 @@ const Input: React.FC<InputPropsTypes> = ({
   icon = true,
   children,
   autoFocus = false,
+  name,
 }) => {
   return (
     <>
@@ -30,6 +32,7 @@ const Input: React.FC<InputPropsTypes> = ({
         <input
           type={type}
           autoFocus={autoFocus}
+          name={name}
           className={
             "w-full h-full focus-visible:outline-none text-lg font-semibold placeholder-[#C5C5CF]"
           }

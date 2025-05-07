@@ -1,12 +1,26 @@
-import { Clipboard, Home, Mobile } from "iconsax-reactjs";
+import { Clipboard, Mobile } from "iconsax-reactjs";
 import CornerButton from "~/Components/Commans/UiParts/CornerButton";
 import HandyAnimation from "~/Components/Commans/UiParts/HandyAnimation";
 import Form from "~/Components/Commans/Forms/Form";
 import Label from "~/Components/Commans/Forms/Label";
 import Input from "~/Components/Commans/Forms/Input";
 import SubmitButton from "~/Components/Commans/Forms/SubmitButton";
+import { z } from "zod";
 
 const Authentication = () => {
+  const handleSubmit = () => {};
+
+  const loginValidation = {
+    mobile: z
+      .string()
+      .regex(/^09\d{9}$/, {
+        message: "شماره موبایلت معتبر نیست!",
+      })
+      .length(11, {
+        message: "باید 11 رقم باشه!",
+      }),
+  };
+
   return (
     <>
       <main
@@ -22,11 +36,15 @@ const Authentication = () => {
             </h1>
           </div>
           <div>
-            <Form className={"w-full max-w-[530px]"}>
+            <Form
+              className={"w-full max-w-[530px]"}
+              onSubmit={handleSubmit}
+              validate={loginValidation}
+            >
               <Label htmlFor={"mobile"} required={true} size={"lg"}>
                 شماره موبایل
               </Label>
-              <Input>
+              <Input autoFocus={true} name={"mobile"}>
                 <Mobile className={"track-2 shrink-0"} variant={"TwoTone"} />
               </Input>
               <SubmitButton />
