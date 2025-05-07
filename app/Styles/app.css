@@ -78,16 +78,21 @@
 
     .custom-hover {
         background-image: linear-gradient(1210deg, #000000, #000000, #5c5c5c, #000000, #000000);
-        background-size: 300px 100%;
-        background-position: 180%;
+        background-size: 350px 100%;
+        background-position: 225%;
         background-repeat: no-repeat;
-        transition: all 400ms;
+        transition: all 200ms, background-position 400ms ease-out, opacity 0ms ;
     }
 
     .custom-hover:hover {
         box-shadow: var(--shadow-buttons);
-        background-position: 50%;
-        transition: all 400ms;
+        background-position: -100%;
+        scale: 1.01;
+    }
+
+    .custom-hover:active {
+        opacity: 80%;
+        scale: 1;
     }
 }
 
