@@ -9,6 +9,8 @@
       <change beforePath="$PROJECT_DIR$/app/Components/Authentication/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/Components/Authentication/index.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/Components/Commans/Forms/Form.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/Components/Commans/Forms/Form.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/Components/Commans/Forms/Input.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/Components/Commans/Forms/Input.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Components/Commans/UiParts/Button.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/Components/Commans/UiParts/Button.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Styles/app.css" beforeDir="false" afterPath="$PROJECT_DIR$/app/Styles/app.css" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -96,6 +98,7 @@
       <workItem from="1746619302988" duration="9000" />
       <workItem from="1746689015708" duration="2114000" />
       <workItem from="1746697495983" duration="2000" />
+      <workItem from="1746697532153" duration="6645000" />
     </task>
     <servers />
   </component>

@@ -18,12 +18,14 @@ const Form: React.FC<FormProps> = ({
 }) => {
   const handleSubmit = (e: FormEvent<HTMLFormElement>) => {
     e.preventDefault();
+
     const formData = new FormData(e.currentTarget);
     const formValues = Object.fromEntries(formData.entries());
     const dataSchema = z.object(validate as ZodRawShape);
     const validateStatus = dataSchema.safeParse(formValues);
 
     if (validateStatus.success) {
+      setError([]);
       if (onSubmit) {
         onSubmit?.(e);
       }

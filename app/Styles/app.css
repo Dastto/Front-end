@@ -87,18 +87,18 @@
         background-size: 350px 100%;
         background-position: 225%;
         background-repeat: no-repeat;
-        transition: all 200ms, background-position 400ms ease-out, opacity 0ms ;
+        transition: all 400ms, background-position 400ms ease-out, opacity 0ms ;
     }
 
     .custom-hover:hover {
         box-shadow: var(--shadow-buttons);
         background-position: -100%;
-        scale: 1.01;
+        scale: 1.03;
     }
 
     .custom-hover:active {
         opacity: 80%;
-        scale: 1;
+        scale: 0.95;
     }
 }
 
