@@ -6,11 +6,6 @@
   <component name="ChangeListManager">
     <list default="true" id="7e7d8412-18e5-477c-83ea-8db850dba07a" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Components/Authentication/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/Components/Authentication/index.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Components/Commans/Forms/Form.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/Components/Commans/Forms/Form.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Components/Commans/Forms/Input.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/Components/Commans/Forms/Input.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Components/Commans/UiParts/Button.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/Components/Commans/UiParts/Button.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Styles/app.css" beforeDir="false" afterPath="$PROJECT_DIR$/app/Styles/app.css" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -21,9 +16,10 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="CSS File" />
-        <option value="TypeScript File" />
         <option value="tsconfig.json" />
         <option value="TypeScript JSX File" />
+        <option value="JavaScript File" />
+        <option value="TypeScript File" />
       </list>
     </option>
   </component>
@@ -98,7 +94,7 @@
       <workItem from="1746619302988" duration="9000" />
       <workItem from="1746689015708" duration="2114000" />
       <workItem from="1746697495983" duration="2000" />
-      <workItem from="1746697532153" duration="6645000" />
+      <workItem from="1746697532153" duration="9794000" />
     </task>
     <servers />
   </component>
