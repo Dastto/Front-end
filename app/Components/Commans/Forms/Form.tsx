@@ -1,13 +1,12 @@
 import React, { type FormEvent } from "react";
-import logo from "~/Components/Commans/Header/Logo";
 import { z, type ZodRawShape } from "zod";
-import toast from "react-hot-toast";
 
 interface FormProps {
   children: React.ReactNode;
   onSubmit?: (e: FormEvent<HTMLFormElement>) => void;
   className?: string;
   validate: object;
+  setError: React.Dispatch<React.SetStateAction<any>>;
 }
 
 const Form: React.FC<FormProps> = ({
@@ -15,6 +14,7 @@ const Form: React.FC<FormProps> = ({
   onSubmit,
   className = "w-full",
   validate,
+  setError,
 }) => {
   const handleSubmit = (e: FormEvent<HTMLFormElement>) => {
     e.preventDefault();
@@ -24,9 +24,16 @@ const Form: React.FC<FormProps> = ({
     const validateStatus = dataSchema.safeParse(formValues);
 
     if (validateStatus.success) {
-      toast.success("همه چی حله!");
+      if (onSubmit) {
+        onSubmit?.(e);
+      }
     } else {
-      toast.error("یه مشکلی هست!");
+      const newErrors = validateStatus.error.issues.map((item) => ({
+        name: item.path[0],
+        error: item.message,
+      }));
+
+      setError(newErrors);
     }
   };
 

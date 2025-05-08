@@ -7,6 +7,7 @@
     <list default="true" id="7e7d8412-18e5-477c-83ea-8db850dba07a" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/Components/Authentication/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/Components/Authentication/index.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Components/Commans/Forms/Form.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/Components/Commans/Forms/Form.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/Components/Commans/Forms/Input.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/Components/Commans/Forms/Input.tsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -91,7 +92,10 @@
       <workItem from="1746553475943" duration="5178000" />
       <workItem from="1746601946486" duration="616000" />
       <workItem from="1746604781761" duration="461000" />
-      <workItem from="1746610402149" duration="6384000" />
+      <workItem from="1746610402149" duration="7176000" />
+      <workItem from="1746619302988" duration="9000" />
+      <workItem from="1746689015708" duration="2114000" />
+      <workItem from="1746697495983" duration="2000" />
     </task>
     <servers />
   </component>

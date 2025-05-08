@@ -9,9 +9,8 @@ import { z } from "zod";
 import { useState } from "react";
 
 const Authentication = () => {
+  const [errors, setErrors] = useState([]);
   const [typing, setTyping] = useState(false);
-
-  const handleSubmit = () => {};
 
   const loginValidation = {
     mobile: z
@@ -23,6 +22,8 @@ const Authentication = () => {
         message: "باید 11 رقم باشه!",
       }),
   };
+
+  const handleSubmit = () => {};
 
   return (
     <>
@@ -40,9 +41,10 @@ const Authentication = () => {
           </div>
           <div>
             <Form
-              className={"w-full max-w-[530px]"}
+              className={"w-full max-w-[500px]"}
               onSubmit={handleSubmit}
               validate={loginValidation}
+              setError={setErrors}
             >
               <Label htmlFor={"mobile"} required={true} size={"lg"}>
                 شماره موبایل
@@ -57,6 +59,7 @@ const Authentication = () => {
                 onblur={() => {
                   setTyping(false);
                 }}
+                errors={errors}
               >
                 <Mobile className={"track-2 shrink-0"} variant={"TwoTone"} />
               </Input>

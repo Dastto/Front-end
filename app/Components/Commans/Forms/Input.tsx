@@ -10,6 +10,7 @@ interface InputPropsTypes {
   onInput?: () => void;
   onblur?: () => void;
   onFocus?: () => void;
+  errors: Array<any>;
 }
 
 const Input: React.FC<InputPropsTypes> = ({
@@ -21,6 +22,7 @@ const Input: React.FC<InputPropsTypes> = ({
   onInput,
   onblur,
   onFocus,
+  errors = [],
 }) => {
   return (
     <>
@@ -47,6 +49,9 @@ const Input: React.FC<InputPropsTypes> = ({
           }
           placeholder={"شماره بده!"}
         />
+        {errors.map((error) => {
+          return <>ok</>;
+        })}
       </div>
     </>
   );
