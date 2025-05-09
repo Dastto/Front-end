@@ -16,10 +16,10 @@ const Authentication = () => {
     mobile: z
       .string()
       .length(11, {
-        message: "باید 11 رقم باشه!",
+        message: "فک نکنم این شماره باشه!",
       })
       .regex(/^09\d{9}$/, {
-        message: "شماره موبایلت معتبر نیست!",
+        message: "فک نکنم معتبر باشه!",
       }),
   };
 

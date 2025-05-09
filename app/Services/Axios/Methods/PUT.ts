@@ -1,5 +1,5 @@
 import ExceptionHandlerService from "~/Services/Axios/ExceptionHandlerService";
-import Client from "./AxiosConfig";
+import Client from "../AxiosConfig";
 
 const PUT = async (url: string, params: object) => {
   try {

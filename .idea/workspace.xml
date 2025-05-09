@@ -6,9 +6,11 @@
   <component name="ChangeListManager">
     <list default="true" id="7e7d8412-18e5-477c-83ea-8db850dba07a" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Services/Axios/AxiosConfig.ts" beforeDir="false" afterPath="$PROJECT_DIR$/app/Services/Axios/AxiosConfig.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Services/Axios/ExceptionHandlerService.ts" beforeDir="false" afterPath="$PROJECT_DIR$/app/Services/Axios/ExceptionHandlerService.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Services/Axios/GET.ts" beforeDir="false" afterPath="$PROJECT_DIR$/app/Services/Axios/GET.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Components/Authentication/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/Components/Authentication/index.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Services/Axios/DELETE.ts" beforeDir="false" afterPath="$PROJECT_DIR$/app/Services/Axios/Methods/DELETE.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Services/Axios/GET.ts" beforeDir="false" afterPath="$PROJECT_DIR$/app/Services/Axios/Methods/GET.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Services/Axios/POST.ts" beforeDir="false" afterPath="$PROJECT_DIR$/app/Services/Axios/Methods/POST.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Services/Axios/PUT.ts" beforeDir="false" afterPath="$PROJECT_DIR$/app/Services/Axios/Methods/PUT.ts" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -63,6 +65,7 @@
       <recent name="C:\Users\TikRack\Desktop\Dastto\Front-end\public\Fonts" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\TikRack\Desktop\Dastto\Front-end\app\Services\Axios\Methods" />
       <recent name="C:\Users\TikRack\Desktop\Dastto\Front-end\app\Components\Commans\Header\Nav" />
       <recent name="C:\Users\TikRack\Desktop\Dastto\Front-end\app\Components\Commans" />
       <recent name="C:\Users\TikRack\Desktop\Dastto\Front-end\app\Services\ErrorHandling" />
@@ -100,7 +103,7 @@
       <workItem from="1746697495983" duration="2000" />
       <workItem from="1746697532153" duration="9794000" />
       <workItem from="1746728473551" duration="2232000" />
-      <workItem from="1746785115542" duration="2537000" />
+      <workItem from="1746785115542" duration="3296000" />
     </task>
     <servers />
   </component>
