@@ -7,10 +7,13 @@ import Input from "~/Components/Commans/Forms/Input";
 import SubmitButton from "~/Components/Commans/Forms/SubmitButton";
 import { z } from "zod";
 import { useState } from "react";
+import POST from "~/Services/Axios/Methods/POST";
 
 const Authentication = () => {
   const [errors, setErrors] = useState([]);
   const [typing, setTyping] = useState(false);
+  const [data, setData] = useState({});
+  const [level, setLevel] = useState(0);
 
   const loginValidation = {
     mobile: z
@@ -23,7 +26,14 @@ const Authentication = () => {
       }),
   };
 
-  const handleSubmit = () => {};
+  const handleSubmit = async (data: any) => {
+    const response = await POST("/auth", data);
+
+    if (response?.status === 200) {
+      setData(data);
+      setLevel(1);
+    }
+  };
 
   return (
     <>

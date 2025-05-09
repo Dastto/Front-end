@@ -27,7 +27,7 @@ const Form: React.FC<FormProps> = ({
     if (validateStatus.success) {
       setError([]);
       if (onSubmit) {
-        onSubmit?.(e);
+        onSubmit?.(formValues);
       }
     } else {
       const newErrors = validateStatus.error.issues.map((item) => ({

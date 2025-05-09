@@ -2,7 +2,7 @@ import ExceptionHandlerService from "~/Services/Axios/ExceptionHandlerService";
 import Client from "../AxiosConfig";
 import AxiosConfig from "../AxiosConfig";
 
-const POST = async (url: any, params: object, config: object) => {
+const POST = async (url: any, params: object, config?: object) => {
   try {
     const response = await Client.post(url, params, config);
 
