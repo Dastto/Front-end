@@ -8,32 +8,11 @@ import SubmitButton from "~/Components/Commans/Forms/SubmitButton";
 import { z } from "zod";
 import { useState } from "react";
 import POST from "~/Services/Axios/Methods/POST";
+import Auth from "~/Components/Authentication/Auth";
 
 const Authentication = () => {
-  const [errors, setErrors] = useState([]);
-  const [typing, setTyping] = useState(false);
   const [data, setData] = useState({});
   const [level, setLevel] = useState(0);
-
-  const loginValidation = {
-    mobile: z
-      .string()
-      .length(11, {
-        message: "فک نکنم این شماره باشه!",
-      })
-      .regex(/^09\d{9}$/, {
-        message: "فک نکنم معتبر باشه!",
-      }),
-  };
-
-  const handleSubmit = async (data: any) => {
-    const response = await POST("/auth", data);
-
-    if (response?.status === 200) {
-      setData(data);
-      setLevel(1);
-    }
-  };
 
   return (
     <>
@@ -42,41 +21,7 @@ const Authentication = () => {
           "h-[calc(100dvh-96px)] w-full flex justify-center gap-32 pb-5"
         }
       >
-        <div className="basis-1/2 flex justify-center gap-4 flex-col">
-          <div>
-            <HandyAnimation isChanging={typing} />
-            <h1 className={"text-4xl block mt-3 font-semibold"}>
-              اکانت میخوام
-            </h1>
-          </div>
-          <div>
-            <Form
-              className={"w-full max-w-[500px]"}
-              onSubmit={handleSubmit}
-              validate={loginValidation}
-              setError={setErrors}
-            >
-              <Label htmlFor={"mobile"} required={true} size={"lg"}>
-                شماره موبایل
-              </Label>
-              <Input
-                autoFocus={true}
-                name={"mobile"}
-                type={"number"}
-                onFocus={() => {
-                  setTyping(true);
-                }}
-                onblur={() => {
-                  setTyping(false);
-                }}
-                errors={errors}
-              >
-                <Mobile className={"track-2 shrink-0"} variant={"TwoTone"} />
-              </Input>
-              <SubmitButton />
-            </Form>
-          </div>
-        </div>
+        <Auth setData={setData} setLevel={setLevel} />
         <div className="basis-1/2">
           <div className={"relative h-full rounded-4xl overflow-hidden"}>
             <img
