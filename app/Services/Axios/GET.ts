@@ -17,7 +17,7 @@ const GET: (
       return response;
     }
   } catch (error) {
-    return ExceptionHandlerService(error);
+    return ExceptionHandlerService(error, false);
   }
 };
 

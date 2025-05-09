@@ -8,9 +8,9 @@ const instance = axios.create({
   },
 });
 
-instance.interceptors.response.use(null, (error) => {
-  return true;
-});
+// instance.interceptors.response.use(null, (error) => {
+//   return true;
+// });
 
 const Client = {
   get: instance.get,
