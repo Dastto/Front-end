@@ -9,9 +9,6 @@ const GET: (
   try {
     const response = await Client.get(url, {
       params,
-      headers: {
-        "Content-Type": "application/json",
-      },
     });
 
     if (responseType === "pagination") {

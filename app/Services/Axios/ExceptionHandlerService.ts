@@ -1,4 +1,4 @@
-const ExceptionHandlerService = (error: any) => {
+const ExceptionHandlerService = (error: any, isResponse: boolean) => {
   throw error;
 };
 
