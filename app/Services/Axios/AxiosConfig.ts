@@ -8,9 +8,11 @@ instance.interceptors.response.use(null, (error) => {
   return true;
 });
 
-export const client = {
+const Client = {
   get: instance.get,
   post: instance.post,
   put: instance.put,
   delete: instance.delete,
 };
+
+export default Client;
