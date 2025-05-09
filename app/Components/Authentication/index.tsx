@@ -9,6 +9,7 @@ import { z } from "zod";
 import { useState } from "react";
 import POST from "~/Services/Axios/Methods/POST";
 import Auth from "~/Components/Authentication/Auth";
+import Verify from "~/Components/Authentication/Verify";
 
 const Authentication = () => {
   const [data, setData] = useState({});
@@ -22,6 +23,7 @@ const Authentication = () => {
         }
       >
         <Auth setData={setData} setLevel={setLevel} />
+        <Verify setData={setData} setLevel={setLevel} />
         <div className="basis-1/2">
           <div className={"relative h-full rounded-4xl overflow-hidden"}>
             <img
