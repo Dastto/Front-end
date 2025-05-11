@@ -7,6 +7,7 @@ import { Mobile } from "iconsax-reactjs";
 import SubmitButton from "~/Components/Commans/Forms/SubmitButton";
 import { z } from "zod";
 import POST from "~/Services/Axios/Methods/POST";
+import OtpInput from "react-otp-input";
 
 interface AuthPropsTypes {
   setData: (value: any) => void;
@@ -16,6 +17,7 @@ interface AuthPropsTypes {
 const Auth: React.FC<AuthPropsTypes> = ({ setData, setLevel }) => {
   const [errors, setErrors] = useState([]);
   const [typing, setTyping] = useState(false);
+  const [otp, setOtp] = useState("");
 
   const loginValidation = {
     mobile: z
@@ -42,34 +44,29 @@ const Auth: React.FC<AuthPropsTypes> = ({ setData, setLevel }) => {
       <div className="basis-1/2 flex justify-center gap-4 flex-col">
         <div>
           <HandyAnimation isChanging={typing} />
-          <h1 className={"text-4xl block mt-3 font-semibold"}>اکانت میخوام</h1>
+          <h1 className={"text-4xl block mt-3 font-semibold"}>
+            دوست دارم ورود به اکانت!
+          </h1>
         </div>
-        <div>
-          <Form
-            className={"w-full max-w-[500px]"}
-            onSubmit={handleSubmit}
-            validate={loginValidation}
-            setError={setErrors}
-          >
-            <Label htmlFor={"mobile"} required={true} size={"lg"}>
-              شماره موبایل
-            </Label>
-            <Input
-              autoFocus={true}
-              name={"mobile"}
-              type={"number"}
-              onFocus={() => {
-                setTyping(true);
+        <div className={"w-full max-w-[500px]"}>
+          <div className={"dir-ltr flex justify-end"}>
+            <OtpInput
+              value={otp}
+              onChange={setOtp}
+              numInputs={5}
+              inputType={"number"}
+              inputStyle={{
+                width: "50px",
+                height: "40px",
+                border: "2px solid lightgray",
+                marginInline: "8px",
+                borderRadius: "10px",
               }}
-              onblur={() => {
-                setTyping(false);
-              }}
-              errors={errors}
-            >
-              <Mobile className={"track-2 shrink-0"} variant={"TwoTone"} />
-            </Input>
-            <SubmitButton />
-          </Form>
+              shouldAutoFocus={true}
+              renderInput={(props) => <input {...props} />}
+            />
+          </div>
+          <SubmitButton />
         </div>
       </div>
     </>

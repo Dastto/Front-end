@@ -13,7 +13,7 @@ import Verify from "~/Components/Authentication/Verify";
 
 const Authentication = () => {
   const [data, setData] = useState({});
-  const [level, setLevel] = useState(0);
+  const [level, setLevel] = useState(1);
 
   return (
     <>
@@ -22,8 +22,11 @@ const Authentication = () => {
           "h-[calc(100dvh-96px)] w-full flex justify-center gap-32 pb-5"
         }
       >
-        <Auth setData={setData} setLevel={setLevel} />
-        <Verify setData={setData} setLevel={setLevel} />
+        {level === 0 ? (
+          <Auth setData={setData} setLevel={setLevel} />
+        ) : (
+          <Verify setData={setData} setLevel={setLevel} />
+        )}
         <div className="basis-1/2">
           <div className={"relative h-full rounded-4xl overflow-hidden"}>
             <img
