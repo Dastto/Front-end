@@ -3,7 +3,13 @@ import HandyAnimation from "~/Components/Commans/UiParts/HandyAnimation";
 import Form from "~/Components/Commans/Forms/Form";
 import Label from "~/Components/Commans/Forms/Label";
 import Input from "~/Components/Commans/Forms/Input";
-import { Mobile } from "iconsax-reactjs";
+import {
+  Arrow,
+  ArrowCircleRight,
+  ArrowCircleRight2,
+  ArrowRight,
+  Mobile,
+} from "iconsax-reactjs";
 import SubmitButton from "~/Components/Commans/Forms/SubmitButton";
 import { z } from "zod";
 import POST from "~/Services/Axios/Methods/POST";
@@ -43,7 +49,9 @@ const Auth: React.FC<AuthPropsTypes> = ({ setData, setLevel }) => {
     <>
       <div className="basis-1/2 flex justify-center gap-4 flex-col">
         <div>
-          <HandyAnimation isChanging={typing} />
+          <button onClick={() => setLevel(0)} className={"cursor-pointer mb-4"}>
+            <ArrowRight className={"track-2"} size={45} />
+          </button>
           <h1 className={"text-4xl block mt-3 font-semibold"}>
             دوست دارم ورود به اکانت!
           </h1>
@@ -52,18 +60,37 @@ const Auth: React.FC<AuthPropsTypes> = ({ setData, setLevel }) => {
           <div className={"dir-ltr flex justify-end"}>
             <OtpInput
               value={otp}
+              containerStyle={{
+                marginBlock: "10px",
+                width: "100%",
+                justifyContent: "space-between",
+                paddingInline: "35px",
+              }}
               onChange={setOtp}
               numInputs={5}
+              renderSeparator={() => (
+                <div className={"w-1.5 h-1.5 rounded-full bg-gray-100"}></div>
+              )}
               inputType={"number"}
               inputStyle={{
-                width: "50px",
-                height: "40px",
-                border: "2px solid lightgray",
+                width: "54px",
+                height: "58px",
+                border: "3px solid",
                 marginInline: "8px",
-                borderRadius: "10px",
+                borderRadius: "20px",
+                fontSize: "18px",
+                fontWeight: "600",
               }}
               shouldAutoFocus={true}
-              renderInput={(props) => <input {...props} />}
+              renderInput={(props) => (
+                <input
+                  {...props}
+                  className={
+                    "focus-visible:outline-none !border-gray-200 valid:!border-green-500 transition-all duration-200"
+                  }
+                  required
+                />
+              )}
             />
           </div>
           <SubmitButton />
