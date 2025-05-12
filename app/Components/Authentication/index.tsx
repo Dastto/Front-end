@@ -1,13 +1,14 @@
 import { Clipboard } from "iconsax-reactjs";
 import CornerButton from "~/Components/Commans/UiParts/CornerButton";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import Auth from "~/Components/Authentication/Auth";
 import Verify from "~/Components/Authentication/Verify";
 import { AnimatePresence, motion } from "framer-motion";
+import GET from "~/Services/Axios/Methods/GET";
 
 const Authentication = () => {
   const [data, setData] = useState({ mobile: "" });
-  const [level, setLevel] = useState(1);
+  const [level, setLevel] = useState(0);
 
   return (
     <>

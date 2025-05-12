@@ -2,27 +2,50 @@ import React, { useState } from "react";
 import { ArrowRight } from "iconsax-reactjs";
 import SubmitButton from "~/Components/Commans/Forms/SubmitButton";
 import OtpInput from "react-otp-input";
+import POST from "~/Services/Axios/Methods/POST";
+import toast from "react-hot-toast";
+import { ToastSetting } from "~/Services/Setting";
+import { setAccessToken } from "~/Hooks/useToken";
+import { useNavigate } from "react-router";
 
 interface VerifyPropsTypes {
   setData: (value: any) => void;
   setLevel: (value: number) => void;
-  data: object;
+  data: { mobile: string };
 }
 
 const Verify: React.FC<VerifyPropsTypes> = ({ setData, setLevel, data }) => {
   const [error, setError] = useState<string>("");
   const [otp, setOtp] = useState("");
+  const navigate = useNavigate();
 
   const handleSubmit = async () => {
     if (otp.length < 5 || otp.length > 5) {
       setError("اگه میشه کامل وارد کن!");
+      return;
+    }
+
+    const response = await POST("/auth/verify", {
+      mobile: data.mobile,
+      otp: otp,
+    });
+
+    if (response?.status === 200 && response.data.success === true) {
+      setAccessToken(response.data.data.access_token);
+      navigate("/");
+    } else {
+      toast.error("مشکلی پیش اومده!", ToastSetting);
     }
   };
 
   return (
-    <>
+    <form onSubmit={(e) => e.preventDefault()}>
       <div>
-        <button onClick={() => setLevel(0)} className={"cursor-pointer mb-4"}>
+        <button
+          type={"button"}
+          onClick={() => setLevel(0)}
+          className={"cursor-pointer mb-4"}
+        >
           <ArrowRight className={"track-2"} size={45} />
         </button>
         <h1 className={"text-4xl block mt-3 font-semibold"}>
@@ -35,6 +58,7 @@ const Verify: React.FC<VerifyPropsTypes> = ({ setData, setLevel, data }) => {
             value={otp}
             containerStyle={{
               marginBlock: "10px",
+              marginTop: "20px",
               width: "100%",
               justifyContent: "space-between",
               paddingInline: "35px",
@@ -74,7 +98,7 @@ const Verify: React.FC<VerifyPropsTypes> = ({ setData, setLevel, data }) => {
         </span>
         <SubmitButton onClick={handleSubmit} />
       </div>
-    </>
+    </form>
   );
 };
 
