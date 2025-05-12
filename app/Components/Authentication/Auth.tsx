@@ -39,38 +39,36 @@ const Auth: React.FC<AuthPropsTypes> = ({ setData, setLevel }) => {
 
   return (
     <>
-      <div className="basis-1/2 flex justify-center gap-4 flex-col">
-        <div>
-          <HandyAnimation isChanging={typing} />
-          <h1 className={"text-4xl block mt-3 font-semibold"}>اکانت میخوام</h1>
-        </div>
-        <div>
-          <Form
-            className={"w-full max-w-[500px]"}
-            onSubmit={handleSubmit}
-            validate={loginValidation}
-            setError={setErrors}
+      <div>
+        <HandyAnimation isChanging={typing} />
+        <h1 className={"text-4xl block mt-3 font-semibold"}>اکانت میخوام</h1>
+      </div>
+      <div>
+        <Form
+          className={"w-full max-w-[500px]"}
+          onSubmit={handleSubmit}
+          validate={loginValidation}
+          setError={setErrors}
+        >
+          <Label htmlFor={"mobile"} required={true} size={"lg"}>
+            شماره موبایل
+          </Label>
+          <Input
+            autoFocus={true}
+            name={"mobile"}
+            type={"number"}
+            onFocus={() => {
+              setTyping(true);
+            }}
+            onblur={() => {
+              setTyping(false);
+            }}
+            errors={errors}
           >
-            <Label htmlFor={"mobile"} required={true} size={"lg"}>
-              شماره موبایل
-            </Label>
-            <Input
-              autoFocus={true}
-              name={"mobile"}
-              type={"number"}
-              onFocus={() => {
-                setTyping(true);
-              }}
-              onblur={() => {
-                setTyping(false);
-              }}
-              errors={errors}
-            >
-              <Mobile className={"track-2 shrink-0"} variant={"TwoTone"} />
-            </Input>
-            <SubmitButton />
-          </Form>
-        </div>
+            <Mobile className={"track-2 shrink-0"} variant={"TwoTone"} />
+          </Input>
+          <SubmitButton />
+        </Form>
       </div>
     </>
   );
