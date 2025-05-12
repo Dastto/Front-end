@@ -9,7 +9,7 @@
       <change beforePath="$PROJECT_DIR$/app/Components/Authentication/Auth.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/Components/Authentication/Auth.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/Components/Authentication/Verify.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/Components/Authentication/Verify.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/Components/Authentication/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/Components/Authentication/index.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Components/Commans/Forms/SubmitButton.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/Components/Commans/Forms/SubmitButton.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Components/Commans/Forms/Input.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/Components/Commans/Forms/Input.tsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -105,7 +105,7 @@
       <workItem from="1746728473551" duration="2232000" />
       <workItem from="1746785115542" duration="4838000" />
       <workItem from="1746964875232" duration="2203000" />
-      <workItem from="1746982178151" duration="3779000" />
+      <workItem from="1746982178151" duration="5928000" />
     </task>
     <servers />
   </component>

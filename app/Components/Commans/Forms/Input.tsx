@@ -11,6 +11,7 @@ interface InputPropsTypes {
   onblur?: () => void;
   onFocus?: () => void;
   errors: Array<any>;
+  defaultValue: string;
 }
 
 const Input: React.FC<InputPropsTypes> = ({
@@ -23,6 +24,7 @@ const Input: React.FC<InputPropsTypes> = ({
   onblur,
   onFocus,
   errors = [],
+  defaultValue,
 }) => {
   const [errs, setErrs] = useState<any>([]);
   const [animationClasses, setAnimationClasses] = useState<string>("");
@@ -88,6 +90,7 @@ const Input: React.FC<InputPropsTypes> = ({
           onFocus={onFocus}
           className={`w-full h-full focus-visible:outline-none text-lg font-semibold placeholder-[#C5C5CF] transition-all duration-300 ${handleError() !== null && "text-red-500"}`}
           placeholder={"شماره بده!"}
+          defaultValue={defaultValue}
         />
       </div>
       <span

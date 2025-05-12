@@ -11,9 +11,10 @@ import POST from "~/Services/Axios/Methods/POST";
 interface AuthPropsTypes {
   setData: (value: any) => void;
   setLevel: (value: number) => void;
+  data: { mobile: string };
 }
 
-const Auth: React.FC<AuthPropsTypes> = ({ setData, setLevel }) => {
+const Auth: React.FC<AuthPropsTypes> = ({ setData, setLevel, data }) => {
   const [errors, setErrors] = useState([]);
   const [typing, setTyping] = useState(false);
 
@@ -63,6 +64,7 @@ const Auth: React.FC<AuthPropsTypes> = ({ setData, setLevel }) => {
             onblur={() => {
               setTyping(false);
             }}
+            defaultValue={data?.mobile}
             errors={errors}
           >
             <Mobile className={"track-2 shrink-0"} variant={"TwoTone"} />

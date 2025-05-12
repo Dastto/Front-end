@@ -3,17 +3,21 @@ import { ArrowRight } from "iconsax-reactjs";
 import SubmitButton from "~/Components/Commans/Forms/SubmitButton";
 import OtpInput from "react-otp-input";
 
-interface AuthPropsTypes {
+interface VerifyPropsTypes {
   setData: (value: any) => void;
   setLevel: (value: number) => void;
   data: object;
 }
 
-const Auth: React.FC<AuthPropsTypes> = ({ setData, setLevel, data }) => {
-  const [error, setError] = useState([]);
+const Verify: React.FC<VerifyPropsTypes> = ({ setData, setLevel, data }) => {
+  const [error, setError] = useState<string>("");
   const [otp, setOtp] = useState("");
 
-  const handleSubmit = async () => {};
+  const handleSubmit = async () => {
+    if (otp.length < 5 || otp.length > 5) {
+      setError("اگه میشه کامل وارد کن!");
+    }
+  };
 
   return (
     <>
@@ -35,7 +39,10 @@ const Auth: React.FC<AuthPropsTypes> = ({ setData, setLevel, data }) => {
               justifyContent: "space-between",
               paddingInline: "35px",
             }}
-            onChange={setOtp}
+            onChange={(otp) => {
+              setError("");
+              setOtp(otp);
+            }}
             numInputs={5}
             renderSeparator={() => (
               <div className={"w-1.5 h-1.5 rounded-full bg-gray-100"}></div>
@@ -54,18 +61,21 @@ const Auth: React.FC<AuthPropsTypes> = ({ setData, setLevel, data }) => {
             renderInput={(props) => (
               <input
                 {...props}
-                className={
-                  "focus-visible:outline-none !border-gray-200 valid:!border-green-500 transition-all duration-200"
-                }
+                className={`focus-visible:outline-none !border-gray-200 valid:!border-green-500 transition-all duration-200 ${error !== "" && "!border-red-500"}`}
                 required
               />
             )}
           />
         </div>
+        <span
+          className={`mt-2 block font-semibold text-red-500 opacity-100 transition-all duration-300 -z-50 relative h-6 ${error === "" && "-translate-y-10 !h-0"}`}
+        >
+          {error}
+        </span>
         <SubmitButton onClick={handleSubmit} />
       </div>
     </>
   );
 };
 
-export default Auth;
+export default Verify;

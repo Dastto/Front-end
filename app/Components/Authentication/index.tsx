@@ -6,8 +6,8 @@ import Verify from "~/Components/Authentication/Verify";
 import { AnimatePresence, motion } from "framer-motion";
 
 const Authentication = () => {
-  const [data, setData] = useState({});
-  const [level, setLevel] = useState(0);
+  const [data, setData] = useState({ mobile: "" });
+  const [level, setLevel] = useState(1);
 
   return (
     <>
@@ -26,7 +26,7 @@ const Authentication = () => {
                 exit={{ opacity: 0, x: 10 }}
                 transition={{ duration: 0.3 }}
               >
-                <Auth setData={setData} setLevel={setLevel} />
+                <Auth setData={setData} setLevel={setLevel} data={data} />
               </motion.div>
             ) : (
               <motion.div
