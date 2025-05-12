@@ -14,6 +14,7 @@ import SubmitButton from "~/Components/Commans/Forms/SubmitButton";
 import { z } from "zod";
 import POST from "~/Services/Axios/Methods/POST";
 import OtpInput from "react-otp-input";
+import toast from "react-hot-toast";
 
 interface AuthPropsTypes {
   setData: (value: any) => void;
@@ -21,29 +22,10 @@ interface AuthPropsTypes {
 }
 
 const Auth: React.FC<AuthPropsTypes> = ({ setData, setLevel }) => {
-  const [errors, setErrors] = useState([]);
-  const [typing, setTyping] = useState(false);
+  const [error, setError] = useState([]);
   const [otp, setOtp] = useState("");
 
-  const loginValidation = {
-    mobile: z
-      .string()
-      .length(11, {
-        message: "فک نکنم این شماره باشه!",
-      })
-      .regex(/^09\d{9}$/, {
-        message: "فک نکنم معتبر باشه!",
-      }),
-  };
-
-  const handleSubmit = async (data: any) => {
-    const response = await POST("/auth", data);
-
-    if (response?.status === 200) {
-      setData(data);
-      setLevel(1);
-    }
-  };
+  const handleSubmit = async () => {};
 
   return (
     <>
@@ -93,7 +75,7 @@ const Auth: React.FC<AuthPropsTypes> = ({ setData, setLevel }) => {
               )}
             />
           </div>
-          <SubmitButton />
+          <SubmitButton onClick={handleSubmit} />
         </div>
       </div>
     </>
