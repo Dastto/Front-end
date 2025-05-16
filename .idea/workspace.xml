@@ -6,10 +6,9 @@
   <component name="ChangeListManager">
     <list default="true" id="7e7d8412-18e5-477c-83ea-8db850dba07a" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Components/Authentication/Verify.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/Components/Authentication/Verify.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Hooks/useAxios.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Hooks/useToken.ts" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/app/Services/Axios/AxiosConfig.ts" beforeDir="false" afterPath="$PROJECT_DIR$/app/Services/Axios/AxiosConfig.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Services/Axios/ExceptionHandlerService.ts" beforeDir="false" afterPath="$PROJECT_DIR$/app/Services/Axios/ExceptionHandlerService.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Services/Axios/Methods/POST.ts" beforeDir="false" afterPath="$PROJECT_DIR$/app/Services/Axios/Methods/POST.ts" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -38,24 +37,24 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "RunOnceActivity.git.unshallow": "true",
-    "git-widget-placeholder": "dev",
-    "last_opened_file_path": "C:/Users/TikRack/Desktop/Dastto/Front-end/app/Hooks",
-    "list.type.of.created.stylesheet": "CSS",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "prettierjs.PrettierConfiguration.Package": "C:\\Users\\TikRack\\Desktop\\Dastto\\Front-end\\node_modules\\prettier",
-    "settings.editor.selected.configurable": "settings.javascript.prettier",
-    "ts.external.directory.path": "C:\\Users\\TikRack\\Desktop\\Dastto\\Front-end\\node_modules\\typescript\\lib",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;dev&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/TikRack/Desktop/Dastto/Front-end/app/Hooks&quot;,
+    &quot;list.type.of.created.stylesheet&quot;: &quot;CSS&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;prettierjs.PrettierConfiguration.Package&quot;: &quot;C:\\Users\\TikRack\\Desktop\\Dastto\\Front-end\\node_modules\\prettier&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;settings.javascript.prettier&quot;,
+    &quot;ts.external.directory.path&quot;: &quot;C:\\Users\\TikRack\\Desktop\\Dastto\\Front-end\\node_modules\\typescript\\lib&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\Users\TikRack\Desktop\Dastto\Front-end\app\Hooks" />
@@ -107,6 +106,10 @@
       <workItem from="1746785115542" duration="4838000" />
       <workItem from="1746964875232" duration="2203000" />
       <workItem from="1746982178151" duration="14965000" />
+      <workItem from="1747074704924" duration="512000" />
+      <workItem from="1747147228916" duration="10000" />
+      <workItem from="1747157370455" duration="20000" />
+      <workItem from="1747386152199" duration="1297000" />
     </task>
     <servers />
   </component>
