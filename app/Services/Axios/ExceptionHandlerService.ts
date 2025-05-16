@@ -1,6 +1,7 @@
+import toast from "react-hot-toast";
+
 const ExceptionHandlerService = (error: any, showToast: boolean = true) => {
   if (error.response?.status === 401) {
-    window.location.href = "/auth";
     return Promise.reject(error);
   }
   console.log(error);

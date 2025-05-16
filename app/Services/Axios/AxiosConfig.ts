@@ -5,6 +5,7 @@ import {
   setAccessToken,
   setRefreshToken,
 } from "~/Services/Axios/TokenService";
+import toast from "react-hot-toast";
 
 const BaseUrl = "http://127.0.0.1:8000/api/v1";
 
@@ -31,8 +32,9 @@ instance.interceptors.response.use(
 
     const refreshToken = getRefreshToken();
     if (!refreshToken) {
-      window.location.href = "/auth";
-      return Promise.reject(error);
+      // window.location.href = "/auth";
+      // return Promise.reject(error);
+      return true;
     }
 
     originalRequest._retry = true;
@@ -48,12 +50,14 @@ instance.interceptors.response.use(
         originalRequest.headers.Authorization = `Bearer ${res.data.data.access_token}`;
         return instance(originalRequest);
       } else {
-        window.location.href = "/auth";
-        return Promise.reject(new Error("Invalid refresh token"));
+        // // window.location.href = "/auth";
+        // return Promise.reject(new Error("Invalid refresh token"));
+        return true;
       }
     } catch (refreshError) {
-      window.location.href = "/auth";
-      return Promise.reject(refreshError);
+      // window.location.href = "/auth";
+      // return Promise.reject(refreshError);
+      return true;
     }
   },
 );

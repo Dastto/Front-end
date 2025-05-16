@@ -14,7 +14,7 @@ const index = ({ loaderData }: Route.ComponentProps) => {
 
   return (
     <>
-      <Container>
+      <Container className={"!w-[calc(100%-140px)]"}>
         <Template />
       </Container>
     </>

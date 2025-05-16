@@ -4,9 +4,9 @@ import Widgets from "~/Components/Template/Widgets";
 const Template = () => {
   return (
     <>
-      <main className="h-screen flex justify-between">
-        <Widgets />
+      <main className="h-screen flex justify-between pt-[70px]">
         <Profile />
+        <Widgets />
       </main>
     </>
   );
