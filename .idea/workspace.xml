@@ -9,7 +9,7 @@
       <change beforePath="$PROJECT_DIR$/app/Components/Template/Profile.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/Components/Template/Profile.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/Components/Template/Widgets.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/Components/Template/Widgets.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/Components/Template/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/Components/Template/index.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Routes/username/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/Routes/username/index.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Components/Widget/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/Components/Widget/index.tsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -110,7 +110,7 @@
       <workItem from="1747074704924" duration="512000" />
       <workItem from="1747147228916" duration="10000" />
       <workItem from="1747157370455" duration="20000" />
-      <workItem from="1747386152199" duration="14422000" />
+      <workItem from="1747386152199" duration="19542000" />
     </task>
     <servers />
   </component>

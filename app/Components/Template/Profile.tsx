@@ -2,7 +2,9 @@ const Profile = () => {
   return (
     <>
       <div
-        className={"w-[35%] p-[70px] pl-0 fixed top-0 h-screen right-0 z-50"}
+        className={
+          "w-[35%] p-[70px] pl-0 xl:fixed xl:top-0 xl:h-screen xl:right-0 z-50"
+        }
       >
         <img
           src="/Images/me.jpg"
