@@ -1,15 +1,18 @@
 import { Outlet } from "react-router";
 import { Toaster } from "react-hot-toast";
 import useLenis from "~/Hooks/useLenis";
+import { AuthProvider } from "~/Context/AuthContext";
 
 const StarterHandling = () => {
   useLenis();
 
   return (
     <>
-      {/*<RouteChangeEvent />*/}
-      <Outlet />
-      <Toaster />
+      <AuthProvider>
+        {/*<RouteChangeEvent />*/}
+        <Outlet />
+        <Toaster />
+      </AuthProvider>
     </>
   );
 };

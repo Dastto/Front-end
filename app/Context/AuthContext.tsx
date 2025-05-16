@@ -12,7 +12,7 @@ interface User {
   mobile: string;
 }
 
-interface AuthContextType {
+export interface AuthContextType {
   login: () => boolean;
   user: User | null;
   pending: boolean;
@@ -26,7 +26,7 @@ interface AuthProviderProps {
 
 const AuthProvider: React.FC<AuthProviderProps> = ({ children }) => {
   const [user, setUser] = useState<User | null>(null);
-  const [pending, setPending] = useState(false);
+  const [pending, setPending] = useState(true);
 
   const login = () => {
     return user !== null;
@@ -36,7 +36,7 @@ const AuthProvider: React.FC<AuthProviderProps> = ({ children }) => {
     setPending(true);
     GET("/auth/user", {}, "normal").then((r) => {
       if (r.status === 200) {
-        setUser(r.data.user);
+        setUser(r.data.data.user);
         setPending(false);
       } else {
         setUser(null);
