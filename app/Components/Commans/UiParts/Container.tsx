@@ -7,7 +7,7 @@ interface ContainerPropsTypes {
 const Container: React.FC<ContainerPropsTypes> = ({ children }) => {
   return (
     <>
-      <div className={"w-[calc(100%-200px)] mx-auto"}>{children}</div>
+      <div className={"w-[calc(100%-180px)] mx-auto"}>{children}</div>
     </>
   );
 };
