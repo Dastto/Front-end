@@ -1,10 +1,10 @@
 import { Outlet } from "react-router";
-import Index from "~/Components/Commans/Header";
+import Header from "~/Components/Commans/Header";
 
 const MasterLayout = () => {
   return (
     <>
-      <Index />
+      <Header />
       <Outlet />
     </>
   );
