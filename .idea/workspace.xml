@@ -6,9 +6,8 @@
   <component name="ChangeListManager">
     <list default="true" id="7e7d8412-18e5-477c-83ea-8db850dba07a" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Services/Axios/AxiosConfig.ts" beforeDir="false" afterPath="$PROJECT_DIR$/app/Services/Axios/AxiosConfig.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Services/Axios/ExceptionHandlerService.ts" beforeDir="false" afterPath="$PROJECT_DIR$/app/Services/Axios/ExceptionHandlerService.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Services/Axios/Methods/POST.ts" beforeDir="false" afterPath="$PROJECT_DIR$/app/Services/Axios/Methods/POST.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Routes/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/Routes/index.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Services/Axios/Methods/GET.ts" beforeDir="false" afterPath="$PROJECT_DIR$/app/Services/Axios/Methods/GET.ts" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -109,7 +108,7 @@
       <workItem from="1747074704924" duration="512000" />
       <workItem from="1747147228916" duration="10000" />
       <workItem from="1747157370455" duration="20000" />
-      <workItem from="1747386152199" duration="1297000" />
+      <workItem from="1747386152199" duration="4971000" />
     </task>
     <servers />
   </component>
