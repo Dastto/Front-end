@@ -1,7 +1,9 @@
 const Profile = () => {
   return (
     <>
-      <div className={"basis-[35%]"}>
+      <div
+        className={"w-[35%] p-[70px] pl-0 fixed top-0 h-screen right-0 z-50"}
+      >
         <img
           src="/Images/me.jpg"
           alt="tikrack"
