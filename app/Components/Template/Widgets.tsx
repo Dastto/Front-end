@@ -10,7 +10,10 @@ const ResponsiveGridLayout = WidthProvider(Responsive);
 
 const Widgets = () => {
   const ref = useRef(null);
-  const largeLayout = [{ i: "dino", x: 0, y: 0, w: 1, h: 1 }];
+  const largeLayout = [
+    { i: "dino", x: 0, y: 0, w: 1, h: 1 },
+    { i: "music", x: 1, y: 0, w: 1, h: 1 },
+  ];
 
   const smallLayout = [
     { i: "a", x: 0, y: 0, w: 12, h: 2 },
@@ -22,9 +25,13 @@ const Widgets = () => {
   ];
 
   const handleStartDrag = (e: any) => {
-    if (e[0].i === "dino") {
-      toast.success("Dino has been dragged");
-    }
+    // e.map((item: any) => {
+    //   if (item.i === "dino") {
+    //     console.log(item);
+    //     toast.success("Dino has been dragged");
+    //   }
+    // });
+    console.log(e);
   };
 
   return (
@@ -37,12 +44,15 @@ const Widgets = () => {
           cols={{ lg: 4, sm: 12 }}
           rowHeight={169}
           isResizable={false}
-          margin={[48, 48]}
+          margin={[48, 40]}
           containerPadding={[0, 0]}
           onDragStart={handleStartDrag}
         >
-          <div key={"dino"} className={""}>
+          <div key={"dino"} className={""} onClick={() => console.log("ok")}>
             <Widget name={"dino"} />
+          </div>
+          <div key={"music"} className={""}>
+            <Widget name={"music"} />
           </div>
         </ResponsiveGridLayout>
       </div>
