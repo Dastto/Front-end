@@ -4,7 +4,7 @@ const DinoWidget = () => {
       className={"size-full flex justify-center items-center"}
       style={{
         borderRadius: "30px",
-        border: "3px solid rgba(0, 0, 0, 0.13)",
+        border: "2px solid rgba(0, 0, 0, 0.13)",
         background: "#E5E1D4",
         boxShadow:
           "0px -3px 4px 0px rgba(0, 0, 0, 0.25) inset, 0px 5px 4px 0px rgba(255, 255, 255, 0.50) inset",

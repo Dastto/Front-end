@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect, useRef } from "react";
 import { Responsive, WidthProvider } from "react-grid-layout";
 import "/node_modules/react-grid-layout/css/styles.css";
 import "/node_modules/react-resizable/css/styles.css";
@@ -9,6 +9,7 @@ import toast from "react-hot-toast";
 const ResponsiveGridLayout = WidthProvider(Responsive);
 
 const Widgets = () => {
+  const ref = useRef(null);
   const largeLayout = [{ i: "dino", x: 0, y: 0, w: 1, h: 1 }];
 
   const smallLayout = [
@@ -30,7 +31,7 @@ const Widgets = () => {
     <div className={"xl:w-[820px] float-end mt-[70px] ml-[70px]"}>
       <div className={"dir-ltr"}>
         <ResponsiveGridLayout
-          className="layout"
+          className="layout ssssss"
           layouts={{ lg: largeLayout, sm: smallLayout }}
           breakpoints={{ lg: 810, sm: 0 }}
           cols={{ lg: 4, sm: 12 }}
