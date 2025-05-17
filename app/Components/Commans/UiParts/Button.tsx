@@ -22,7 +22,8 @@ const Button: React.FC<ButtonPropsTypes> = ({
       "border-black",
       "text-white",
       "hover:shadow-buttons",
-      "hover:scale-[1.05]",
+      "hover:scale-[1.08]",
+      "active:scale-[0.95]",
     ],
     blue: ["bg-dastto", "border-dastto", "text-white"],
   };
@@ -39,7 +40,7 @@ const Button: React.FC<ButtonPropsTypes> = ({
           ${variants[variant]?.join(" ")}
           ${sizes[size]?.join(" ")}
           border-2 gap-1.5 flex items-center justify-center
-          rounded-full transition-shadow transition-transform
+          rounded-full transition-all
           duration-300 cursor-pointer active:opacity-80
           ${className}
         `}

@@ -6,8 +6,10 @@
   <component name="ChangeListManager">
     <list default="true" id="7e7d8412-18e5-477c-83ea-8db850dba07a" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Components/Landing/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/Components/Landing/index.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Hooks/useLenis.ts" beforeDir="false" afterPath="$PROJECT_DIR$/app/Hooks/useLenis.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Components/Template/Profile.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/Components/Template/Profile.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Components/Template/Widgets.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/Components/Template/Widgets.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Components/Template/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/Components/Template/index.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Components/Widget/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/Components/Widget/index.tsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -18,8 +20,10 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="CSS File" />
-        <option value="TypeScript JSX File" />
+        <option value="tsconfig.json" />
+        <option value="JavaScript File" />
         <option value="TypeScript File" />
+        <option value="TypeScript JSX File" />
       </list>
     </option>
   </component>
@@ -34,31 +38,35 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;dev&quot;,
-    &quot;last_opened_file_path&quot;: &quot;C:/Users/TikRack/Desktop/Dastto/Front-end/app/Components/Landing/Sides&quot;,
-    &quot;list.type.of.created.stylesheet&quot;: &quot;CSS&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;prettierjs.PrettierConfiguration.Package&quot;: &quot;C:\\Users\\TikRack\\Desktop\\Dastto\\Front-end\\node_modules\\prettier&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;settings.javascript.prettier&quot;,
-    &quot;ts.external.directory.path&quot;: &quot;C:\\Users\\TikRack\\Desktop\\Dastto\\Front-end\\node_modules\\typescript\\lib&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "RunOnceActivity.git.unshallow": "true",
+    "git-widget-placeholder": "dev",
+    "last_opened_file_path": "C:/Users/TikRack/Desktop/Dastto/Front-end/public/Images",
+    "list.type.of.created.stylesheet": "CSS",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "prettierjs.PrettierConfiguration.Package": "C:\\Users\\TikRack\\Desktop\\Dastto\\Front-end\\node_modules\\prettier",
+    "settings.editor.selected.configurable": "settings.javascript.prettier",
+    "ts.external.directory.path": "C:\\Users\\TikRack\\Desktop\\Dastto\\Front-end\\node_modules\\typescript\\lib",
+    "vue.rearranger.settings.migration": "true"
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
-      <recent name="C:\Users\TikRack\Desktop\Dastto\Front-end\app\Components\Landing\Sides" />
       <recent name="C:\Users\TikRack\Desktop\Dastto\Front-end\public\Images" />
-      <recent name="C:\Users\TikRack\Desktop\Dastto\Front-end\public\Fonts" />
+      <recent name="C:\Users\TikRack\Desktop\Dastto\Front-end\app\Routes\[username]" />
+      <recent name="C:\Users\TikRack\Desktop\Dastto\Front-end\app\Hooks" />
+      <recent name="C:\Users\TikRack\Desktop\Dastto\Front-end\app\Components\Authentication" />
+      <recent name="C:\Users\TikRack\Desktop\Dastto\Front-end\app\Services\Axios" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\TikRack\Desktop\Dastto\Front-end\app\Hooks" />
+      <recent name="C:\Users\TikRack\Desktop\Dastto\Front-end\app\Services\Axios\Methods" />
       <recent name="C:\Users\TikRack\Desktop\Dastto\Front-end\app\Components\Commans\Header\Nav" />
       <recent name="C:\Users\TikRack\Desktop\Dastto\Front-end\app\Components\Commans" />
       <recent name="C:\Users\TikRack\Desktop\Dastto\Front-end\app\Services\ErrorHandling" />
@@ -83,11 +91,41 @@
       <workItem from="1746035271639" duration="6765000" />
       <workItem from="1746046667013" duration="9371000" />
       <workItem from="1746085419156" duration="26079000" />
-      <workItem from="1746168562184" duration="11442000" />
+      <workItem from="1746168562184" duration="13051000" />
+      <workItem from="1746270879752" duration="8000" />
+      <workItem from="1746464851942" duration="13235000" />
+      <workItem from="1746531045424" duration="396000" />
+      <workItem from="1746553475943" duration="5178000" />
+      <workItem from="1746601946486" duration="616000" />
+      <workItem from="1746604781761" duration="461000" />
+      <workItem from="1746610402149" duration="7176000" />
+      <workItem from="1746619302988" duration="9000" />
+      <workItem from="1746689015708" duration="2114000" />
+      <workItem from="1746697495983" duration="2000" />
+      <workItem from="1746697532153" duration="9794000" />
+      <workItem from="1746728473551" duration="2232000" />
+      <workItem from="1746785115542" duration="4838000" />
+      <workItem from="1746964875232" duration="2203000" />
+      <workItem from="1746982178151" duration="14965000" />
+      <workItem from="1747074704924" duration="512000" />
+      <workItem from="1747147228916" duration="10000" />
+      <workItem from="1747157370455" duration="20000" />
+      <workItem from="1747386152199" duration="19542000" />
     </task>
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
   </component>
 </project>

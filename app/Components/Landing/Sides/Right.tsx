@@ -1,5 +1,6 @@
 import { EmojiNormal } from "iconsax-reactjs";
 import Button from "~/Components/Commans/UiParts/Button";
+import { Link } from "react-router";
 
 const Right = () => {
   return (
@@ -14,10 +15,12 @@ const Right = () => {
       <p className={"text-[#C5C5CF] text-[20px] mt-2"}>
         دستو یه لینک می‌سازه که حرف می‌زنه.
       </p>
-      <Button variant={"black"} size={"large"} className={"mt-6"}>
-        <EmojiNormal size={24} />
-        <span>لینک میخوام</span>
-      </Button>
+      <Link to={"/auth"}>
+        <Button variant={"black"} size={"large"} className={"mt-6"}>
+          <EmojiNormal size={24} />
+          <span>لینک میخوام</span>
+        </Button>
+      </Link>
     </div>
   );
 };

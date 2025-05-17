@@ -68,12 +68,37 @@
         font-family: 'IRANYekanX', sans-serif;
     }
 
+    input[type="number"]::-webkit-inner-spin-button,
+    input[type="number"]::-webkit-outer-spin-button {
+        -webkit-appearance: none;
+        margin: 0;
+    }
+
     .react-grid-item.react-grid-placeholder {
         @apply !bg-blue-300 rounded-[20px];
     }
 
     .track-2 path {
         stroke-width: 2px;
+    }
+
+    .custom-hover {
+        background-image: linear-gradient(1210deg, #000000, #000000, #5c5c5c, #000000, #000000);
+        background-size: 350px 100%;
+        background-position: 225%;
+        background-repeat: no-repeat;
+        transition: all 400ms, background-position 400ms ease-out, opacity 0ms ;
+    }
+
+    .custom-hover:hover {
+        box-shadow: var(--shadow-buttons);
+        background-position: -100%;
+        scale: 1.03;
+    }
+
+    .custom-hover:active {
+        opacity: 80%;
+        scale: 0.95;
     }
 }
 
