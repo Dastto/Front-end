@@ -31,7 +31,7 @@ const Widgets = () => {
     //     toast.success("Dino has been dragged");
     //   }
     // });
-    console.log(e);
+    // console.log(e);
   };
 
   return (

@@ -8,10 +8,10 @@ interface WidgetPropsTypes {
 
 const Widget: React.FC<WidgetPropsTypes> = ({ name }) => {
   return (
-    <>
+    <div onContextMenu={(e) => e.preventDefault()} className={"size-full"}>
       {name === "dino" && <DinoWidget />}
       {name === "music" && <MusicWidget />}
-    </>
+    </div>
   );
 };
 
