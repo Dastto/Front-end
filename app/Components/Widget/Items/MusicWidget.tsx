@@ -44,7 +44,7 @@ const MusicWidget = () => {
         <img
           src="/Images/gramafon.png"
           alt="gramafon"
-          className={`${isPlaying && "animate-spin"}`}
+          className={`${isPlaying && "animate-spin"} rounded-full overflow-hidden`}
         />
         <div
           className={
