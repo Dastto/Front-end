@@ -12,5 +12,6 @@ export default [
       route("auth", "./Routes/auth/index.tsx"),
     ]),
     route("/:username", "./Routes/username/index.tsx"),
+    route("/test", "./Routes/test.tsx"),
   ]),
 ] satisfies RouteConfig;
