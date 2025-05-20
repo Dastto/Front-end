@@ -1,7 +1,7 @@
 import type { Route } from "../+types";
 import Template from "~/Components/Template";
 import { useParams } from "react-router";
-import Container from "~/Components/Commans/UiParts/Container";
+import ActionBar from "~/Components/Template/ActionBar";
 
 export async function loader({ params }: Route.LoaderArgs) {
   console.log(params.username);
@@ -15,6 +15,7 @@ const index = ({ loaderData }: Route.ComponentProps) => {
   return (
     <>
       <Template />
+      <ActionBar />
     </>
   );
 };
