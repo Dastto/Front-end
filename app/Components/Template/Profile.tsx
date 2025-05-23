@@ -82,48 +82,54 @@ const Profile: React.FC<{ template: any }> = ({ template }) => {
               </button>
 
               {subMenuOpen && (
-                <motion.div
-                  initial={{
-                    opacity: 0,
-                    scale: 0,
-                    transformOrigin: "bottom right",
-                  }}
-                  animate={{ opacity: 1, scale: 1 }}
-                  exit={{ opacity: 0, scale: 0 }}
-                  className={
-                    "w-[210px] bg-white shadow-modal absolute bottom-12 rounded-[20px] right-0 p-2"
-                  }
-                >
-                  <div>
-                    <button
-                      className={
-                        "w-full rounded-xl transition-all duration-200 hover:bg-[rgb(248,248,248)] cursor-pointer text-[14px] flex flex-col items-start p-3"
-                      }
-                    >
-                      تغییر نام کاربری
-                      <span className={"text-neutral-400 text-sm mt-1"}>
-                        {profile?.username}/
-                      </span>
-                    </button>
-                  </div>
-                  <div className="px-2 py-3">
-                    <hr
-                      className={
-                        "h-[1px] w-full rounded-sm border-0 bg-[#EFEFEF]"
-                      }
-                    />
-                  </div>
-                  <div>
-                    <button
-                      onClick={handleLogout}
-                      className={
-                        "w-full rounded-xl transition-all duration-200 hover:bg-[rgb(248,248,248)] cursor-pointer text-[14px] flex items-center p-3 justify-start"
-                      }
-                    >
-                      خروج از حساب
-                    </button>
-                  </div>
-                </motion.div>
+                <>
+                  <div
+                    className={"w-screen z-[9] right-0 top-0 h-screen fixed "}
+                    onClick={() => setSubMenuOpen(false)}
+                  ></div>
+                  <motion.div
+                    initial={{
+                      opacity: 0,
+                      scale: 0,
+                      transformOrigin: "bottom right",
+                    }}
+                    animate={{ opacity: 1, scale: 1 }}
+                    exit={{ opacity: 0, scale: 0 }}
+                    className={
+                      "w-[210px] bg-white shadow-modal absolute bottom-12 rounded-[20px] z-[10] right-0 p-2"
+                    }
+                  >
+                    <div>
+                      <button
+                        className={
+                          "w-full rounded-xl transition-all duration-200 hover:bg-[rgb(248,248,248)] cursor-pointer text-[14px] flex flex-col items-start p-3"
+                        }
+                      >
+                        تغییر نام کاربری
+                        <span className={"text-neutral-400 text-sm mt-1"}>
+                          {profile?.username}/
+                        </span>
+                      </button>
+                    </div>
+                    <div className="px-2 py-3">
+                      <hr
+                        className={
+                          "h-[1px] w-full rounded-sm border-0 bg-[#EFEFEF]"
+                        }
+                      />
+                    </div>
+                    <div>
+                      <button
+                        onClick={handleLogout}
+                        className={
+                          "w-full rounded-xl transition-all duration-200 hover:bg-[rgb(248,248,248)] cursor-pointer text-[14px] flex items-center p-3 justify-start"
+                        }
+                      >
+                        خروج از حساب
+                      </button>
+                    </div>
+                  </motion.div>
+                </>
               )}
             </div>
           </motion.div>
