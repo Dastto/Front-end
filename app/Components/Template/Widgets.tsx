@@ -11,7 +11,9 @@ const ResponsiveGridLayout = WidthProvider(Responsive);
 const Widgets = () => {
   const ref = useRef(null);
   const largeLayout = [
-    { i: "dino", x: 0, y: 0, w: 1, h: 1 },
+    { i: "dino1", x: 0, y: 0, w: 1, h: 1 },
+    { i: "dino2", x: 0, y: 0, w: 1, h: 1 },
+    { i: "dino3", x: 0, y: 0, w: 1, h: 1 },
     { i: "music", x: 1, y: 0, w: 1, h: 1 },
   ];
 
@@ -48,7 +50,13 @@ const Widgets = () => {
           containerPadding={[0, 0]}
           onDragStart={handleStartDrag}
         >
-          <div key={"dino"} className={""} onClick={() => console.log("ok")}>
+          <div key={"dino1"} className={""} onClick={() => console.log("ok")}>
+            <Widget name={"dino"} />
+          </div>
+          <div key={"dino2"} className={""} onClick={() => console.log("ok")}>
+            <Widget name={"dino"} />
+          </div>
+          <div key={"dino3"} className={""} onClick={() => console.log("ok")}>
             <Widget name={"dino"} />
           </div>
           <div key={"music"} className={""}>

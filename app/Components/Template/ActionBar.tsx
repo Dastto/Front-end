@@ -1,10 +1,10 @@
 import ShareLinkButton from "~/Components/Template/ShareLinkButton";
 import Divider from "~/Components/Commans/UiParts/Divider";
 import Modal from "~/Components/Commans/UiParts/Modal";
-import { useState } from "react";
+import React, { useState } from "react";
 import logo from "~/Components/Commans/Header/Logo";
 
-const ActionBar = () => {
+const ActionBar: React.FC<{ template: any }> = ({ template }) => {
   const [shareModal, setShareModal] = useState(false);
   return (
     <>
