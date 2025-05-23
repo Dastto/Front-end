@@ -5,6 +5,9 @@ import React, {
   useState,
 } from "react";
 import GET from "~/Services/Axios/Methods/GET";
+import axios from "axios";
+import { setAccessToken } from "~/Services/Axios/TokenService";
+import { BaseUrl } from "~/Services/Axios/AxiosConfig";
 
 interface User {
   name: string;
@@ -34,15 +37,24 @@ const AuthProvider: React.FC<AuthProviderProps> = ({ children }) => {
 
   useEffect(() => {
     setPending(true);
-    GET("/auth/user", {}, "normal").then((r) => {
-      if (r.status === 200) {
-        setUser(r.data.data.user);
+    axios
+      .post(`${BaseUrl}/auth/refresh`, {}, { withCredentials: true })
+      .then((r) => {
+        if (r.status === 200 && r.data.success) {
+          setAccessToken(r.data.data.access_token);
+        }
+
+        GET("/auth/user", {}, "normal").then((r) => {
+          if (r.status === 200) {
+            setUser(r.data.data.user);
+          } else {
+            setUser(null);
+          }
+        });
+      })
+      .finally(() => {
         setPending(false);
-      } else {
-        setUser(null);
-        setPending(false);
-      }
-    });
+      });
   }, []);
 
   return (

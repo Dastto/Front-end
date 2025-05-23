@@ -1,13 +1,6 @@
 import axios from "axios";
-import {
-  getAccessToken,
-  getRefreshToken,
-  setAccessToken,
-  setRefreshToken,
-} from "~/Services/Axios/TokenService";
-import toast from "react-hot-toast";
-
-const BaseUrl = "http://127.0.0.1:8000/api/v1";
+import { getAccessToken, setAccessToken } from "~/Services/Axios/TokenService";
+export const BaseUrl = "http://127.0.0.1:8000/api/v1";
 
 const instance = axios.create({
   baseURL: BaseUrl,
@@ -31,23 +24,13 @@ instance.interceptors.response.use(
       return Promise.reject(error);
     }
 
-    const refreshToken = getRefreshToken();
-    if (!refreshToken) {
-      // window.location.href = "/auth";
-      // return Promise.reject(error);
-      return true;
-    }
-
     originalRequest._retry = true;
 
     try {
-      const res = await axios.post(`${BaseUrl}/auth/refresh`, {
-        refresh_token: refreshToken,
-      });
+      const res = await axios.post(`${BaseUrl}/auth/refresh`);
 
       if (res.status === 200 && res.data.success) {
         setAccessToken(res.data.data.access_token);
-        setRefreshToken(res.data.data.refresh_token);
         originalRequest.headers.Authorization = `Bearer ${res.data.data.access_token}`;
         return instance(originalRequest);
       } else {

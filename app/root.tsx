@@ -5,10 +5,10 @@ import React from "react";
 import Error from "~/Services/ErrorHandling";
 
 export const links: Route.LinksFunction = () => [
-    {
-        rel: "stylesheet",
-        href: "app/Styles/app.css"
-    }
+  {
+    rel: "stylesheet",
+    href: "app/Styles/app.css",
+  },
 ];
 
 export function Layout({ children }: { children: React.ReactNode }) {
@@ -17,6 +17,8 @@ export function Layout({ children }: { children: React.ReactNode }) {
       <head>
         <meta charSet="utf-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <meta name={"developer"} content={"Tikrack"} />
+        <meta name={"developer_email"} content={"tikrackcode@gmail.com"} />
         <Meta />
         <Links />
       </head>

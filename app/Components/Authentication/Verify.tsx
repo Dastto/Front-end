@@ -6,7 +6,7 @@ import POST from "~/Services/Axios/Methods/POST";
 import toast from "react-hot-toast";
 import { ToastSetting } from "~/Services/Setting";
 import { useNavigate } from "react-router";
-import { setAccessToken, setRefreshToken } from "~/Services/Axios/TokenService";
+import { setAccessToken } from "~/Services/Axios/TokenService";
 
 interface VerifyPropsTypes {
   setData: (value: any) => void;
@@ -31,8 +31,7 @@ const Verify: React.FC<VerifyPropsTypes> = ({ setData, setLevel, data }) => {
     });
 
     if (response?.status === 200 && response.data.success === true) {
-      // setAccessToken(response.data.data.access_token);
-      // setRefreshToken(response.data.data.refresh_token);
+      setAccessToken(response.data.data.access_token);
       navigate("/");
     } else {
       toast.error("مشکلی پیش اومده!", ToastSetting);
