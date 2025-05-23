@@ -5,8 +5,12 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="7e7d8412-18e5-477c-83ea-8db850dba07a" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/app/Components/Template/ShareLinkButton.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Components/Template/ActionBar.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/Components/Template/ActionBar.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Components/Template/ShareLink.tsx" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/app/Routes/username/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/Routes/username/index.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Services/Axios/AxiosConfig.ts" beforeDir="false" afterPath="$PROJECT_DIR$/app/Services/Axios/AxiosConfig.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/Styles/app.css" beforeDir="false" afterPath="$PROJECT_DIR$/app/Styles/app.css" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -41,7 +45,7 @@
     &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
     &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
     &quot;git-widget-placeholder&quot;: &quot;dev&quot;,
-    &quot;last_opened_file_path&quot;: &quot;C:/Users/TikRack/Desktop/Dastto/Front-end/public/Songs&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/TikRack/Desktop/HarmonyApp&quot;,
     &quot;list.type.of.created.stylesheet&quot;: &quot;CSS&quot;,
     &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
     &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
@@ -111,7 +115,10 @@
       <workItem from="1747386152199" duration="19542000" />
       <workItem from="1747511247922" duration="7482000" />
       <workItem from="1747571059283" duration="3570000" />
-      <workItem from="1747734007535" duration="8252000" />
+      <workItem from="1747734007535" duration="13110000" />
+      <workItem from="1747835639286" duration="46000" />
+      <workItem from="1747835688617" duration="4000" />
+      <workItem from="1747898659283" duration="2437000" />
     </task>
     <servers />
   </component>

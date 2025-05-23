@@ -5,7 +5,7 @@ import ActionBar from "~/Components/Template/ActionBar";
 
 export async function loader({ params }: Route.LoaderArgs) {
   console.log(params.username);
-  return await fetch("https://jsonplaceholder.typicode.com/todos/1");
+  return await fetch("https://jsonplaceholder.typicode.com/todos/10");
 }
 
 const index = ({ loaderData }: Route.ComponentProps) => {
