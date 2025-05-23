@@ -6,8 +6,8 @@ const Template: React.FC<{ template: any }> = ({ template }) => {
   return (
     <>
       <main className="h-screen flex flex-col items-center xl:block">
-        <Profile />
-        <Widgets />
+        <Profile template={template} />
+        <Widgets template={template} />
       </main>
     </>
   );

@@ -5,10 +5,11 @@ import "/node_modules/react-resizable/css/styles.css";
 import Widget from "~/Components/Widget";
 import logo from "~/Components/Commans/Header/Logo";
 import toast from "react-hot-toast";
+import { AnimatePresence, motion } from "framer-motion";
 
 const ResponsiveGridLayout = WidthProvider(Responsive);
 
-const Widgets = () => {
+const Widgets: React.FC<{ template: any }> = ({ template }) => {
   const ref = useRef(null);
   const largeLayout = [
     { i: "dino1", x: 0, y: 0, w: 1, h: 1 },
@@ -36,35 +37,63 @@ const Widgets = () => {
     // console.log(e);
   };
 
+  const fadeUp = {
+    initial: { opacity: 0 },
+    animate: { opacity: 1 },
+    transition: { duration: 0.5 },
+  };
+
   return (
-    <div className={"xl:w-[820px] float-end mt-[70px] ml-[70px]"}>
-      <div className={"dir-ltr"}>
-        <ResponsiveGridLayout
-          className="layout ssssss"
-          layouts={{ lg: largeLayout, sm: smallLayout }}
-          breakpoints={{ lg: 810, sm: 0 }}
-          cols={{ lg: 4, sm: 12 }}
-          rowHeight={169}
-          isResizable={false}
-          margin={[48, 40]}
-          containerPadding={[0, 0]}
-          onDragStart={handleStartDrag}
-        >
-          <div key={"dino1"} className={""} onClick={() => console.log("ok")}>
-            <Widget name={"dino"} />
-          </div>
-          <div key={"dino2"} className={""} onClick={() => console.log("ok")}>
-            <Widget name={"dino"} />
-          </div>
-          <div key={"dino3"} className={""} onClick={() => console.log("ok")}>
-            <Widget name={"dino"} />
-          </div>
-          <div key={"music"} className={""}>
-            <Widget name={"music"} />
-          </div>
-        </ResponsiveGridLayout>
-      </div>
-    </div>
+    <AnimatePresence>
+      <motion.div
+        initial={{ opacity: 0, y: 20 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.5 }}
+        className={"xl:w-[820px] float-end my-[70px] ml-[70px]"}
+      >
+        <div className={"dir-ltr"}>
+          <ResponsiveGridLayout
+            className="layout ssssss"
+            layouts={{ lg: largeLayout, sm: smallLayout }}
+            breakpoints={{ lg: 810, sm: 0 }}
+            cols={{ lg: 4, sm: 12 }}
+            rowHeight={169}
+            isResizable={false}
+            margin={[48, 40]}
+            containerPadding={[0, 0]}
+            onDragStart={handleStartDrag}
+          >
+            <motion.div
+              {...fadeUp}
+              key={"dino1"}
+              className={""}
+              onClick={() => console.log("ok")}
+            >
+              <Widget name={"dino"} />
+            </motion.div>
+            <motion.div
+              {...fadeUp}
+              key={"dino2"}
+              className={""}
+              onClick={() => console.log("ok")}
+            >
+              <Widget name={"dino"} />
+            </motion.div>
+            <motion.div
+              {...fadeUp}
+              key={"dino3"}
+              className={""}
+              onClick={() => console.log("ok")}
+            >
+              <Widget name={"dino"} />
+            </motion.div>
+            <motion.div {...fadeUp} key={"music"} className={""}>
+              <Widget name={"music"} />
+            </motion.div>
+          </ResponsiveGridLayout>
+        </div>
+      </motion.div>
+    </AnimatePresence>
   );
 };
 

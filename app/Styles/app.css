@@ -82,6 +82,10 @@
         stroke-width: 2px;
     }
 
+    .track-3 path {
+        stroke-width: 3px;
+    }
+
     .custom-hover {
         background-image: linear-gradient(1210deg, #000000, #000000, #5c5c5c, #000000, #000000);
         background-size: 350px 100%;

@@ -3,16 +3,10 @@ import Client from "../AxiosConfig";
 
 const POST = async (url: any, params: object, config?: object) => {
   try {
-    const res = await Client.post(url, params, {
+    return await Client.post(url, params, {
       ...config,
       withCredentials: true,
     });
-
-    if (res.status === 200) {
-      return res;
-    } else {
-      return ExceptionHandlerService(res, true);
-    }
   } catch (error) {
     return ExceptionHandlerService(error, false);
   }

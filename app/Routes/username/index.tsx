@@ -7,10 +7,24 @@ import { ToastSetting } from "~/Services/Setting";
 import { useEffect, useState } from "react";
 import { AnimatePresence, motion } from "framer-motion";
 import useAuth from "~/Hooks/useAuth";
+import type { Route } from "../+types";
+
+export function meta({}: Route.MetaArgs) {
+  return [{ title: "دستو 🔵 یهترین برای همیشه" }];
+}
 
 const index = () => {
+  const defaultData = {
+    user: {
+      mobile: "",
+    },
+    profile: {
+      name: "",
+    },
+  };
+
   const params = useParams();
-  const [template, setTemplate] = useState(null);
+  const [template, setTemplate] = useState(defaultData);
   const [loading, setLoading] = useState(false);
   const { login, user, pending } = useAuth();
   const [forMe, setForMe] = useState(false);
@@ -22,7 +36,7 @@ const index = () => {
     if (response.status === 200 && response.data.success === true) {
       setTemplate(response.data.data);
     } else if (response.status === 404) {
-      setTemplate(null);
+      setTemplate(defaultData);
     } else {
       toast.error("مشکلی پیش امده است!", ToastSetting);
     }
@@ -36,27 +50,27 @@ const index = () => {
   useEffect(() => {
     if (!pending) {
       setForMe(user?.mobile === template?.user?.mobile);
+      document.title = template?.profile?.name;
     }
   }, [template, pending]);
 
   return (
     <>
       {/*{loading && <h1>loading</h1>}*/}
-      <div className={"h-screen"}>
-        <AnimatePresence>
-          <Template template={template} />
-          {forMe && (
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              key="box"
-              className={"fixed w-screen"}
-            >
-              <ActionBar template={template} />
-            </motion.div>
-          )}
-        </AnimatePresence>
-      </div>
+      <AnimatePresence>
+        <Template template={template} />
+        {forMe && (
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.5 }}
+            key="box"
+            className={"fixed w-screen"}
+          >
+            <ActionBar template={template} />
+          </motion.div>
+        )}
+      </AnimatePresence>
     </>
   );
 };
