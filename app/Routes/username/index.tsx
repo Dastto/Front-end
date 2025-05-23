@@ -4,7 +4,6 @@ import { useParams } from "react-router";
 import ActionBar from "~/Components/Template/ActionBar";
 
 export async function loader({ params }: Route.LoaderArgs) {
-  console.log(params.username);
   return await fetch("https://jsonplaceholder.typicode.com/todos/10");
 }
 

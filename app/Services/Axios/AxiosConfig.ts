@@ -7,6 +7,29 @@ const instance = axios.create({
   baseURL: BaseUrl,
 });
 
+let refreshingTokenPromise: Promise<string> | null = null;
+
+async function refreshAccessToken(): Promise<string> {
+  if (!refreshingTokenPromise) {
+    refreshingTokenPromise = axios
+      .post(`${BaseUrl}/auth/refresh`, {}, { withCredentials: true })
+      .then((res) => {
+        if (res.status === 200 && res.data.success) {
+          const newToken = res.data.data.access_token;
+          setAccessToken(newToken);
+          return newToken;
+        } else {
+          throw new Error("Refresh failed");
+        }
+      })
+      .finally(() => {
+        refreshingTokenPromise = null;
+      });
+  }
+
+  return refreshingTokenPromise;
+}
+
 instance.interceptors.request.use((config) => {
   const token = getAccessToken();
   if (token) {
@@ -27,21 +50,12 @@ instance.interceptors.response.use(
     originalRequest._retry = true;
 
     try {
-      const res = await axios.post(
-        `${BaseUrl}/auth/refresh`,
-        {},
-        { withCredentials: true },
-      );
+      const newToken = await refreshAccessToken();
 
-      if (res.status === 200 && res.data.success) {
-        setAccessToken(res.data.data.access_token);
-        originalRequest.headers.Authorization = `Bearer ${res.data.data.access_token}`;
-        return instance(originalRequest);
-      } else {
-        return true;
-      }
+      originalRequest.headers.Authorization = `Bearer ${newToken}`;
+      return instance(originalRequest);
     } catch (refreshError) {
-      return true;
+      return Promise.reject(refreshError);
     }
   },
 );
