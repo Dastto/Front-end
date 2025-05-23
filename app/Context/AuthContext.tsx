@@ -37,24 +37,15 @@ const AuthProvider: React.FC<AuthProviderProps> = ({ children }) => {
 
   useEffect(() => {
     setPending(true);
-    axios
-      .post(`${BaseUrl}/auth/refresh`, {}, { withCredentials: true })
-      .then((r) => {
-        if (r.status === 200 && r.data.success) {
-          setAccessToken(r.data.data.access_token);
-        }
-
-        GET("/auth/user", {}, "normal").then((r) => {
-          if (r.status === 200) {
-            setUser(r.data.data.user);
-          } else {
-            setUser(null);
-          }
-        });
-      })
-      .finally(() => {
+    GET("/auth/user", {}, "normal").then((r) => {
+      if (r.status === 200) {
+        setUser(r.data.data.user);
         setPending(false);
-      });
+      } else {
+        setUser(null);
+        setPending(false);
+      }
+    });
   }, []);
 
   return (
