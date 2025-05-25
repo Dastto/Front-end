@@ -6,6 +6,7 @@ interface ButtonPropsTypes {
   children?: React.ReactNode;
   onClick?: () => void;
   className?: string;
+  disabled?: boolean;
 }
 
 const Button: React.FC<ButtonPropsTypes> = ({
@@ -14,6 +15,7 @@ const Button: React.FC<ButtonPropsTypes> = ({
   children,
   onClick,
   className,
+  disabled,
 }) => {
   const variants = {
     white: ["bg-white", "border-[#F3F3F8]", "text-black"],
@@ -42,8 +44,10 @@ const Button: React.FC<ButtonPropsTypes> = ({
           border-2 gap-1.5 flex items-center justify-center
           rounded-full transition-all
           duration-300 cursor-pointer active:opacity-80
+          disabled:opacity-20
           ${className}
         `}
+        disabled={disabled}
         onClick={onClick}
       >
         {children}

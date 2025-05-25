@@ -3,6 +3,10 @@ import { Setting4 } from "iconsax-reactjs";
 import { AnimatePresence, motion } from "framer-motion";
 import POST from "~/Services/Axios/Methods/POST";
 import useAuth from "~/Hooks/useAuth";
+import Input from "~/Components/Commans/Forms/Input";
+import ChangeUsernameInput from "~/Components/Template/ChangeUsername/ChangeUsernameInput";
+import Button from "~/Components/Commans/UiParts/Button";
+import ChangeUsername from "~/Components/Template/ChangeUsername";
 
 const Profile: React.FC<{ template: any }> = ({ template }) => {
   const [profile, setProfile] = useState({
@@ -13,6 +17,7 @@ const Profile: React.FC<{ template: any }> = ({ template }) => {
     views: "",
   });
   const [subMenuOpen, setSubMenuOpen] = useState(false);
+  const [changeUsernameOpen, setChangeUsernameOpen] = useState(false);
   const [forMe, setForMe] = useState(false);
   const { login, user, pending } = useAuth();
 
@@ -85,7 +90,10 @@ const Profile: React.FC<{ template: any }> = ({ template }) => {
                 <>
                   <div
                     className={"w-screen z-[9] right-0 top-0 h-screen fixed "}
-                    onClick={() => setSubMenuOpen(false)}
+                    onClick={() => {
+                      setSubMenuOpen(false);
+                      setChangeUsernameOpen(false);
+                    }}
                   ></div>
                   <motion.div
                     initial={{
@@ -101,6 +109,7 @@ const Profile: React.FC<{ template: any }> = ({ template }) => {
                   >
                     <div>
                       <button
+                        onClick={() => setChangeUsernameOpen((prev) => !prev)}
                         className={
                           "w-full rounded-xl transition-all duration-200 hover:bg-[rgb(248,248,248)] cursor-pointer text-[14px] flex flex-col items-start p-3"
                         }
@@ -111,6 +120,25 @@ const Profile: React.FC<{ template: any }> = ({ template }) => {
                         </span>
                       </button>
                     </div>
+                    {changeUsernameOpen && (
+                      <>
+                        <motion.div
+                          initial={{
+                            opacity: 0,
+                            rotate: "-20deg",
+                            x: 30,
+                            transformOrigin: "bottom right",
+                          }}
+                          animate={{ opacity: 1, rotate: 0, x: 0 }}
+                          exit={{ opacity: 0, rotate: "-20deg", x: 20 }}
+                          className={
+                            "w-[300px] bg-white shadow-modal absolute top-[40px] -translate-y-1/2 rounded-[20px] z-[12] -left-[290px] p-5"
+                          }
+                        >
+                          <ChangeUsername profile={profile} />
+                        </motion.div>
+                      </>
+                    )}
                     <div className="px-2 py-3">
                       <hr
                         className={
