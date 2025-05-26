@@ -65,7 +65,7 @@ const index = () => {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5 }}
             key="box"
-            className={"fixed w-screen"}
+            className={"fixed w-screen z-[100]"}
           >
             <ActionBar template={template} />
           </motion.div>

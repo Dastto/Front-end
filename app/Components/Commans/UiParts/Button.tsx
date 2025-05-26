@@ -7,6 +7,7 @@ interface ButtonPropsTypes {
   onClick?: () => void;
   className?: string;
   disabled?: boolean;
+  loading?: boolean;
 }
 
 const Button: React.FC<ButtonPropsTypes> = ({
@@ -16,6 +17,7 @@ const Button: React.FC<ButtonPropsTypes> = ({
   onClick,
   className,
   disabled,
+  loading,
 }) => {
   const variants = {
     white: ["bg-white", "border-[#F3F3F8]", "text-black"],
@@ -31,7 +33,7 @@ const Button: React.FC<ButtonPropsTypes> = ({
   };
   const sizes = {
     small: ["p-2.5", "text-[12px]"],
-    medium: ["p-2.5", "px-3", "text-[15px]"],
+    medium: ["p-2.5", "px-3", "text-[15px]", "h-[46px]"],
     large: ["p-2.5", "px-5", "text-[18px]"],
   };
 
@@ -50,7 +52,136 @@ const Button: React.FC<ButtonPropsTypes> = ({
         disabled={disabled}
         onClick={onClick}
       >
-        {children}
+        {loading ? (
+          <svg
+            viewBox="0 0 100 100"
+            preserveAspectRatio="xMidYMid"
+            className={"size-6"}
+          >
+            <g transform="rotate(0 50 50)">
+              <rect
+                x="44"
+                y="0.5"
+                rx="6"
+                ry="6.29"
+                width="12"
+                height="37"
+                fill="currentColor"
+              >
+                <animate
+                  attributeName="opacity"
+                  values="1;0"
+                  keyTimes="0;1"
+                  dur="0.625s"
+                  begin="-0.5208333333333333s"
+                  repeatCount="indefinite"
+                ></animate>
+              </rect>
+            </g>
+            <g transform="rotate(60 50 50)">
+              <rect
+                x="44"
+                y="0.5"
+                rx="6"
+                ry="6.29"
+                width="12"
+                height="37"
+                fill="currentColor"
+              >
+                <animate
+                  attributeName="opacity"
+                  values="1;0"
+                  keyTimes="0;1"
+                  dur="0.625s"
+                  begin="-0.41666666666666663s"
+                  repeatCount="indefinite"
+                ></animate>
+              </rect>
+            </g>
+            <g transform="rotate(120 50 50)">
+              <rect
+                x="44"
+                y="0.5"
+                rx="6"
+                ry="6.29"
+                width="12"
+                height="37"
+                fill="currentColor"
+              >
+                <animate
+                  attributeName="opacity"
+                  values="1;0"
+                  keyTimes="0;1"
+                  dur="0.625s"
+                  begin="-0.31249999999999994s"
+                  repeatCount="indefinite"
+                ></animate>
+              </rect>
+            </g>
+            <g transform="rotate(180 50 50)">
+              <rect
+                x="44"
+                y="0.5"
+                rx="6"
+                ry="6.29"
+                width="12"
+                height="37"
+                fill="currentColor"
+              >
+                <animate
+                  attributeName="opacity"
+                  values="1;0"
+                  keyTimes="0;1"
+                  dur="0.625s"
+                  begin="-0.20833333333333331s"
+                  repeatCount="indefinite"
+                ></animate>
+              </rect>
+            </g>
+            <g transform="rotate(240 50 50)">
+              <rect
+                x="44"
+                y="0.5"
+                rx="6"
+                ry="6.29"
+                width="12"
+                height="37"
+                fill="currentColor"
+              >
+                <animate
+                  attributeName="opacity"
+                  values="1;0"
+                  keyTimes="0;1"
+                  dur="0.625s"
+                  begin="-0.10416666666666666s"
+                  repeatCount="indefinite"
+                ></animate>
+              </rect>
+            </g>
+            <g transform="rotate(300 50 50)">
+              <rect
+                x="44"
+                y="0.5"
+                rx="6"
+                ry="6.29"
+                width="12"
+                height="37"
+                fill="currentColor"
+              >
+                <animate
+                  attributeName="opacity"
+                  values="1;0"
+                  keyTimes="0;1"
+                  dur="0.625s"
+                  begin="0s"
+                  repeatCount="indefinite"
+                ></animate>
+              </rect>
+            </g>
+          </svg>
+        ) : (
+          children
+        )}
       </button>
     </>
   );

@@ -1,4 +1,4 @@
-import React, { type ChangeEvent, useState } from "react";
+import React, { type ChangeEvent, useEffect, useState } from "react";
 import GET from "~/Services/Axios/Methods/GET";
 import { CloseCircle, TickCircle } from "iconsax-reactjs";
 
@@ -43,9 +43,11 @@ const ChangeUsernameInput: React.FC<{
   const handleChange = (e: ChangeEvent<HTMLInputElement>) => {
     if (
       e.target.value.trim() === "" ||
-      e.target.value.trim().split(" ").length > 1
+      e.target.value.trim().split(" ").length > 1 ||
+      profile?.username === e.target.value.trim()
     ) {
       setEmpty(true);
+      setReady(false);
       return;
     } else {
       setEmpty(false);
@@ -53,9 +55,14 @@ const ChangeUsernameInput: React.FC<{
     debouncedHandleChange(e);
   };
 
+  useEffect(() => {
+    setEmpty(true);
+    setReady(false);
+  }, []);
+
   return (
     <div
-      className={`origin-center dir-ltr h-12 my-3 w-full rounded-[20px] px-4 bg-white border-2 flex items-center transition-all duration-300 gap-1 border-[#F3F3F8] ${empty && "border-red-500"}`}
+      className={`origin-center dir-ltr h-12 my-3 w-full rounded-[20px] px-4 bg-white border-2 flex items-center transition-all duration-300 gap-1 border-[#F3F3F8]`}
     >
       <span className={"text-neutral-400 mt-1 font-semibold"}>dastto.ir/</span>
       <input
@@ -67,9 +74,8 @@ const ChangeUsernameInput: React.FC<{
       <div className="alerts">
         {loading && (
           <svg
-            height="14"
-            width="14"
-            className="animate-spin"
+            height="16"
+            width="16"
             viewBox="0 0 100 100"
             preserveAspectRatio="xMidYMid"
           >

@@ -5,19 +5,30 @@ import GET from "~/Services/Axios/Methods/GET";
 import { useNavigate } from "react-router";
 import { ToastSetting } from "~/Services/Setting";
 import toast from "react-hot-toast";
+import HappyConfetti from "~/Components/Commans/UiParts/HappyConfetti";
 
-const ChangeUsername: React.FC<{ profile: any }> = ({ profile }) => {
+const ChangeUsername: React.FC<{
+  profile: any;
+  setChangeUsernameOpen: any;
+  onFinish: () => void;
+}> = ({ profile, setChangeUsernameOpen, onFinish }) => {
   const [ready, setReady] = useState(false);
   const [username, setUsername] = useState("");
   const navigate = useNavigate();
+  const [loading, setLoading] = useState(false);
 
   const handleClick = async () => {
+    setLoading(true);
     const response = await GET(`/template/username/change/${username}`);
 
     if (response.status === 200) {
-      toast.success("با موفقیت انجام شد.", ToastSetting);
+      setLoading(false);
 
-      navigate(`/${username}`);
+      toast.success("با موفقیت انجام شد.", ToastSetting);
+      setChangeUsernameOpen(false);
+      onFinish?.();
+
+      navigate(`/${username.trim()}`);
     }
   };
 
@@ -39,6 +50,7 @@ const ChangeUsername: React.FC<{ profile: any }> = ({ profile }) => {
           className={"w-full"}
           disabled={!ready}
           onClick={handleClick}
+          loading={loading}
         >
           تغییر نام کاربری
         </Button>
