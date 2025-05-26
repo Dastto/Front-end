@@ -45,7 +45,7 @@ const index = () => {
 
   useEffect(() => {
     fetchData();
-  }, []);
+  }, [params.username]);
 
   useEffect(() => {
     if (!pending) {

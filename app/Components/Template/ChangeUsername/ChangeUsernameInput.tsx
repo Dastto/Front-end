@@ -2,10 +2,11 @@ import React, { type ChangeEvent, useState } from "react";
 import GET from "~/Services/Axios/Methods/GET";
 import { CloseCircle, TickCircle } from "iconsax-reactjs";
 
-const ChangeUsernameInput: React.FC<{ profile: any; setReady: any }> = ({
-  profile,
-  setReady,
-}) => {
+const ChangeUsernameInput: React.FC<{
+  profile: any;
+  setReady: any;
+  setUsername: any;
+}> = ({ profile, setUsername, setReady }) => {
   const [available, setAvailable] = useState(false);
   const [loading, setLoading] = useState(false);
   const [empty, setEmpty] = useState(false);
@@ -24,11 +25,12 @@ const ChangeUsernameInput: React.FC<{ profile: any; setReady: any }> = ({
     const { value } = e.target;
 
     setLoading(true);
-    GET(`/template/isAvailable/${value}`)
+    GET(`/template/username/isAvailable/${value}`)
       .then((res) => {
         if (res.status === 200) {
           setAvailable(true);
           setReady(true);
+          setUsername(value);
         }
       })
       .catch(() => {
@@ -39,7 +41,10 @@ const ChangeUsernameInput: React.FC<{ profile: any; setReady: any }> = ({
   }, 300);
 
   const handleChange = (e: ChangeEvent<HTMLInputElement>) => {
-    if (e.target.value.trim() === "") {
+    if (
+      e.target.value.trim() === "" ||
+      e.target.value.trim().split(" ").length > 1
+    ) {
       setEmpty(true);
       return;
     } else {
