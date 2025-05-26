@@ -5,9 +5,6 @@ import React, {
   useState,
 } from "react";
 import GET from "~/Services/Axios/Methods/GET";
-import axios from "axios";
-import { setAccessToken } from "~/Services/Axios/TokenService";
-import { BaseUrl } from "~/Services/Axios/AxiosConfig";
 import { useLocation } from "react-router";
 
 interface User {

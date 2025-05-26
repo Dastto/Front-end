@@ -19,4 +19,7 @@ const Config = {
   routerEvent: false,
 };
 
-export { ToastSetting, NAV_ITEMS, Config };
+const FILE_BASE_URL = "http://127.0.0.1:8000/storage/";
+const API_BASE_URL = "http://127.0.0.1:8000/api/v1";
+
+export { ToastSetting, NAV_ITEMS, Config, FILE_BASE_URL, API_BASE_URL };

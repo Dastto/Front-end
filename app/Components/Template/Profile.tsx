@@ -5,15 +5,11 @@ import POST from "~/Services/Axios/Methods/POST";
 import useAuth from "~/Hooks/useAuth";
 import ChangeUsername from "~/Components/Template/ChangeUsername";
 import HappyConfetti from "~/Components/Commans/UiParts/HappyConfetti";
+import ProfileImage from "~/Components/Template/ProfileImage";
+import useTemplate from "~/Hooks/useTemplate";
 
-const Profile: React.FC<{ template: any }> = ({ template }) => {
-  const [profile, setProfile] = useState({
-    name: "",
-    bio: "",
-    username: "",
-    avatar: "",
-    views: "",
-  });
+const Profile = () => {
+  const [profile, setProfile] = useState<any>();
   const [subMenuOpen, setSubMenuOpen] = useState(false);
   const [changeUsernameOpen, setChangeUsernameOpen] = useState(false);
   const [forMe, setForMe] = useState(false);
@@ -22,8 +18,9 @@ const Profile: React.FC<{ template: any }> = ({ template }) => {
     animate: { opacity: 1, y: 0 },
     transition: { duration: 0.5 },
   };
-  const { login, user, pending } = useAuth();
+  const { user, pending } = useAuth();
   const [happyShow, setHappyShow] = useState(false);
+  const { template } = useTemplate();
 
   useEffect(() => {
     setProfile(template?.profile);
@@ -60,14 +57,7 @@ const Profile: React.FC<{ template: any }> = ({ template }) => {
         >
           {/*Profile*/}
           <div>
-            <motion.img
-              {...fadeUp}
-              src="/Images/me.jpg"
-              alt="tikrack"
-              className={
-                "size-48 rounded-full overflow-hidden object-cover outline-2 outline-gray-200/20 -outline-offset-2"
-              }
-            />
+            <ProfileImage />
             <motion.h1 {...fadeUp} className={"font-bold text-4xl mt-6"}>
               {profile?.name}
             </motion.h1>

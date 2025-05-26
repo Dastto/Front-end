@@ -1,27 +1,39 @@
-import React, { useEffect, useRef } from "react";
+import React from "react";
 import { Responsive, WidthProvider } from "react-grid-layout";
 import "/node_modules/react-grid-layout/css/styles.css";
 import "/node_modules/react-resizable/css/styles.css";
 import Widget from "~/Components/Widget";
-import logo from "~/Components/Commans/Header/Logo";
-import toast from "react-hot-toast";
 import { AnimatePresence, motion } from "framer-motion";
+import useTemplate from "~/Hooks/useTemplate";
 
 const ResponsiveGridLayout = WidthProvider(Responsive);
 
-const Widgets: React.FC<{ template: any }> = ({ template }) => {
-  const ref = useRef(null);
+const Widgets = () => {
+  const { template } = useTemplate();
+
   const largeLayout = [
     { i: "dino1", x: 0, y: 0, w: 1, h: 1 },
     { i: "dino2", x: 0, y: 0, w: 1, h: 1 },
-    { i: "dino3", x: 0, y: 0, w: 1, h: 1 },
+    {
+      i: "dino3",
+      x: 0,
+      y: 0,
+      w: 1,
+      h: 1,
+    },
     { i: "music", x: 1, y: 0, w: 1, h: 1 },
   ];
 
   const smallLayout = [
     { i: "a", x: 0, y: 0, w: 12, h: 2 },
     { i: "b", x: 0, y: 1, w: 12, h: 2 },
-    { i: "c", x: 0, y: 2, w: 12, h: 2 },
+    {
+      i: "c",
+      x: 0,
+      y: 2,
+      w: 12,
+      h: 2,
+    },
     { i: "d", x: 0, y: 2, w: 12, h: 2 },
     { i: "e", x: 0, y: 2, w: 12, h: 2 },
     { i: "h", x: 0, y: 2, w: 12, h: 2 },
@@ -53,7 +65,7 @@ const Widgets: React.FC<{ template: any }> = ({ template }) => {
       >
         <div className={"dir-ltr"}>
           <ResponsiveGridLayout
-            className="layout ssssss"
+            className="layout"
             layouts={{ lg: largeLayout, sm: smallLayout }}
             breakpoints={{ lg: 810, sm: 0 }}
             cols={{ lg: 4, sm: 12 }}
@@ -63,28 +75,13 @@ const Widgets: React.FC<{ template: any }> = ({ template }) => {
             containerPadding={[0, 0]}
             onDragStart={handleStartDrag}
           >
-            <motion.div
-              {...fadeUp}
-              key={"dino1"}
-              className={""}
-              onClick={() => console.log("ok")}
-            >
+            <motion.div {...fadeUp} key={"dino1"}>
               <Widget name={"dino"} />
             </motion.div>
-            <motion.div
-              {...fadeUp}
-              key={"dino2"}
-              className={""}
-              onClick={() => console.log("ok")}
-            >
+            <motion.div {...fadeUp} key={"dino2"}>
               <Widget name={"dino"} />
             </motion.div>
-            <motion.div
-              {...fadeUp}
-              key={"dino3"}
-              className={""}
-              onClick={() => console.log("ok")}
-            >
+            <motion.div {...fadeUp} key={"dino3"}>
               <Widget name={"dino"} />
             </motion.div>
             <motion.div {...fadeUp} key={"music"} className={""}>

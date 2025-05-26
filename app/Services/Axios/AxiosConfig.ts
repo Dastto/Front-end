@@ -1,7 +1,8 @@
 import axios from "axios";
 import { getAccessToken, setAccessToken } from "~/Services/Axios/TokenService";
+import { API_BASE_URL } from "~/Services/Setting";
 
-export const BaseUrl = "http://127.0.0.1:8000/api/v1";
+export const BaseUrl = API_BASE_URL;
 
 const instance = axios.create({
   baseURL: BaseUrl,

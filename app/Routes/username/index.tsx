@@ -8,39 +8,28 @@ import { useEffect, useState } from "react";
 import { AnimatePresence, motion } from "framer-motion";
 import useAuth from "~/Hooks/useAuth";
 import type { Route } from "../+types";
+import useTemplate from "~/Hooks/useTemplate";
 
 export function meta({}: Route.MetaArgs) {
   return [{ title: "دستو 🔵 یهترین برای همیشه" }];
 }
 
 const index = () => {
-  const defaultData = {
-    user: {
-      mobile: "",
-    },
-    profile: {
-      name: "",
-    },
-  };
-
+  const { setTemplate, template } = useTemplate();
   const params = useParams();
-  const [template, setTemplate] = useState(defaultData);
-  const [loading, setLoading] = useState(false);
-  const { login, user, pending } = useAuth();
+  const { user, pending } = useAuth();
   const [forMe, setForMe] = useState(false);
 
   const fetchData = async () => {
-    setLoading(true);
     const response = await GET(`/template/${params.username}`);
 
     if (response.status === 200 && response.data.success === true) {
       setTemplate(response.data.data);
     } else if (response.status === 404) {
-      setTemplate(defaultData);
+      return;
     } else {
       toast.error("مشکلی پیش امده است!", ToastSetting);
     }
-    setLoading(false);
   };
 
   useEffect(() => {
@@ -58,7 +47,7 @@ const index = () => {
     <>
       {/*{loading && <h1>loading</h1>}*/}
       <AnimatePresence>
-        <Template template={template} />
+        <Template />
         {forMe && (
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -67,7 +56,7 @@ const index = () => {
             key="box"
             className={"fixed w-screen z-[100]"}
           >
-            <ActionBar template={template} />
+            <ActionBar />
           </motion.div>
         )}
       </AnimatePresence>

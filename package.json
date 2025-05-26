@@ -20,6 +20,7 @@
     "motion": "^12.10.6",
     "nprogress": "^0.2.0",
     "prettier": "^3.5.3",
+    "rc-progress": "^4.0.0",
     "react": "^19.0.0",
     "react-confetti": "^6.4.0",
     "react-dom": "^19.0.0",
