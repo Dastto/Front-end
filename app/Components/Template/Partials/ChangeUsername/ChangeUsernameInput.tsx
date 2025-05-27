@@ -1,6 +1,7 @@
 import React, { type ChangeEvent, useEffect, useState } from "react";
 import GET from "~/Services/Axios/Methods/GET";
 import { CloseCircle, TickCircle } from "iconsax-reactjs";
+import debounce from "~/Services/PublicFunctions/debounce";
 
 const ChangeUsernameInput: React.FC<{
   profile: any;
@@ -10,16 +11,6 @@ const ChangeUsernameInput: React.FC<{
   const [available, setAvailable] = useState(false);
   const [loading, setLoading] = useState(false);
   const [empty, setEmpty] = useState(false);
-
-  function debounce(cb: any, delay: any) {
-    let timeoutId: NodeJS.Timeout;
-    return function (...args: any) {
-      clearTimeout(timeoutId);
-      timeoutId = setTimeout(() => {
-        cb(...args);
-      }, delay);
-    };
-  }
 
   const debouncedHandleChange = debounce((e: ChangeEvent<HTMLInputElement>) => {
     const { value } = e.target;

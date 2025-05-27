@@ -5,7 +5,7 @@ import { ArrowCircleUp2 } from "iconsax-reactjs";
 import useAuth from "~/Hooks/useAuth";
 import POST from "~/Services/Axios/Methods/POST";
 import { Circle } from "rc-progress";
-import { FILE_BASE_URL, ToastSetting } from "~/Services/Setting";
+import { FADE_UP, FILE_BASE_URL, ToastSetting } from "~/Services/Setting";
 import toast from "react-hot-toast";
 import { useNavigate } from "react-router";
 import { Tooltip } from "react-tooltip";
@@ -72,9 +72,7 @@ const ProfileImage = () => {
     <>
       {profile?.avatar !== null && !forMe && (
         <motion.img
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.5 }}
+          {...FADE_UP}
           src={FILE_BASE_URL + profile?.avatar}
           alt="tikrack"
           className={
@@ -99,9 +97,7 @@ const ProfileImage = () => {
 
           <motion.label
             htmlFor={"profileImage"}
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.5 }}
+            {...FADE_UP}
             data-tooltip-id="upload"
             data-tooltip-content="اپلود تصویر جدید"
             data-tooltip-delay-show={1000}

@@ -1,4 +1,4 @@
-import ShareLinkButton from "~/Components/Template/ShareLinkButton";
+import ShareLinkButton from "~/Components/Template/Partials/ShareLinkButton";
 import Divider from "~/Components/Commans/UiParts/Divider";
 import Modal from "~/Components/Commans/UiParts/Modal";
 import React, { useState } from "react";

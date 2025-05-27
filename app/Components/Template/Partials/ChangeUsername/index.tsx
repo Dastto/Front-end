@@ -1,4 +1,4 @@
-import ChangeUsernameInput from "~/Components/Template/ChangeUsername/ChangeUsernameInput";
+import ChangeUsernameInput from "~/Components/Template/Partials/ChangeUsername/ChangeUsernameInput";
 import Button from "~/Components/Commans/UiParts/Button";
 import React, { useState } from "react";
 import GET from "~/Services/Axios/Methods/GET";

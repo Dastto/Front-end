@@ -3,21 +3,18 @@ import { Setting4 } from "iconsax-reactjs";
 import { AnimatePresence, motion } from "framer-motion";
 import POST from "~/Services/Axios/Methods/POST";
 import useAuth from "~/Hooks/useAuth";
-import ChangeUsername from "~/Components/Template/ChangeUsername";
+import ChangeUsername from "app/Components/Template/Partials/ChangeUsername";
 import HappyConfetti from "~/Components/Commans/UiParts/HappyConfetti";
-import ProfileImage from "~/Components/Template/ProfileImage";
+import ProfileImage from "~/Components/Template/Partials/ProfileImage";
 import useTemplate from "~/Hooks/useTemplate";
+import ProfileName from "~/Components/Template/Partials/ProfileName";
+import { FADE_UP } from "~/Services/Setting";
 
 const Profile = () => {
   const [profile, setProfile] = useState<any>();
   const [subMenuOpen, setSubMenuOpen] = useState(false);
   const [changeUsernameOpen, setChangeUsernameOpen] = useState(false);
   const [forMe, setForMe] = useState(false);
-  const fadeUp = {
-    initial: { opacity: 0, y: 20 },
-    animate: { opacity: 1, y: 0 },
-    transition: { duration: 0.5 },
-  };
   const { user, pending } = useAuth();
   const [happyShow, setHappyShow] = useState(false);
   const { template } = useTemplate();
@@ -58,11 +55,9 @@ const Profile = () => {
           {/*Profile*/}
           <div>
             <ProfileImage />
-            <motion.h1 {...fadeUp} className={"font-bold text-4xl mt-6"}>
-              {profile?.name}
-            </motion.h1>
+            <ProfileName />
             <motion.p
-              {...fadeUp}
+              {...FADE_UP}
               className={"mt-4 text-lg leading-8 text-gray-500"}
             >
               {profile?.bio}
@@ -70,7 +65,7 @@ const Profile = () => {
           </div>
           {/*Information*/}
           {forMe && (
-            <motion.div {...fadeUp}>
+            <motion.div {...FADE_UP}>
               <div className={"w-fit relative"}>
                 <button
                   className={`size-8 flex items-center justify-center hover:bg-gray-100 cursor-pointer active:scale-95 transition-all duration-200 rounded-full ${subMenuOpen && "!bg-gray-100"}`}
