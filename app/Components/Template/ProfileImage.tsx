@@ -69,7 +69,7 @@ const ProfileImage = () => {
 
   return (
     <>
-      {profile?.avatar !== null && (
+      {profile?.avatar !== null && !forMe && (
         <motion.img
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
@@ -80,6 +80,55 @@ const ProfileImage = () => {
             "size-48 rounded-full overflow-hidden object-cover outline-2 outline-gray-200/20 -outline-offset-2"
           }
         />
+      )}
+      {profile?.avatar !== null && forMe && (
+        <>
+          <input
+            type="file"
+            id={"profileImage"}
+            className={"hidden"}
+            onChange={handleUpload}
+            accept="image/*"
+            onClick={(e) => {
+              if (uploading) {
+                e.preventDefault();
+              }
+            }}
+          />
+
+          <motion.label
+            htmlFor={"profileImage"}
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.5 }}
+            className={
+              "size-48 block rounded-full relative cursor-pointer hover:scale-95 flex-col active:scale-90 transition-all duration-300 overflow-hidden object-cover outline-2 outline-gray-200/20 -outline-offset-2"
+            }
+          >
+            <img
+              src={FILE_BASE_URL + profile?.avatar}
+              className={"size-full object-cover"}
+              alt={profile.name}
+            />
+            {uploading && (
+              <div
+                className={
+                  "absolute translate-x-1/2 size-full flex items-center justify-center flex-col gap-3 bg-black/40 top-1/2 right-1/2 -translate-y-1/2 text-white"
+                }
+              >
+                <Circle
+                  percent={progress}
+                  strokeWidth={6}
+                  trailWidth={6}
+                  className={"size-10"}
+                  strokeColor="#fff"
+                  trailColor="#a1a1a1"
+                />
+                <span className={"text-lg font-bold"}>{progress}%</span>
+              </div>
+            )}
+          </motion.label>
+        </>
       )}
 
       {profile?.avatar === null && forMe && (
