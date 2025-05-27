@@ -8,6 +8,7 @@ import { Circle } from "rc-progress";
 import { FILE_BASE_URL, ToastSetting } from "~/Services/Setting";
 import toast from "react-hot-toast";
 import { useNavigate } from "react-router";
+import { Tooltip } from "react-tooltip";
 
 const ProfileImage = () => {
   const { profile, template } = useTemplate();
@@ -101,6 +102,9 @@ const ProfileImage = () => {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5 }}
+            data-tooltip-id="upload"
+            data-tooltip-content="اپلود تصویر جدید"
+            data-tooltip-delay-show={1000}
             className={
               "size-48 block rounded-full relative cursor-pointer hover:scale-95 flex-col active:scale-90 transition-all duration-300 overflow-hidden object-cover outline-2 outline-gray-200/20 -outline-offset-2"
             }
@@ -128,6 +132,7 @@ const ProfileImage = () => {
               </div>
             )}
           </motion.label>
+          <Tooltip id="upload" style={{ fontSize: "12px" }} />
         </>
       )}
 
