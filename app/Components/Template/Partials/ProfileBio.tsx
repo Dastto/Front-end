@@ -7,7 +7,7 @@ import debounce from "~/Services/PublicFunctions/debounce";
 import POST from "~/Services/Axios/Methods/POST";
 import toast from "react-hot-toast";
 
-const ProfileName = () => {
+const ProfileBio = () => {
   const { profile, template } = useTemplate();
   const { user, pending } = useAuth();
   const [forMe, setForMe] = useState(false);
@@ -22,41 +22,47 @@ const ProfileName = () => {
     async (e: ChangeEvent<HTMLInputElement>) => {
       const { value } = e.target;
 
-      await POST("template/profile/changeName", {
-        name: value,
+      if (value.trim().length < 3) {
+        toast.error("نام باید حداقل 3 حرف باشه!", ToastSetting);
+        return;
+      }
+
+      await POST("template/profile/changeBio", {
+        bio: value,
       });
     },
-    300,
+    2000,
   );
 
   const handleChange = (e: any) => {
-    if (e.target.value.trim().length < 3) {
-      toast.error("نام باید حداقل 3 حرف باشه!", ToastSetting);
-      return;
-    }
-
     debouncedHandleChange(e);
   };
 
   return (
     <>
       {!forMe && (
-        <motion.h1 {...FADE_UP} className={"font-bold text-4xl mt-6 w-full"}>
-          {profile?.name}
-        </motion.h1>
+        <motion.p
+          {...FADE_UP}
+          className={
+            "mt-4 text-lg leading-8 text-gray-500 w-full whitespace-pre"
+          }
+        >
+          {profile?.bio}
+        </motion.p>
       )}
       {forMe && (
-        <motion.input
-          type={"text"}
+        <motion.textarea
           onInput={handleChange}
           className={
-            "font-bold text-4xl mt-6 text-black focus-visible:outline-0 block w-full"
+            "mt-4 text-lg leading-8 resize-none text-gray-500 focus-visible:outline-0 block w-full"
           }
-          defaultValue={profile?.name}
-        />
+          rows={7}
+        >
+          {profile?.bio}
+        </motion.textarea>
       )}
     </>
   );
 };
 
-export default ProfileName;
+export default ProfileBio;

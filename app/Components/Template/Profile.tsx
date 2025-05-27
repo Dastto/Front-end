@@ -9,6 +9,7 @@ import ProfileImage from "~/Components/Template/Partials/ProfileImage";
 import useTemplate from "~/Hooks/useTemplate";
 import ProfileName from "~/Components/Template/Partials/ProfileName";
 import { FADE_UP } from "~/Services/Setting";
+import ProfileBio from "~/Components/Template/Partials/ProfileBio";
 
 const Profile = () => {
   const [profile, setProfile] = useState<any>();
@@ -56,12 +57,7 @@ const Profile = () => {
           <div>
             <ProfileImage />
             <ProfileName />
-            <motion.p
-              {...FADE_UP}
-              className={"mt-4 text-lg leading-8 text-gray-500"}
-            >
-              {profile?.bio}
-            </motion.p>
+            <ProfileBio />
           </div>
           {/*Information*/}
           {forMe && (
