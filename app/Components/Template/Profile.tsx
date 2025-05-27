@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import { Setting4 } from "iconsax-reactjs";
+import { Link21, Login, Setting4 } from "iconsax-reactjs";
 import { AnimatePresence, motion } from "framer-motion";
 import POST from "~/Services/Axios/Methods/POST";
 import useAuth from "~/Hooks/useAuth";
@@ -10,13 +10,16 @@ import useTemplate from "~/Hooks/useTemplate";
 import ProfileName from "~/Components/Template/Partials/ProfileName";
 import { FADE_UP } from "~/Services/Setting";
 import ProfileBio from "~/Components/Template/Partials/ProfileBio";
+import Divider from "~/Components/Commans/UiParts/Divider";
+import Button from "~/Components/Commans/UiParts/Button";
+import { Link } from "react-router";
 
 const Profile = () => {
   const [profile, setProfile] = useState<any>();
   const [subMenuOpen, setSubMenuOpen] = useState(false);
   const [changeUsernameOpen, setChangeUsernameOpen] = useState(false);
   const [forMe, setForMe] = useState(false);
-  const { user, pending } = useAuth();
+  const { user, pending, login } = useAuth();
   const [happyShow, setHappyShow] = useState(false);
   const { template } = useTemplate();
 
@@ -60,8 +63,8 @@ const Profile = () => {
             <ProfileBio />
           </div>
           {/*Information*/}
-          {forMe && (
-            <motion.div {...FADE_UP}>
+          {login() && forMe && (
+            <motion.div className={"flex items-center gap-3"} {...FADE_UP}>
               <div className={"w-fit relative"}>
                 <button
                   className={`size-8 flex items-center justify-center hover:bg-gray-100 cursor-pointer active:scale-95 transition-all duration-200 rounded-full ${subMenuOpen && "!bg-gray-100"}`}
@@ -151,6 +154,34 @@ const Profile = () => {
                   </>
                 )}
               </div>
+              <Divider className={"!h-6"} />
+              <span className={"text-sm text-gray-400"}>
+                {profile?.views} بازدید
+              </span>
+            </motion.div>
+          )}
+          {login() && !forMe && (
+            <motion.div className={"flex items-center gap-3"} {...FADE_UP}>
+              <Link to={`/${user?.username}`}>
+                <Button variant={"white"} size={"small"}>
+                  <Link21 className={"track-2"} size={17} />
+                  دستوی من
+                </Button>
+              </Link>
+              <Divider className={"!h-6"} />
+              <span className={"text-sm text-gray-400"}>
+                {profile?.views} بازدید
+              </span>
+            </motion.div>
+          )}
+          {!login() && (
+            <motion.div className={"flex items-center gap-3"} {...FADE_UP}>
+              <Link to={`/auth`}>
+                <Button variant={"white"} size={"small"}>
+                  <Login className={"track-2"} size={17} />
+                  برای خودت بساز!
+                </Button>
+              </Link>
             </motion.div>
           )}
         </div>

@@ -11,6 +11,7 @@ interface User {
   name: string;
   family: string;
   mobile: string;
+  username: string;
 }
 
 export interface AuthContextType {
