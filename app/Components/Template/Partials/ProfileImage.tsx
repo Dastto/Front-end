@@ -102,7 +102,7 @@ const ProfileImage = () => {
             data-tooltip-content="اپلود تصویر جدید"
             data-tooltip-delay-show={1000}
             className={
-              "size-48 block rounded-full relative cursor-pointer hover:scale-95 flex-col active:scale-90 transition-all duration-300 overflow-hidden object-cover outline-2 outline-gray-200/20 -outline-offset-2"
+              "size-48 block rounded-full relative cursor-pointer active:scale-95 flex-col transition-all duration-300 overflow-hidden object-cover outline-2 outline-gray-200/20 -outline-offset-2"
             }
           >
             <img

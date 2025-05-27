@@ -2,6 +2,8 @@ import ShareLinkButton from "~/Components/Template/Partials/ShareLinkButton";
 import Divider from "~/Components/Commans/UiParts/Divider";
 import Modal from "~/Components/Commans/UiParts/Modal";
 import React, { useState } from "react";
+import MusicAction from "~/Components/Widget/Music/MusicAction";
+import DinoAction from "~/Components/Widget/Dino/DinoAction";
 
 const ActionBar = () => {
   const [shareModal, setShareModal] = useState(false);
@@ -14,6 +16,8 @@ const ActionBar = () => {
       >
         <ShareLinkButton onClick={() => setShareModal((prev) => !prev)} />
         <Divider className={"!h-5 rounded-full"} />
+        <MusicAction />
+        <DinoAction />
       </div>
 
       <Modal

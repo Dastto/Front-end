@@ -1,6 +1,6 @@
 import React from "react";
-import DinoWidget from "~/Components/Widget/Items/DinoWidget";
-import MusicWidget from "~/Components/Widget/Items/MusicWidget";
+import DinoWidget from "~/Components/Widget/Dino/DinoWidget";
+import MusicWidget from "~/Components/Widget/Music/MusicWidget";
 
 interface WidgetPropsTypes {
   name: string;
