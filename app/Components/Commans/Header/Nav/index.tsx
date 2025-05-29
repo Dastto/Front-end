@@ -4,7 +4,7 @@ import { NAV_ITEMS } from "~/Services/Setting";
 
 const Nav = () => {
   return (
-    <div className="flex justify-center items-center gap-4">
+    <div className="flex justify-center items-center gap-5">
       {NAV_ITEMS.map((item) => (
         <NavItem key={item.to} to={item.to}>
           {item.icon}

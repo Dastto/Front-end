@@ -1,4 +1,5 @@
 import useWidget from "~/Hooks/useWidget";
+import Modal from "~/Components/Commans/UiParts/Modal";
 
 const MusicAction = () => {
   const { add } = useWidget();

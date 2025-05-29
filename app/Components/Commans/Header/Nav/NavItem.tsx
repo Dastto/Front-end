@@ -17,7 +17,7 @@ const NavItem: React.FC<NavItemPropsTypes> = ({ children, to }) => {
   return (
     <Link
       to={to}
-      className={`cursor-pointer flex items-center justify-center gap-[10px] font-medium text-[#C5C5CF] ${active && "!text-black"}`}
+      className={`cursor-pointer flex items-center justify-center gap-[8px] font-medium text-[#C5C5CF] ${active && "!text-black"}`}
     >
       {children}
     </Link>

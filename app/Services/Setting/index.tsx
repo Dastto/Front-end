@@ -1,4 +1,4 @@
-import { Home, Profile2User } from "iconsax-reactjs";
+import { Home, Music, Profile2User } from "iconsax-reactjs";
 
 const ToastSetting = {};
 
@@ -9,9 +9,9 @@ const NAV_ITEMS = [
     label: "خانه",
   },
   {
-    to: "/team",
-    icon: <Profile2User size="24" variant="TwoTone" className={"track-2"} />,
-    label: "تیممون",
+    to: "/music",
+    icon: <Music size="24" variant="TwoTone" className={"track-2"} />,
+    label: "موزیک",
   },
 ];
 
