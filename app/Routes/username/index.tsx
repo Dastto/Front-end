@@ -9,6 +9,7 @@ import { AnimatePresence, motion } from "framer-motion";
 import useAuth from "~/Hooks/useAuth";
 import type { Route } from "../+types";
 import useTemplate from "~/Hooks/useTemplate";
+import useWidget from "~/Hooks/useWidget";
 
 export function meta({}: Route.MetaArgs) {
   return [{ title: "دستو 🔵 یهترین برای همیشه" }];
@@ -16,6 +17,7 @@ export function meta({}: Route.MetaArgs) {
 
 const index = () => {
   const { setTemplate, template } = useTemplate();
+  const { setWidgets } = useWidget();
   const params = useParams();
   const { user, pending } = useAuth();
   const [forMe, setForMe] = useState(false);
@@ -25,6 +27,7 @@ const index = () => {
 
     if (response.status === 200 && response.data.success === true) {
       setTemplate(response.data.data);
+      setWidgets(response.data.data.widgets);
     } else if (response.status === 404) {
       return;
     } else {

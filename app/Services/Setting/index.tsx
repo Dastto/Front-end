@@ -25,6 +25,12 @@ const FADE_UP = {
   transition: { duration: 0.5 },
 };
 
+const WIDGET_EFFECT = {
+  initial: { opacity: 0 },
+  animate: { opacity: 1 },
+  transition: { duration: 0.5 },
+};
+
 const FILE_BASE_URL = "http://127.0.0.1:8000/storage/";
 const API_BASE_URL = "http://127.0.0.1:8000/api/v1";
 
@@ -38,4 +44,5 @@ export {
   FILE_BASE_URL,
   API_BASE_URL,
   FADE_UP,
+  WIDGET_EFFECT,
 };

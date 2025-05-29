@@ -11,7 +11,7 @@ const useWidget = (): WidgetContextValue => {
     throw new Error("useWidget must be used within an WidgetProvider");
   }
 
-  return context;
+  return { ...context };
 };
 
 export default useWidget;

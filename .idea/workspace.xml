@@ -6,6 +6,14 @@
   <component name="ChangeListManager">
     <list default="true" id="7e7d8412-18e5-477c-83ea-8db850dba07a" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Components/Template/Widgets.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/Components/Template/Widgets.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Components/Widget/Dino/DinoAction.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/Components/Widget/Dino/DinoAction.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Components/Widget/Music/MusicAction.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/Components/Widget/Music/MusicAction.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Context/WidgetContext.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/Context/WidgetContext.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Hooks/useWidget.ts" beforeDir="false" afterPath="$PROJECT_DIR$/app/Hooks/useWidget.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Routes/username/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/Routes/username/index.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Services/Setting/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/Services/Setting/index.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Services/StarterHandling/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/Services/StarterHandling/index.tsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -39,7 +47,7 @@
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "RunOnceActivity.git.unshallow": "true",
     "git-widget-placeholder": "dev",
-    "last_opened_file_path": "C:/Users/TikRack/Desktop/Dastto/Front-end/app/Context",
+    "last_opened_file_path": "C:/Users/TikRack/Desktop/Dastto/Front-end/app/Hooks",
     "list.type.of.created.stylesheet": "CSS",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
@@ -54,11 +62,11 @@
 }]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\TikRack\Desktop\Dastto\Front-end\app\Hooks" />
       <recent name="C:\Users\TikRack\Desktop\Dastto\Front-end\app\Context" />
       <recent name="C:\Users\TikRack\Desktop\Dastto\Front-end\public\Images\actionBar" />
       <recent name="C:\Users\TikRack\Desktop\Dastto\Front-end\app\Components\Widget\Dino" />
       <recent name="C:\Users\TikRack\Desktop\Dastto\Front-end\app\Components\Template\Partials" />
-      <recent name="C:\Users\TikRack\Desktop\Dastto\Front-end\app\Hooks" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\Users\TikRack\Desktop\Dastto\Front-end\app\Components\Widget\Dino" />
@@ -124,7 +132,7 @@
       <workItem from="1748380489375" duration="4790000" />
       <workItem from="1748412452988" duration="548000" />
       <workItem from="1748454980033" duration="5568000" />
-      <workItem from="1748539495636" duration="1427000" />
+      <workItem from="1748539495636" duration="3454000" />
     </task>
     <servers />
   </component>

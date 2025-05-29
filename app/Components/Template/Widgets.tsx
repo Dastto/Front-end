@@ -1,22 +1,22 @@
-import React, { useEffect, useRef, useState } from "react";
+import React, { useEffect, useRef } from "react";
 import { Responsive, WidthProvider } from "react-grid-layout";
 import "/node_modules/react-grid-layout/css/styles.css";
 import "/node_modules/react-resizable/css/styles.css";
 import Widget from "~/Components/Widget";
 import { AnimatePresence, motion } from "framer-motion";
 import useTemplate from "~/Hooks/useTemplate";
-import { FADE_UP } from "~/Services/Setting";
-import type { WidgetType } from "~/Context/TemplateContext";
+import { FADE_UP, WIDGET_EFFECT } from "~/Services/Setting";
+import useWidget from "~/Hooks/useWidget";
 
 const ResponsiveGridLayout = WidthProvider(Responsive);
 
 const Widgets = () => {
   const lgLayout = useRef<any>([]);
   const { template } = useTemplate();
-  const [widgets, setWidgets] = useState<any>();
+  const { widgets, setWidgets } = useWidget();
 
   useEffect(() => {
-    lgLayout.current = template?.widgets?.map((widget: any, index: number) => {
+    lgLayout.current = widgets?.map((widget: any, index: number) => {
       const positions = widget.widget_position;
       return {
         i: widget?.widget?.name + index,
@@ -26,7 +26,6 @@ const Widgets = () => {
         w: parseInt(positions.w),
       };
     });
-    setWidgets(template?.widgets);
   }, [template]);
 
   const smallLayout = [{ i: "music", x: 0, y: 0, w: 1, h: 1 }];
@@ -54,9 +53,9 @@ const Widgets = () => {
             onDragStop={handleStartDrag}
           >
             {widgets?.map((widget: any, index: number) => (
-              <div {...FADE_UP} key={widget.widget.name + index}>
+              <motion.div {...WIDGET_EFFECT} key={widget.widget.name + index}>
                 <Widget name={widget.widget.name} />
-              </div>
+              </motion.div>
             ))}
           </ResponsiveGridLayout>
         </div>

@@ -4,6 +4,7 @@ import useLenis from "~/Hooks/useLenis";
 import { AuthProvider } from "~/Context/AuthContext";
 import { TemplateProvider } from "~/Context/TemplateContext";
 import "react-tooltip/dist/react-tooltip.css";
+import { WidgetProvider } from "~/Context/WidgetContext";
 
 const StarterHandling = () => {
   useLenis();
@@ -12,9 +13,11 @@ const StarterHandling = () => {
     <>
       <AuthProvider>
         <TemplateProvider>
-          {/*<RouteChangeEvent />*/}
-          <Outlet />
-          <Toaster />
+          <WidgetProvider>
+            {/*<RouteChangeEvent />*/}
+            <Outlet />
+            <Toaster />
+          </WidgetProvider>
         </TemplateProvider>
       </AuthProvider>
     </>
