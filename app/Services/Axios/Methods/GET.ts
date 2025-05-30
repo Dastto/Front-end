@@ -1,17 +1,12 @@
 // AxiosConfig.ts
 import Client from "../AxiosConfig";
 
-interface ApiResponse<T = any> {
-  data: T;
-  status: number;
-}
-
 const GET = async <T = any>(
   url: string,
   params: object = {},
   responseType: "pagination" | "normal" = "normal",
-): Promise<ApiResponse<T>> => {
-  const response = await Client.get<T>(url, { params });
+) => {
+  const response = await Client.get(url, { withCredentials: true });
 
   if (responseType === "pagination") {
     return response;

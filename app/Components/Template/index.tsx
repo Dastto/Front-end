@@ -1,5 +1,6 @@
 import Profile from "~/Components/Template/Profile";
 import Widgets from "~/Components/Template/Widgets";
+import React from "react";
 
 const Template = () => {
   return (

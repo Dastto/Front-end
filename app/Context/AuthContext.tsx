@@ -5,11 +5,13 @@ import React, {
   useState,
 } from "react";
 import GET from "~/Services/Axios/Methods/GET";
+import { useLocation } from "react-router";
 
 interface User {
   name: string;
   family: string;
   mobile: string;
+  username: string;
 }
 
 export interface AuthContextType {
@@ -27,6 +29,7 @@ interface AuthProviderProps {
 const AuthProvider: React.FC<AuthProviderProps> = ({ children }) => {
   const [user, setUser] = useState<User | null>(null);
   const [pending, setPending] = useState(true);
+  const location = useLocation();
 
   const login = () => {
     return user !== null;
@@ -34,16 +37,16 @@ const AuthProvider: React.FC<AuthProviderProps> = ({ children }) => {
 
   useEffect(() => {
     setPending(true);
-    GET("/auth/user", {}, "normal").then((r) => {
-      if (r.status === 200) {
-        setUser(r.data.data.user);
-        setPending(false);
-      } else {
-        setUser(null);
-        setPending(false);
-      }
-    });
-  }, []);
+    GET("/auth/user", {}, "normal")
+      .then((r) => {
+        if (r.status === 200) {
+          setUser(r.data.data.user);
+        } else {
+          setUser(null);
+        }
+      })
+      .finally(() => setPending(false));
+  }, [location]);
 
   return (
     <AuthContext.Provider value={{ login, user, pending }}>

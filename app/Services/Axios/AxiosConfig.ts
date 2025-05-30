@@ -1,17 +1,35 @@
 import axios from "axios";
-import {
-  getAccessToken,
-  getRefreshToken,
-  setAccessToken,
-  setRefreshToken,
-} from "~/Services/Axios/TokenService";
-import toast from "react-hot-toast";
+import { getAccessToken, setAccessToken } from "~/Services/Axios/TokenService";
+import { API_BASE_URL } from "~/Services/Setting";
 
-const BaseUrl = "http://127.0.0.1:8000/api/v1";
+export const BaseUrl = API_BASE_URL;
 
 const instance = axios.create({
   baseURL: BaseUrl,
 });
+
+let refreshingTokenPromise: Promise<string> | null = null;
+
+async function refreshAccessToken(): Promise<string> {
+  if (!refreshingTokenPromise) {
+    refreshingTokenPromise = axios
+      .post(`${BaseUrl}/auth/refresh`, {}, { withCredentials: true })
+      .then((res) => {
+        if (res.status === 200 && res.data.success) {
+          const newToken = res.data.data.access_token;
+          setAccessToken(newToken);
+          return newToken;
+        } else {
+          throw new Error("Refresh failed");
+        }
+      })
+      .finally(() => {
+        refreshingTokenPromise = null;
+      });
+  }
+
+  return refreshingTokenPromise;
+}
 
 instance.interceptors.request.use((config) => {
   const token = getAccessToken();
@@ -30,34 +48,15 @@ instance.interceptors.response.use(
       return Promise.reject(error);
     }
 
-    const refreshToken = getRefreshToken();
-    if (!refreshToken) {
-      // window.location.href = "/auth";
-      // return Promise.reject(error);
-      return true;
-    }
-
     originalRequest._retry = true;
 
     try {
-      const res = await axios.post(`${BaseUrl}/auth/refresh`, {
-        refresh_token: refreshToken,
-      });
+      const newToken = await refreshAccessToken();
 
-      if (res.status === 200 && res.data.success) {
-        setAccessToken(res.data.data.access_token);
-        setRefreshToken(res.data.data.refresh_token);
-        originalRequest.headers.Authorization = `Bearer ${res.data.data.access_token}`;
-        return instance(originalRequest);
-      } else {
-        // // window.location.href = "/auth";
-        // return Promise.reject(new Error("Invalid refresh token"));
-        return true;
-      }
+      originalRequest.headers.Authorization = `Bearer ${newToken}`;
+      return instance(originalRequest);
     } catch (refreshError) {
-      // window.location.href = "/auth";
-      // return Promise.reject(refreshError);
-      return true;
+      return Promise.reject(refreshError);
     }
   },
 );

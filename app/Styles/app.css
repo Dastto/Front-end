@@ -75,11 +75,15 @@
     }
 
     .react-grid-item.react-grid-placeholder {
-        @apply !bg-blue-300 rounded-[20px];
+        @apply !bg-sky-300 !opacity-30 shadow rounded-[30px];
     }
 
     .track-2 path {
         stroke-width: 2px;
+    }
+
+    .track-3 path {
+        stroke-width: 3px;
     }
 
     .custom-hover {
@@ -100,6 +104,18 @@
         opacity: 80%;
         scale: 0.95;
     }
+
+    .react-grid-item.react-draggable {
+        @apply z-50
+    }
+
+    .react-tooltip-arrow {
+        @apply hidden
+    }
+
+    .react-tooltip {
+        @apply !rounded-[15px] shadow-modal !bg-gray-50 !text-black/70;
+    }
 }
 
 @utility dir-* {
@@ -109,4 +125,6 @@
 @theme {
     --color-dastto: #3E7BFF;
     --shadow-buttons: 0px 22px 20px -10px rgba(0, 0, 0, 0.10);
+    --shadow-action: 0 0 0 1px rgba(0,0,0,.04),0 27px 54px rgba(0,0,0,.04),0 17.5px 31.625px rgba(0,0,0,.03),0 10.4px 17.2px rgba(0,0,0,.024),0 5.4px 8.775px rgba(0,0,0,.02),0 2.2px 4.4px rgba(0,0,0,.016),0 .5px 2.125px rgba(0,0,0,.01);
+    --shadow-modal: 0 0 0 1px rgba(0,0,0,.06),0 40px 54px rgba(0,0,0,.04),0 25.9259px 31.625px rgba(0,0,0,.03),0 15.4074px 17.2px rgba(0,0,0,.024),0 8px 8.775px rgba(0,0,0,.02),0 3.25926px 4.4px rgba(0,0,0,.016),0 .740741px 2.125px rgba(0,0,0,.01);
 }

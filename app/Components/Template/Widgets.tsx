@@ -1,51 +1,66 @@
-import React from "react";
+import React, { useEffect, useRef } from "react";
 import { Responsive, WidthProvider } from "react-grid-layout";
 import "/node_modules/react-grid-layout/css/styles.css";
 import "/node_modules/react-resizable/css/styles.css";
 import Widget from "~/Components/Widget";
-import logo from "~/Components/Commans/Header/Logo";
-import toast from "react-hot-toast";
+import { AnimatePresence, motion } from "framer-motion";
+import useTemplate from "~/Hooks/useTemplate";
+import { FADE_UP, WIDGET_EFFECT } from "~/Services/Setting";
+import useWidget from "~/Hooks/useWidget";
 
 const ResponsiveGridLayout = WidthProvider(Responsive);
 
 const Widgets = () => {
-  const largeLayout = [{ i: "dino", x: 0, y: 0, w: 1, h: 1 }];
+  const lgLayout = useRef<any>([]);
+  const { template } = useTemplate();
+  const { widgets, setWidgets } = useWidget();
 
-  const smallLayout = [
-    { i: "a", x: 0, y: 0, w: 12, h: 2 },
-    { i: "b", x: 0, y: 1, w: 12, h: 2 },
-    { i: "c", x: 0, y: 2, w: 12, h: 2 },
-    { i: "d", x: 0, y: 2, w: 12, h: 2 },
-    { i: "e", x: 0, y: 2, w: 12, h: 2 },
-    { i: "h", x: 0, y: 2, w: 12, h: 2 },
-  ];
+  useEffect(() => {
+    lgLayout.current = widgets?.map((widget: any, index: number) => {
+      const positions = widget.widget_position;
+      return {
+        i: widget?.widget?.name + index,
+        x: positions.x,
+        y: positions.y,
+        h: parseInt(positions.h),
+        w: parseInt(positions.w),
+      };
+    });
+  }, [template]);
+
+  const smallLayout = [{ i: "music", x: 0, y: 0, w: 1, h: 1 }];
 
   const handleStartDrag = (e: any) => {
-    if (e[0].i === "dino") {
-      toast.success("Dino has been dragged");
-    }
+    console.log(e);
   };
 
   return (
-    <div className={"xl:w-[820px] float-end mt-[70px] ml-[70px]"}>
-      <div className={"dir-ltr"}>
-        <ResponsiveGridLayout
-          className="layout"
-          layouts={{ lg: largeLayout, sm: smallLayout }}
-          breakpoints={{ lg: 810, sm: 0 }}
-          cols={{ lg: 4, sm: 12 }}
-          rowHeight={169}
-          isResizable={false}
-          margin={[48, 48]}
-          containerPadding={[0, 0]}
-          onDragStart={handleStartDrag}
-        >
-          <div key={"dino"} className={""}>
-            <Widget name={"dino"} />
-          </div>
-        </ResponsiveGridLayout>
-      </div>
-    </div>
+    <AnimatePresence>
+      <motion.div
+        {...FADE_UP}
+        className={"xl:w-[820px] float-end my-[70px] ml-[70px]"}
+      >
+        <div className={"dir-ltr"}>
+          <ResponsiveGridLayout
+            className="layout"
+            layouts={{ lg: lgLayout.current, sm: smallLayout }}
+            breakpoints={{ lg: 810, sm: 0 }}
+            cols={{ lg: 4, sm: 1 }}
+            rowHeight={169}
+            isResizable={false}
+            margin={[48, 40]}
+            containerPadding={[0, 0]}
+            onDragStop={handleStartDrag}
+          >
+            {widgets?.map((widget: any, index: number) => (
+              <motion.div {...WIDGET_EFFECT} key={widget.widget.name + index}>
+                <Widget name={widget.widget.name} />
+              </motion.div>
+            ))}
+          </ResponsiveGridLayout>
+        </div>
+      </motion.div>
+    </AnimatePresence>
   );
 };
 
