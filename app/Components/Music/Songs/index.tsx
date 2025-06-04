@@ -1,6 +1,18 @@
 import Song from "~/Components/Music/Songs/Song";
+import { useEffect } from "react";
+import GET from "~/Services/Axios/Methods/GET";
 
 const Songs = () => {
+  const fetchSongs = async () => {
+    const response = await GET("/songs", {}, "pagination");
+
+    console.log(response.data);
+  };
+
+  useEffect(() => {
+    fetchSongs();
+  }, []);
+
   return (
     <>
       <section className={"my-8"}>
