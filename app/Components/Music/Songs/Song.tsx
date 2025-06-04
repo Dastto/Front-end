@@ -1,8 +1,9 @@
 import { Link } from "react-router";
 import React from "react";
-import { FILE_BASE_URL } from "~/Services/Setting";
+import { FADE_UP, FILE_BASE_URL } from "~/Services/Setting";
 import { Clock, DocumentDownload, Eye } from "iconsax-reactjs";
 import convertDuration from "~/Services/PublicFunctions/convertDuration";
+import { motion } from "motion/react";
 
 interface SongPropsTypes {
   song: any;
@@ -10,7 +11,7 @@ interface SongPropsTypes {
 
 const Song: React.FC<SongPropsTypes> = ({ song }) => {
   return (
-    <div data-aos="fade-up">
+    <motion.div {...FADE_UP}>
       <div
         className={
           "border border-gray-200 bg-white rounded-[30px] p-3 block hover:-translate-y-[10px] transition-all duration-300 ease-in-out"
@@ -92,7 +93,7 @@ const Song: React.FC<SongPropsTypes> = ({ song }) => {
           </a>
         </div>
       </div>
-    </div>
+    </motion.div>
   );
 };
 
