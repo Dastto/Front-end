@@ -116,6 +116,19 @@
     .react-tooltip {
         @apply !rounded-[15px] shadow-modal !bg-gray-50 !text-black/70;
     }
+
+    .section-title {
+        @apply relative text-2xl font-semibold pr-4 flex flex-row-reverse items-center text-nowrap gap-2;
+
+        &:after {
+            @apply content-[""] block size-3 bg-[#443EFF] rounded-2xl;
+        }
+
+        &:before {
+            @apply content-[""] block w-full h-1 bg-gray-100 rounded-2xl;
+        }
+    }
+
 }
 
 @utility dir-* {

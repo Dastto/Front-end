@@ -1,6 +1,7 @@
 import { motion } from "motion/react";
 import { FADE_UP } from "~/Services/Setting";
 import Button from "~/Components/Commans/UiParts/Button";
+import Songs from "~/Components/Music/Songs";
 
 const Music = () => {
   const IMG_SRC = [
@@ -103,7 +104,7 @@ const Music = () => {
           </div>
         </motion.div>
       </main>
-      <section className={"min-h-96 my-8"}></section>
+      <Songs />
     </>
   );
 };
