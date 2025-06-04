@@ -6,7 +6,7 @@
   <component name="ChangeListManager">
     <list default="true" id="7e7d8412-18e5-477c-83ea-8db850dba07a" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Components/Music/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/Components/Music/index.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Components/Music/Songs.tsx" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/app/Styles/app.css" beforeDir="false" afterPath="$PROJECT_DIR$/app/Styles/app.css" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -63,11 +63,11 @@
       <recent name="C:\Users\TikRack\Desktop\Dastto\Front-end\app\Components\Template\Partials" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\TikRack\Desktop\Dastto\Front-end\app\Components\Music\Songs" />
       <recent name="C:\Users\TikRack\Desktop\Dastto\Front-end\app\Components\Widget\Dino" />
       <recent name="C:\Users\TikRack\Desktop\Dastto\Front-end\app\Components\Widget\Music" />
       <recent name="C:\Users\TikRack\Desktop\Dastto\Front-end\app\Components\Template\Partials" />
       <recent name="C:\Users\TikRack\Desktop\Dastto\Front-end\app\Components\Template\ChangeUsername" />
-      <recent name="C:\Users\TikRack\Desktop\Dastto\Front-end\app\Hooks" />
     </key>
   </component>
   <component name="SharedIndexes">
@@ -132,7 +132,7 @@
       <workItem from="1748773664682" duration="1719000" />
       <workItem from="1748804514908" duration="727000" />
       <workItem from="1748951249643" duration="4000" />
-      <workItem from="1749034977914" duration="2028000" />
+      <workItem from="1749034977914" duration="7621000" />
     </task>
     <servers />
   </component>

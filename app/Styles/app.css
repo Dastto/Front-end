@@ -121,7 +121,7 @@
         @apply relative text-2xl font-semibold pr-4 flex flex-row-reverse items-center text-nowrap gap-2;
 
         &:after {
-            @apply content-[""] block size-3 bg-[#443EFF] rounded-2xl;
+            @apply content-[""] block size-3 bg-dastto rounded-2xl;
         }
 
         &:before {
