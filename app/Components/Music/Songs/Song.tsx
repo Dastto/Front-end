@@ -4,12 +4,14 @@ import { FADE_UP, FILE_BASE_URL } from "~/Services/Setting";
 import { Clock, DocumentDownload, Eye } from "iconsax-reactjs";
 import convertDuration from "~/Services/PublicFunctions/convertDuration";
 import { motion } from "motion/react";
+import SongPlayer from "~/Components/Music/Songs/SongPlayer";
 
 interface SongPropsTypes {
   song: any;
+  onPlay?: () => void;
 }
 
-const Song: React.FC<SongPropsTypes> = ({ song }) => {
+const Song: React.FC<SongPropsTypes> = ({ song, onPlay }) => {
   return (
     <motion.div {...FADE_UP}>
       <div
@@ -38,6 +40,7 @@ const Song: React.FC<SongPropsTypes> = ({ song }) => {
               className={
                 "flex cursor-pointer justify-center items-center size-[48px] bg-dastto absolute rounded-full right-1/2 translate-x-1/2 origin-center -translate-y-1/2"
               }
+              onClick={() => onPlay?.()}
             >
               <svg
                 width="16"

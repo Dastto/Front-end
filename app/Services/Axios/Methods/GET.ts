@@ -1,12 +1,23 @@
-// AxiosConfig.ts
 import Client from "../AxiosConfig";
+import axios from "axios";
+import { API_BASE_URL } from "~/Services/Setting";
 
 const GET = async <T = any>(
   url: string,
   params: object = {},
   responseType: "pagination" | "normal" = "normal",
+  instance: boolean = true,
 ) => {
-  const response = await Client.get(url, { params, withCredentials: true });
+  let response;
+
+  if (instance) {
+    response = await Client.get(url, { params, withCredentials: true });
+  } else {
+    response = await axios.get(API_BASE_URL + url, {
+      params,
+      withCredentials: true,
+    });
+  }
 
   if (responseType === "pagination") {
     return {

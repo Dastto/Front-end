@@ -3,6 +3,7 @@ import { useEffect, useRef, useState } from "react";
 import GET from "~/Services/Axios/Methods/GET";
 import useLenisScrollToEnd from "~/Hooks/useLenisScrollToEnd";
 import Loading from "~/Components/Commans/UiParts/Loading";
+import SongPlayer from "~/Components/Music/Songs/SongPlayer";
 
 const Songs = () => {
   const [page, setPage] = useState(1);
@@ -22,7 +23,7 @@ const Songs = () => {
           current_page: response.data.current_page,
           last_page: response.data.last_page,
         });
-        setSongs((prev) => [...prev, ...response.data.items]);
+        setSongs(response.data.items);
       }
     } finally {
       setIsLoading(false);
@@ -50,10 +51,15 @@ const Songs = () => {
         ref={wrapperRef}
       >
         {songs.map((song, index) => (
-          <Song key={song.id || index} song={song} />
+          <Song
+            key={song.id || index}
+            song={song}
+            onPlay={() => console.log("played")}
+          />
         ))}
         {isLoading && <Loading />}
       </div>
+      <SongPlayer />
     </section>
   );
 };
