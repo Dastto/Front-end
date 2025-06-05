@@ -4,62 +4,77 @@ import GET from "~/Services/Axios/Methods/GET";
 import useLenisScrollToEnd from "~/Hooks/useLenisScrollToEnd";
 import Loading from "~/Components/Commans/UiParts/Loading";
 import SongPlayer from "~/Components/Music/Songs/SongPlayer";
+import Button from "~/Components/Commans/UiParts/Button";
+import { Music } from "iconsax-reactjs";
 
 const Songs = () => {
-  const [page, setPage] = useState(1);
+  const page = useRef(1);
   const [songs, setSongs] = useState<any[]>([]);
   const [paginate, setPaginate] = useState({ current_page: 1, last_page: 1 });
   const [isLoading, setIsLoading] = useState(false);
-  const wrapperRef = useRef<HTMLDivElement | null>(null);
+  const [player, setPlayer] = useState(true);
+  const [currentSong, setCurrentSong] = useState<any>(null);
 
-  const fetchSongs = async () => {
+  const fetchSongs = async (isMore = false) => {
     if (isLoading) return;
     setIsLoading(true);
 
     try {
-      const response = await GET("/songs", { page }, "pagination");
+      const response = await GET(
+        "/songs",
+        { page: page.current },
+        "pagination",
+      );
       if (response.status === 200) {
         setPaginate({
           current_page: response.data.current_page,
           last_page: response.data.last_page,
         });
-        setSongs(response.data.items);
+        !isMore
+          ? setSongs(response.data.items)
+          : setSongs((prev) => [...prev, ...response.data.items]);
       }
     } finally {
       setIsLoading(false);
     }
   };
 
+  const handleMore = () => {
+    page.current++;
+    fetchSongs(true);
+  };
+
   useEffect(() => {
     fetchSongs();
-  }, [page]);
-
-  useLenisScrollToEnd(wrapperRef, () => {
-    if (!isLoading && paginate.current_page < paginate.last_page) {
-      setPage((prev) => prev + 1);
-    }
-  });
+  }, [page.current]);
 
   return (
-    <section className="my-8">
+    <section className={`my-8 ${player && "mb-[160px]"}`}>
       <h2 className="section-title">
         <span className="text-sm text-dastto">Songs</span>
         آهنگ ها
       </h2>
-      <div
-        className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-5 mt-10"
-        ref={wrapperRef}
-      >
+      <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-5 mt-10">
         {songs.map((song, index) => (
           <Song
-            key={song.id || index}
+            key={song?.slug || index}
             song={song}
-            onPlay={() => console.log("played")}
+            onPlay={() => {
+              setPlayer(true);
+              setCurrentSong(song);
+            }}
           />
         ))}
-        {isLoading && <Loading />}
       </div>
-      <SongPlayer />
+      <div className={"flex justify-center items-center my-4"}>
+        {paginate?.current_page < paginate?.last_page && (
+          <Button variant={"blue"} loading={isLoading} onClick={handleMore}>
+            <Music />
+            دیدن بیشتر...
+          </Button>
+        )}
+      </div>
+      <SongPlayer song={currentSong} />
     </section>
   );
 };

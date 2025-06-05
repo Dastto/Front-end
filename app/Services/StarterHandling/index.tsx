@@ -8,7 +8,7 @@ import { WidgetProvider } from "~/Context/WidgetContext";
 import { MusicProvider } from "~/Context/MusicContext";
 
 const StarterHandling = () => {
-  useLenis();
+  // useLenis();
 
   return (
     <>
