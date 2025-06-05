@@ -19,7 +19,7 @@ const Music = () => {
       "linear-gradient(#fff, #f1f1ff)";
 
     return () => {
-      document.documentElement.style.backgroundColor = "white";
+      document.documentElement.style.backgroundImage = "none";
     };
   }, []);
 

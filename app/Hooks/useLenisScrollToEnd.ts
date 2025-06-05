@@ -2,7 +2,7 @@ import React, { useEffect, useRef } from "react";
 import Lenis from "@studio-freight/lenis";
 
 const useLenisScrollToEnd = (
-  ref: React.RefObject<null>,
+  ref: React.RefObject<HTMLDivElement | null>,
   onReachEnd: () => void,
   threshold: number = 10,
   throttleTime: number = 200,
