@@ -1,6 +1,8 @@
 import React, { useEffect, useRef, useState } from "react";
-import { Pause, Play, Repeat, Volume2 } from "lucide-react";
 import { API_BASE_URL, FILE_BASE_URL } from "~/Services/Setting";
+import { Pause, Play, Repeat, VolumeHigh } from "iconsax-reactjs";
+import { Range } from "react-range";
+import { Tooltip } from "react-tooltip";
 
 type Song = {
   slug: string;
@@ -50,14 +52,6 @@ const SongPlayer: React.FC<{ song: Song }> = ({ song }) => {
     setIsPlaying(!isPlaying);
   };
 
-  const handleSeek = (e: React.ChangeEvent<HTMLInputElement>) => {
-    if (audioRef.current) {
-      const t = parseFloat(e.target.value);
-      audioRef.current.currentTime = t;
-      setCurrentTime(t);
-    }
-  };
-
   useEffect(() => {
     if (audioRef.current) {
       audioRef.current.volume = volume;
@@ -78,17 +72,19 @@ const SongPlayer: React.FC<{ song: Song }> = ({ song }) => {
         loop={isLooping}
       />
       <div className="fixed bottom-4 right-1/2 translate-x-1/2 z-30 w-[90%] max-w-2xl">
-        <div className="bg-white border border-gray-300 rounded-[30px] px-5 py-4 flex items-center justify-between shadow-md">
+        <div className="bg-white border border-gray-300 rounded-[30px] px-5 py-4 flex items-center justify-between">
           {/* Info */}
           <div className="flex items-center gap-4">
             <img
               src={FILE_BASE_URL + song?.thumbnail}
               alt={song?.name}
-              className="w-[80px] h-[80px] rounded-[15px] object-cover"
+              className="w-[90px] h-[90px] rounded-[15px] object-cover"
             />
-            <div>
-              <div className="text-lg font-bold text-dastto">{song?.name}</div>
-              <div className="text-sm text-gray-600">{song?.singer?.name}</div>
+            <div className="flex flex-col gap-1">
+              <div className="text-[22px] font-bold text-dastto">
+                {song?.name}
+              </div>
+              <div className="text-[18px]">{song?.singer?.name}</div>
             </div>
           </div>
 
@@ -97,38 +93,99 @@ const SongPlayer: React.FC<{ song: Song }> = ({ song }) => {
             <div className="flex items-center gap-4">
               <button
                 onClick={togglePlay}
-                className="p-3 bg-purple-100 rounded-full text-purple-700 hover:bg-purple-200"
+                className="size-[45px] flex items-center justify-center bg-purple-100 cursor-pointer rounded-full text-dastto hover:bg-purple-200"
               >
-                {isPlaying ? <Pause size={24} /> : <Play size={24} />}
+                {isPlaying ? <Pause size={22} /> : <Play size={22} />}
               </button>
-              <Volume2 />
               <button
                 onClick={() => setIsLooping(!isLooping)}
-                className={`p-3 rounded-full ${isLooping ? "bg-purple-600 text-white" : "bg-gray-100 text-gray-600 hover:bg-gray-200"}`}
-                title="تکرار آهنگ"
+                className={`size-[45px] flex items-center cursor-pointer justify-center rounded-full ${isLooping ? "bg-dastto text-white" : "bg-gray-100 text-gray-600 hover:bg-gray-200"}`}
+                data-tooltip-id="upload"
+                data-tooltip-content="تکرار"
+                data-tooltip-delay-show={500}
               >
                 <Repeat size={20} />
               </button>
-              <input
-                type="range"
-                min={0}
-                max={1}
+              <Tooltip id="upload" style={{ fontSize: "12px" }} />
+
+              <VolumeHigh />
+              <Range
                 step={0.01}
-                value={volume}
-                onChange={(e) => setVolume(parseFloat(e.target.value))}
-                className="w-[80px] accent-purple-500"
+                min={0}
+                rtl={true}
+                max={1}
+                values={[volume]}
+                onChange={([val]) => setVolume(val)}
+                renderTrack={({ props, children }) => (
+                  <div
+                    {...props}
+                    style={{
+                      ...props.style,
+                      height: "7px",
+                      width: "80px",
+                      background: `linear-gradient(to left, #3E7BFF 0%, #3E7BFF ${volume * 100}%, #ddd ${volume * 100}%)`,
+                      borderRadius: "50px",
+                      boxShadow: "5px 0px 20px -3px #3E7BFF",
+                    }}
+                  >
+                    {children}
+                  </div>
+                )}
+                renderThumb={({ props }) => (
+                  <div
+                    {...props}
+                    style={{
+                      ...props.style,
+                      height: "14px",
+                      width: "14px",
+                      borderRadius: "50%",
+                      backgroundColor: "#3E7BFF",
+                    }}
+                  />
+                )}
               />
             </div>
-
-            <div className="flex items-center w-full gap-2 text-sm text-gray-500">
+            <div className="flex items-center w-full gap-3 text-sm text-gray-500">
               <span>{formatTime(currentTime)}</span>
-              <input
-                type="range"
+              <Range
+                step={0.1}
                 min={0}
-                max={duration || 0}
-                value={currentTime}
-                onChange={handleSeek}
-                className="w-full accent-purple-500"
+                max={duration > 0 ? duration : 1}
+                values={[currentTime]}
+                onChange={([val]) => {
+                  if (audioRef.current) {
+                    audioRef.current.currentTime = val;
+                    setCurrentTime(val);
+                  }
+                }}
+                rtl={true}
+                renderTrack={({ props, children }) => (
+                  <div
+                    {...props}
+                    style={{
+                      ...props.style,
+                      height: "10px",
+                      width: "100%",
+                      background: `linear-gradient(to left, #3E7BFF 0%, #3E7BFF ${(currentTime / (duration || 1)) * 100}%, #e5e7eb ${(currentTime / (duration || 1)) * 100}%)`,
+                      borderRadius: "50px",
+                      boxShadow: "5px 0px 20px -4px #3E7BFF",
+                    }}
+                  >
+                    {children}
+                  </div>
+                )}
+                renderThumb={({ props }) => (
+                  <div
+                    {...props}
+                    style={{
+                      ...props.style,
+                      height: "17px",
+                      width: "17px",
+                      borderRadius: "50%",
+                      backgroundColor: "#3E7BFF",
+                    }}
+                  />
+                )}
               />
               <span>{formatTime(duration)}</span>
             </div>
