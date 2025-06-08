@@ -4,7 +4,13 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="7e7d8412-18e5-477c-83ea-8db850dba07a" name="Changes" comment="" />
+    <list default="true" id="7e7d8412-18e5-477c-83ea-8db850dba07a" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Components/Music/Songs/SongPlayer.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/Components/Music/Songs/SongPlayer.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Styles/app.css" beforeDir="false" afterPath="$PROJECT_DIR$/app/Styles/app.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -32,24 +38,24 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;dev&quot;,
-    &quot;last_opened_file_path&quot;: &quot;C:/Users/TikRack/Desktop/Dastto/Front-end/app/Hooks&quot;,
-    &quot;list.type.of.created.stylesheet&quot;: &quot;CSS&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;prettierjs.PrettierConfiguration.Package&quot;: &quot;C:\\Users\\TikRack\\Desktop\\Dastto\\Front-end\\node_modules\\prettier&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.editor&quot;,
-    &quot;ts.external.directory.path&quot;: &quot;C:\\Users\\TikRack\\Desktop\\Dastto\\Front-end\\node_modules\\typescript\\lib&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "RunOnceActivity.git.unshallow": "true",
+    "git-widget-placeholder": "dev",
+    "last_opened_file_path": "C:/Users/TikRack/Desktop/Dastto/Front-end/app/Hooks",
+    "list.type.of.created.stylesheet": "CSS",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "prettierjs.PrettierConfiguration.Package": "C:\\Users\\TikRack\\Desktop\\Dastto\\Front-end\\node_modules\\prettier",
+    "settings.editor.selected.configurable": "preferences.editor",
+    "ts.external.directory.path": "C:\\Users\\TikRack\\Desktop\\Dastto\\Front-end\\node_modules\\typescript\\lib",
+    "vue.rearranger.settings.migration": "true"
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\Users\TikRack\Desktop\Dastto\Front-end\app\Hooks" />
@@ -59,11 +65,11 @@
       <recent name="C:\Users\TikRack\Desktop\Dastto\Front-end\app\Components\Template\Partials" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\TikRack\Desktop\Dastto\Front-end\app\Components\Music\Songs" />
       <recent name="C:\Users\TikRack\Desktop\Dastto\Front-end\app\Components\Widget\Dino" />
       <recent name="C:\Users\TikRack\Desktop\Dastto\Front-end\app\Components\Widget\Music" />
       <recent name="C:\Users\TikRack\Desktop\Dastto\Front-end\app\Components\Template\Partials" />
       <recent name="C:\Users\TikRack\Desktop\Dastto\Front-end\app\Components\Template\ChangeUsername" />
-      <recent name="C:\Users\TikRack\Desktop\Dastto\Front-end\app\Hooks" />
     </key>
   </component>
   <component name="SharedIndexes">
@@ -123,7 +129,13 @@
       <workItem from="1748412452988" duration="548000" />
       <workItem from="1748454980033" duration="5568000" />
       <workItem from="1748539495636" duration="6438000" />
-      <workItem from="1748593849223" duration="1393000" />
+      <workItem from="1748593849223" duration="1999000" />
+      <workItem from="1748600223040" duration="3852000" />
+      <workItem from="1748773664682" duration="1719000" />
+      <workItem from="1748804514908" duration="727000" />
+      <workItem from="1748951249643" duration="4000" />
+      <workItem from="1749034977914" duration="17054000" />
+      <workItem from="1749105619247" duration="16568000" />
     </task>
     <servers />
   </component>
