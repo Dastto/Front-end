@@ -5,11 +5,11 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="7e7d8412-18e5-477c-83ea-8db850dba07a" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/.env.example" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Components/Music/Songs/SongPlayer.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/Components/Music/Songs/SongPlayer.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Styles/app.css" beforeDir="false" afterPath="$PROJECT_DIR$/app/Styles/app.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Components/Music/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/Components/Music/index.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Services/Setting/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/Services/Setting/index.tsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -41,18 +41,19 @@
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
     "RunOnceActivity.ShowReadmeOnStart": "true",
+    "RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager": "true",
     "RunOnceActivity.git.unshallow": "true",
     "git-widget-placeholder": "dev",
-    "last_opened_file_path": "C:/Users/TikRack/Desktop/Dastto/Front-end/app/Hooks",
+    "last_opened_file_path": "/var/www/Dastto-Frontend",
     "list.type.of.created.stylesheet": "CSS",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
     "node.js.selected.package.tslint": "(autodetect)",
     "nodejs_package_manager_path": "npm",
-    "prettierjs.PrettierConfiguration.Package": "C:\\Users\\TikRack\\Desktop\\Dastto\\Front-end\\node_modules\\prettier",
+    "prettierjs.PrettierConfiguration.Package": "/var/www/Dastto-Frontend/node_modules/prettier",
     "settings.editor.selected.configurable": "preferences.editor",
-    "ts.external.directory.path": "C:\\Users\\TikRack\\Desktop\\Dastto\\Front-end\\node_modules\\typescript\\lib",
+    "ts.external.directory.path": "/var/www/Dastto-Frontend/node_modules/typescript/lib",
     "vue.rearranger.settings.migration": "true"
   }
 }]]></component>
@@ -75,7 +76,7 @@
   <component name="SharedIndexes">
     <attachedChunks>
       <set>
-        <option value="bundled-js-predefined-d6986cc7102b-1632447f56bf-JavaScript-WS-243.25659.40" />
+        <option value="bundled-js-predefined-d6986cc7102b-b26f3e71634d-JavaScript-WS-251.26094.131" />
       </set>
     </attachedChunks>
   </component>
@@ -136,11 +137,19 @@
       <workItem from="1748951249643" duration="4000" />
       <workItem from="1749034977914" duration="17054000" />
       <workItem from="1749105619247" duration="16568000" />
+      <workItem from="1749390422689" duration="1098000" />
+      <workItem from="1749393165387" duration="6000" />
+      <workItem from="1749393858399" duration="17000" />
+      <workItem from="1749398904302" duration="155000" />
+      <workItem from="1749400637338" duration="626000" />
     </task>
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
+  </component>
+  <component name="UnknownFeatures">
+    <option featureType="com.intellij.fileTypeFactory" implementationName=".env" />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
     <option name="TAB_STATES">

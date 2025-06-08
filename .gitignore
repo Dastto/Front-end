@@ -8,3 +8,7 @@
 .idea
 /.idea
 ./.idea
+
+.env
+./.env
+/.env

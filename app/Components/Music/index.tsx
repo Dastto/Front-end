@@ -54,6 +54,7 @@ const Music = () => {
                   ease: "easeInOut",
                   delay: index === 0 ? 1.5 : 2,
                 }}
+                key={index * 1.5}
                 className="w-[165px] h-[165px] rounded-[30px]"
               >
                 <img
@@ -78,6 +79,7 @@ const Music = () => {
                   ease: "easeInOut",
                   delay: index === 0 ? 3 : 4,
                 }}
+                key={index * 3}
                 className="w-[165px] h-[165px] rounded-[30px]"
               >
                 <img
@@ -103,6 +105,7 @@ const Music = () => {
                   delay: index === 0 ? 2.5 : 3,
                 }}
                 className="w-[165px] h-[165px] rounded-[30px]"
+                key={index * 2.5}
               >
                 <img
                   src={`/Images/singers/${img}`}
