@@ -1,5 +1,4 @@
 import { Home, Music, Profile2User } from "iconsax-reactjs";
-import * as process from "node:process";
 
 const ToastSetting = {};
 
@@ -35,8 +34,8 @@ const WIDGET_EFFECT = {
 // const FILE_BASE_URL = "http://127.0.0.1:8000/storage/";
 // const API_BASE_URL = "http://127.0.0.1:8000/api/v1";
 
-const FILE_BASE_URL = process.env.REACT_APP_FILES_URL;
-const API_BASE_URL = process.env.REACT_APP_API_URL;
+const FILE_BASE_URL = import.meta.env.VITE_FILES_URL;
+const API_BASE_URL = import.meta.env.VITE_API_URL;
 
 export {
   ToastSetting,
