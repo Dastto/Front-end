@@ -19,6 +19,8 @@ jobs:
           port: ${{ secrets.SERVER_PORT }}
           script: |
             cd ${{ secrets.SERVER_PATH }}
+            git restore .
             git pull
             bun i
             bun run build
+            sudo systemctl restart myapp.service
