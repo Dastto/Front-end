@@ -1,10 +1,7 @@
 import useWidget from "~/Hooks/useWidget";
-import Modal from "~/Components/Commans/UiParts/Modal";
 
 const MusicAction = () => {
   const { add } = useWidget();
-
-  const handleSelectMusic = () => {};
 
   return (
     <>
@@ -12,7 +9,11 @@ const MusicAction = () => {
         className={
           "cursor-pointer active:scale-95 transition-all duration-100 rounded-lg overflow-hidden"
         }
-        onClick={() => handleSelectMusic}
+        onClick={() =>
+          add("music", {
+            contents: "https://ehiuhuhiuh",
+          })
+        }
       >
         <img
           src="/Images/actionBar/music.png"

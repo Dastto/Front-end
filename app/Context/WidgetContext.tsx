@@ -37,6 +37,7 @@ const WidgetProvider: React.FC<WidgetProviderProps> = ({ children }) => {
   const add = async (name: string, data: any) => {
     const response = await POST("/template/widget", {
       name: name,
+      ...data,
     });
 
     if (response.status === 200) {
@@ -59,7 +60,6 @@ const WidgetProvider: React.FC<WidgetProviderProps> = ({ children }) => {
               w: "1",
               h: "1",
             },
-            ...data,
           },
         ];
       });
