@@ -18,12 +18,15 @@ const Verify: React.FC<VerifyPropsTypes> = ({ setData, setLevel, data }) => {
   const [error, setError] = useState<string>("");
   const [otp, setOtp] = useState("");
   const navigate = useNavigate();
+  const [loading, setLoading] = useState(false);
 
   const handleSubmit = async () => {
     if (otp.length < 5 || otp.length > 5) {
       setError("اگه میشه کامل وارد کن!");
       return;
     }
+
+    setLoading(true);
 
     const response = await POST("/auth/verify", {
       mobile: data.mobile,
@@ -34,8 +37,10 @@ const Verify: React.FC<VerifyPropsTypes> = ({ setData, setLevel, data }) => {
       setAccessToken(response.data.data.access_token);
       navigate("/");
     } else {
-      toast.error("مشکلی پیش اومده!", ToastSetting);
+      toast.error(response.response?.data?.message, ToastSetting);
     }
+
+    setLoading(false);
   };
 
   return (
@@ -96,7 +101,7 @@ const Verify: React.FC<VerifyPropsTypes> = ({ setData, setLevel, data }) => {
         >
           {error}
         </span>
-        <SubmitButton onClick={handleSubmit} />
+        <SubmitButton loading={loading} onClick={handleSubmit} />
       </div>
     </form>
   );
