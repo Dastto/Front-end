@@ -6,10 +6,7 @@
   <component name="ChangeListManager">
     <list default="true" id="7e7d8412-18e5-477c-83ea-8db850dba07a" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Components/Authentication/Auth.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/Components/Authentication/Auth.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Components/Authentication/Verify.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/Components/Authentication/Verify.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Components/Commans/Forms/SubmitButton.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/Components/Commans/Forms/SubmitButton.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Services/Axios/ExceptionHandlerService.ts" beforeDir="false" afterPath="$PROJECT_DIR$/app/Services/Axios/ExceptionHandlerService.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Components/Commans/Header/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/Components/Commans/Header/index.tsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -149,6 +146,7 @@
       <workItem from="1751874409880" duration="3248000" />
       <workItem from="1751877733172" duration="7000" />
       <workItem from="1752071500589" duration="120000" />
+      <workItem from="1752072992881" duration="1376000" />
     </task>
     <servers />
   </component>
