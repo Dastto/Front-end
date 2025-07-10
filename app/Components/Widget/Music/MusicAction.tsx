@@ -1,7 +1,9 @@
-import useWidget from "~/Hooks/useWidget";
+import React from "react";
 
-const MusicAction = () => {
-  const { add } = useWidget();
+const MusicAction: React.FC<{ onClick: () => void }> = ({ onClick }) => {
+  const handleClick = () => {
+    onClick();
+  };
 
   return (
     <>
@@ -9,11 +11,7 @@ const MusicAction = () => {
         className={
           "cursor-pointer active:scale-95 transition-all duration-100 rounded-lg overflow-hidden"
         }
-        onClick={() =>
-          add("music", {
-            contents: "https://ehiuhuhiuh",
-          })
-        }
+        onClick={handleClick}
       >
         <img
           src="/Images/actionBar/music.png"

@@ -4,9 +4,12 @@ import Modal from "~/Components/Commans/UiParts/Modal";
 import React, { useState } from "react";
 import MusicAction from "~/Components/Widget/Music/MusicAction";
 import DinoAction from "~/Components/Widget/Dino/DinoAction";
+import MusicModal from "~/Components/Widget/Music/MusicModal";
 
 const ActionBar = () => {
   const [shareModal, setShareModal] = useState(false);
+  const [gramophoneModal, setGramophoneModal] = useState(false);
+
   return (
     <>
       <div
@@ -16,7 +19,7 @@ const ActionBar = () => {
       >
         <ShareLinkButton onClick={() => setShareModal((prev) => !prev)} />
         <Divider className={"!h-5 rounded-full"} />
-        <MusicAction />
+        <MusicAction onClick={() => setGramophoneModal(true)} />
         <DinoAction />
       </div>
 
@@ -27,6 +30,10 @@ const ActionBar = () => {
       >
         <div className="mt-7 rounded-[20px] bg-white p-6 shadow-[0px_0px_1px_rgba(0,0,0,0.2),0px_2px_3px_rgba(0,0,0,0.04)] xl:min-h-[min(60vh,550px)]"></div>
       </Modal>
+      <MusicModal
+        show={gramophoneModal}
+        onClose={() => setGramophoneModal(false)}
+      />
     </>
   );
 };
