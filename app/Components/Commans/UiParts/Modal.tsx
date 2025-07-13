@@ -50,7 +50,7 @@ const Modal: React.FC<ModalPropsTypes> = ({
             initial={{ opacity: 0, scale: 0, y: 100 }}
             animate={{ opacity: 1, scale: 1, y: 0 }}
             exit={{ opacity: 0, scale: 0, y: 100 }}
-            className={`!max-w-[414px] z-[1002] overflow-hidden !rounded-[44px] !bg-[#F9F9F9] !px-6 !py-6 xl:!pt-8 fixed top-1/2 right-1/2 -translate-y-1/2 translate-x-1/2 shadow-modal w-screen ${className}`}
+            className={`!max-w-[90%] z-[1002] overflow-hidden !rounded-[44px] !bg-[#F9F9F9] !px-6 !py-6 xl:!pt-8 fixed top-1/2 right-1/2 -translate-y-1/2 translate-x-1/2 shadow-modal w-screen ${className}`}
             key={"modal"}
           >
             <div className={"flex items-center justify-between"}>

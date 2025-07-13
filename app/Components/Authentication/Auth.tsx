@@ -17,6 +17,7 @@ interface AuthPropsTypes {
 const Auth: React.FC<AuthPropsTypes> = ({ setData, setLevel, data }) => {
   const [errors, setErrors] = useState([]);
   const [typing, setTyping] = useState(false);
+  const [loading, setLoading] = useState(false);
 
   const loginValidation = {
     mobile: z
@@ -30,12 +31,16 @@ const Auth: React.FC<AuthPropsTypes> = ({ setData, setLevel, data }) => {
   };
 
   const handleSubmit = async (data: any) => {
+    setLoading(true);
+
     const response = await POST("/auth", data);
 
     if (response?.status === 200) {
       setData(data);
       setLevel(1);
     }
+
+    setLoading(false);
   };
 
   return (
@@ -69,7 +74,7 @@ const Auth: React.FC<AuthPropsTypes> = ({ setData, setLevel, data }) => {
           >
             <Mobile className={"track-2 shrink-0"} variant={"TwoTone"} />
           </Input>
-          <SubmitButton />
+          <SubmitButton loading={loading} />
         </Form>
       </div>
     </>

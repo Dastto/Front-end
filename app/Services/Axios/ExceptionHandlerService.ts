@@ -1,16 +1,11 @@
 import toast from "react-hot-toast";
+import { ToastSetting } from "~/Services/Setting";
 
-const ExceptionHandlerService = (error: any, showToast: boolean = true) => {
-  if (error.response?.status === 401) {
-    return Promise.reject(error);
-  }
-  console.log(error);
-
+const ExceptionHandlerService = (error: any, showToast: boolean) => {
   if (showToast) {
-    console.error("API Error:", error.message);
+    toast.error(error.response?.data?.message, ToastSetting);
   }
-
-  return Promise.reject(error);
+  return error;
 };
 
 export default ExceptionHandlerService;
