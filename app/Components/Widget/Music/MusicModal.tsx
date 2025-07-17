@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from "react";
 import Modal from "~/Components/Commans/UiParts/Modal";
+import GET from "~/Services/Axios/Methods/GET";
 
 interface MusicModalPropsTypes {
   show: boolean;
@@ -8,14 +9,25 @@ interface MusicModalPropsTypes {
 
 const MusicModal: React.FC<MusicModalPropsTypes> = ({ show, onClose }) => {
   const [isOpen, setIsOpen] = useState(false);
+  const [songs, setSongs] = useState<any>([]);
 
   useEffect(() => {
+    if (show) fetchData();
+
     setIsOpen(show);
   }, [show]);
 
   const handleClose = () => {
     setIsOpen(false);
     onClose();
+  };
+
+  const fetchData = async () => {
+    const response = await GET("/songs/selection");
+
+    if (response.status === 200) {
+      setSongs(response.data);
+    }
   };
 
   return (
