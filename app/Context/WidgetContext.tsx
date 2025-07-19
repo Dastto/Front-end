@@ -35,7 +35,7 @@ const WidgetProvider: React.FC<WidgetProviderProps> = ({ children }) => {
   const [widgets, setWidgets] = useState<WidgetContextType[]>([]);
 
   const add = async (name: string, data: any) => {
-    const response = await POST("/template/widget", {
+    const response = await POST("/template/widgets", {
       name: name,
       ...data,
     });

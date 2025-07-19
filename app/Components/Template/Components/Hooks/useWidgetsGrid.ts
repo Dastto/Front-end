@@ -1,6 +1,9 @@
 import { useEffect, useRef } from "react";
 import useTemplate from "~/Hooks/useTemplate";
 import useWidget from "~/Hooks/useWidget";
+import POST from "~/Services/Axios/Methods/POST";
+import toast from "react-hot-toast";
+import { ToastSetting } from "~/Services/Setting";
 
 const useWidgetsGrid = () => {
   const lgLayout = useRef<any>([]);
@@ -22,8 +25,19 @@ const useWidgetsGrid = () => {
 
   const smallLayout = [{ i: "music", x: 0, y: 0, w: 1, h: 1 }];
 
-  const handleLayoutChange = (e: any) => {
-    console.log(e);
+  const handleLayoutChange = async (e: any) => {
+    let data = e.map((item: { i: string }) => ({
+      ...item,
+      i: item.i.split("-")[0],
+    }));
+
+    const response = await POST("/template/widgets/arrangements", {
+      layout: data,
+    });
+
+    if (response.status !== 200) {
+      toast.error("error", ToastSetting);
+    }
   };
 
   return {
