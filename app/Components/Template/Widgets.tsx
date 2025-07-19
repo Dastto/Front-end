@@ -32,10 +32,7 @@ const Widgets = () => {
             onLayoutChange={handleLayoutChange}
           >
             {widgets?.map((widget: any, index: number) => (
-              <motion.div
-                {...WIDGET_EFFECT}
-                key={widget.widget.name + "-" + index}
-              >
+              <motion.div {...WIDGET_EFFECT} key={"uw-" + widget.id}>
                 <Widget name={widget.widget.name} />
               </motion.div>
             ))}

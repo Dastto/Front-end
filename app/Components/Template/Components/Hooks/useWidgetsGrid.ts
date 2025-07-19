@@ -8,31 +8,28 @@ import { ToastSetting } from "~/Services/Setting";
 const useWidgetsGrid = () => {
   const lgLayout = useRef<any>([]);
   const { template } = useTemplate();
-  const { widgets, setWidgets } = useWidget();
+  const { widgets } = useWidget();
 
   useEffect(() => {
-    lgLayout.current = widgets?.map((widget: any, index: number) => {
+    lgLayout.current = widgets?.map((widget: any) => {
       const positions = widget.widget_position;
       return {
-        i: widget?.widget?.name + index,
+        i: "uw-" + widget.id,
         x: positions.x,
         y: positions.y,
         h: parseInt(positions.h),
         w: parseInt(positions.w),
       };
     });
+
+    console.log(lgLayout.current);
   }, [template]);
 
   const smallLayout = [{ i: "music", x: 0, y: 0, w: 1, h: 1 }];
 
   const handleLayoutChange = async (e: any) => {
-    let data = e.map((item: { i: string }) => ({
-      ...item,
-      i: item.i.split("-")[0],
-    }));
-
     const response = await POST("/template/widgets/arrangements", {
-      layout: data,
+      layout: e,
     });
 
     if (response.status !== 200) {
