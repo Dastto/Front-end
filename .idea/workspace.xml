@@ -6,7 +6,6 @@
   <component name="ChangeListManager">
     <list default="true" id="7e7d8412-18e5-477c-83ea-8db850dba07a" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Components/Widget/Music/MusicModal.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/Components/Widget/Music/MusicModal.tsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -151,7 +150,8 @@
       <workItem from="1752129653576" duration="2136000" />
       <workItem from="1752134081277" duration="4000" />
       <workItem from="1752389506551" duration="629000" />
-      <workItem from="1752743243916" duration="1224000" />
+      <workItem from="1752743243916" duration="1368000" />
+      <workItem from="1752937017562" duration="616000" />
     </task>
     <servers />
   </component>

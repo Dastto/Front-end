@@ -124,6 +124,7 @@ const Profile = () => {
                             className={
                               "w-[300px] bg-white shadow-modal absolute top-[40px] -translate-y-1/2 rounded-[20px] z-[12] -left-[290px] p-5"
                             }
+                            key={"settings"}
                           >
                             <ChangeUsername
                               profile={profile}
