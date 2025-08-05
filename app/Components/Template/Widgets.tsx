@@ -10,8 +10,7 @@ import useWidgetsGrid from "~/Components/Template/Components/Hooks/useWidgetsGri
 const ResponsiveGridLayout = WidthProvider(Responsive);
 
 const Widgets = () => {
-  const { lgLayout, smallLayout, widgets, handleLayoutChange } =
-    useWidgetsGrid();
+  const { layouts, widgets, handleLayoutChange } = useWidgetsGrid();
 
   return (
     <AnimatePresence>
@@ -22,7 +21,7 @@ const Widgets = () => {
         <div className={"dir-ltr"}>
           <ResponsiveGridLayout
             className="layout"
-            layouts={{ lg: lgLayout.current, sm: smallLayout }}
+            layouts={layouts}
             breakpoints={{ lg: 810, sm: 0 }}
             cols={{ lg: 4, sm: 1 }}
             rowHeight={169}
@@ -30,12 +29,14 @@ const Widgets = () => {
             margin={[48, 40]}
             containerPadding={[0, 0]}
             onLayoutChange={handleLayoutChange}
+            verticalCompact={false}
           >
-            {widgets?.map((widget: any, index: number) => (
-              <motion.div {...WIDGET_EFFECT} key={"uw-" + widget.id}>
-                <Widget name={widget.widget.name} />
-              </motion.div>
-            ))}
+            {widgets.length > 0 &&
+              widgets.map((widget: any) => (
+                <div key={"uw-" + widget.id}>
+                  <Widget name={widget.widget.name} />
+                </div>
+              ))}
           </ResponsiveGridLayout>
         </div>
       </motion.div>

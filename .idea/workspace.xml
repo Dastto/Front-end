@@ -6,8 +6,11 @@
   <component name="ChangeListManager">
     <list default="true" id="7e7d8412-18e5-477c-83ea-8db850dba07a" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Components/Template/Components/Hooks/useWidgetsGrid.ts" beforeDir="false" afterPath="$PROJECT_DIR$/app/Components/Template/Components/Hooks/useWidgetsGrid.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Components/Template/Widgets.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/Components/Template/Widgets.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Routes/comingSoon/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/Routes/comingSoon/index.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/routes.ts" beforeDir="false" afterPath="$PROJECT_DIR$/app/routes.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bun.lock" beforeDir="false" afterPath="$PROJECT_DIR$/bun.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -36,39 +39,39 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;dev&quot;,
-    &quot;last_opened_file_path&quot;: &quot;/home/tikrack/Projects/Dastto/frontend&quot;,
-    &quot;list.type.of.created.stylesheet&quot;: &quot;CSS&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;prettierjs.PrettierConfiguration.Package&quot;: &quot;/home/tikrack/Projects/Dastto/frontend/node_modules/prettier&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.editor&quot;,
-    &quot;ts.external.directory.path&quot;: &quot;/home/tikrack/Projects/Dastto/frontend/node_modules/typescript/lib&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager": "true",
+    "RunOnceActivity.git.unshallow": "true",
+    "git-widget-placeholder": "dev",
+    "last_opened_file_path": "/home/tikrack/Projects/Dastto/frontend/app/Routes",
+    "list.type.of.created.stylesheet": "CSS",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "prettierjs.PrettierConfiguration.Package": "/home/tikrack/Projects/Dastto/frontend/node_modules/prettier",
+    "settings.editor.selected.configurable": "preferences.editor",
+    "ts.external.directory.path": "/home/tikrack/Projects/Dastto/frontend/node_modules/typescript/lib",
+    "vue.rearranger.settings.migration": "true"
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/app/Routes" />
       <recent name="C:\Users\TikRack\Desktop\Dastto\Front-end\app\Hooks" />
       <recent name="C:\Users\TikRack\Desktop\Dastto\Front-end\app\Context" />
       <recent name="C:\Users\TikRack\Desktop\Dastto\Front-end\public\Images\actionBar" />
       <recent name="C:\Users\TikRack\Desktop\Dastto\Front-end\app\Components\Widget\Dino" />
-      <recent name="C:\Users\TikRack\Desktop\Dastto\Front-end\app\Components\Template\Partials" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/app/Routes/comingSoon" />
       <recent name="C:\Users\TikRack\Desktop\Dastto\Front-end\app\Components\Music\Songs" />
       <recent name="C:\Users\TikRack\Desktop\Dastto\Front-end\app\Components\Widget\Dino" />
       <recent name="C:\Users\TikRack\Desktop\Dastto\Front-end\app\Components\Widget\Music" />
       <recent name="C:\Users\TikRack\Desktop\Dastto\Front-end\app\Components\Template\Partials" />
-      <recent name="C:\Users\TikRack\Desktop\Dastto\Front-end\app\Components\Template\ChangeUsername" />
     </key>
   </component>
   <component name="SharedIndexes">
@@ -153,7 +156,11 @@
       <workItem from="1752134081277" duration="4000" />
       <workItem from="1752389506551" duration="629000" />
       <workItem from="1752743243916" duration="1368000" />
-      <workItem from="1752937017562" duration="5370000" />
+      <workItem from="1752937017562" duration="5757000" />
+      <workItem from="1752953027891" duration="3562000" />
+      <workItem from="1752990796395" duration="13000" />
+      <workItem from="1753300414182" duration="13000" />
+      <workItem from="1754423136384" duration="936000" />
     </task>
     <servers />
   </component>
