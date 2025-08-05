@@ -1,5 +1,11 @@
+import ComingSoon from "~/ComingSoon";
+
 const index = () => {
-  return <>comming soon</>;
+  return (
+    <>
+      <ComingSoon />
+    </>
+  );
 };
 
 export default index;

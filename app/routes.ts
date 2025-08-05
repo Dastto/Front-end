@@ -15,5 +15,5 @@ export default [
   //   route("/:username", "./Routes/username/index.tsx"),
   //   route("/test", "./Routes/test.tsx"),
   // ]),
-  route("*", "./Routes/comingSoon/index.tsx"),
+  route("/", "./Routes/comingSoon/index.tsx"),
 ] satisfies RouteConfig;
